@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Precios - Concesionaria</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logoautocity" src="../img/logoautocity.jpg" alt="Logo AutoCity">
+        <div class="navbar">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/precios.html">Precios</a></li>
+                <li><a href="../pages/pautas.html">Pautas</a></li>
+            </ul>
+        </div>
+        <img class="logofiat" src="../img/logofiat.png" alt="Logo Fiat">
+    </header>
+
+    <section class="app-section">
+        <h1>LISTA DE PRECIOS</h1>
+        <p>Seleccione marca y modelo para conocer los precios vigentes</p>
+    </section>
+
+    <div class="container">
+        <!-- SECCIÓN DE FILTROS (usa filter-group-inline) -->
+        <section class="section" id="filter-section">
+            <h2>Filtrar Vehículos</h2>
+            <div class="filter-group-inline">
+                <div class="form-group">
+                    <label for="brand-filter">Seleccionar Marca:</label>
+                    <select id="brand-filter">
+                        <option value="">Todas las marcas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="model-filter">Seleccionar Modelo:</label>
+                    <select id="model-filter">
+                        <option value="">Todos los modelos</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="list-section">
+            <h2>Lista de Vehículos</h2>
+            <table id="vehicles-table">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Versión</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="vehicles-list">
+                    <!-- Los vehículos se cargarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECCIÓN DEL COMPARADOR (mantiene filter-group normal) -->
+        <section class="section" id="compare-section">
+            <h2>Comparador de Precios</h2>
+            <div class="filter-group">
+                <div class="vehicle-select">
+                    <div class="form-group">
+                        <label for="vehicle1">Seleccionar primera versión:</label>
+                        <select id="vehicle1">
+                            <option value="">-- Seleccione una versión --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="vehicle-select">
+                    <div class="form-group">
+                        <label for="vehicle2">Seleccionar segunda versión:</label>
+                        <select id="vehicle2">
+                            <option value="">-- Seleccione una versión --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="compare-btn">Comparar</button>
+                <button id="reset-btn" class="btn-danger">Reiniciar</button>
+            </div>
+
+            <div class="comparison-result" id="comparison-result" style="display: none;">
+                <h3>Resultado de la comparación</h3>
+                <div id="vehicle1-details"></div>
+                <div id="vehicle2-details"></div>
+                <div class="price-difference" id="price-difference"></div>
+                <p id="comparison-text"></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <img class="logoautocity" src="../img/logoautocity.jpg" alt="Logo AutoCity">
+        <div class="atencion">
+            <h3>Atención al cliente</h3>
+            <p>Teléfono: 0810-888-4000</p>
+            <p>Lunes a Viernes de 8:30 a 17:30hs</p>
+            <p>Av. Santa Ana 6363 esq. Circunvalación</p>
+        </div>
+    </footer>
+
+    <script src="../Javascript/script.js"></script>
+</body>
+
+</html>

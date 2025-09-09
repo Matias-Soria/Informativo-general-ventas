@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pautas comerciales Fiat</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <img class="logoautocity" src="../img/logoautocity.jpg" alt="Auto City">
+            <div class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/precios.html">Precios</a></li>
+                    <li><a href="../pages/pautas.html">Pautas</a></li>
+                </ul>
+            </div>
+            <img class="logofiat" src="../img/logofiat.png" alt="Fiat">
+        </header>
+
+        <main>
+            <section class="app-section">
+                <h1>PAUTAS COMERCIALES</h1>
+                <p>Seleccione marca y modelo para conocer las pautas vigentes</p>
+            </section>
+            <div class="fiat-filters">
+                <div class="fiat-filter-group">
+                    <label for="brandFilter">Filtrar por marca:</label>
+                    <select id="brandFilter">
+                        <option value="">Todas las marcas</option>
+                        <!-- Las opciones se cargarán dinámicamente -->
+                    </select>
+                </div>
+
+                <div class="fiat-filter-group">
+                    <label for="modelFilter">Filtrar por modelo:</label>
+                    <input type="text" id="modelFilter" placeholder="Escribe el nombre del modelo">
+                </div>
+
+                <div class="fiat-filter-group">
+                    <label for="sobrepautaFilter">Filtrar por sobrepauta:</label>
+                    <select id="sobrepautaFilter">
+                        <option value="todos">Todos</option>
+                        <option value="con">Con sobrepauta</option>
+                        <option value="sin">Sin sobrepauta</option>
+                    </select>
+                </div>
+
+                <div class="fiat-filter-group">
+                    <button id="resetFilters" class="fiat-reset-btn">Reiniciar filtros</button>
+                </div>
+            </div>
+
+            <div class="fiat-models-table">
+                <table class="fiat-table" id="modelsTable">
+                    <thead>
+                        <tr>
+                            <th>AUTO</th>
+                            <th>MODELO</th>
+                            <th>FINANCIACION</th>
+                            <th>CUOTAS</th>
+                            <th>SOBREPAUTA</th>
+                            <th>PEA 1</th>
+                            <th>PEA 2</th>
+                            <th>SUSCRI PREMIO</th>
+                            <th>SUSCRI NEUTRA</th>
+                            <th>BONIFICACION</th>
+                            <th>% RETIRO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    </main>
+
+    <footer>
+        <img class="logoautocity" src="../img/logoautocity.jpg" alt="">
+        <div class="atencion">
+            <h3>Atención al cliente</h3>
+            <p>Teléfono: 0810-888-4000</p>
+            <p>Lunes a Viernes de 8:30 a 17:30hs</p>
+            <p>Av. Santa Ana 6363 esq. Circunvalación</p>
+        </div>
+    </footer>
+    </div>
+
+    <script src="../Javascript/script.js"></script>
+</body>
+
+</html>
