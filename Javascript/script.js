@@ -309,62 +309,62 @@ function initComparadorPrecios() {
     // DATOS DE VEHÍCULOS FIAT 
     // =======================================================================
     const fiatVehicles = [
-        { id: 1001, brand: "Fiat", model: "Cronos", version: "Like 1.3 GSE MY26", price: 27819000 },
-        { id: 1002, brand: "Fiat", model: "Cronos", version: "Drive 1.3 GSE PACK PLUS MY26", price: 32656000 },
-        { id: 1003, brand: "Fiat", model: "Cronos", version: "Drive 1.3L GSE CVT PACK PLUS MY26", price: 32852000 },
-        { id: 1004, brand: "Fiat", model: "Cronos", version: "Precision 1.3 GSE CVT MY26", price: 34675000 },
-        { id: 1005, brand: "Fiat", model: "Pulse", version: "Drive 1.3 MT5", price: 32669000 },
-        { id: 1006, brand: "Fiat", model: "Pulse", version: "Drive 1.3 CVT", price: 34027000 },
-        { id: 1007, brand: "Fiat", model: "Pulse", version: "Audace 1.0T CVT", price: 36770000 },
-        { id: 1008, brand: "Fiat", model: "Pulse", version: "Impetus 1.0T CVT", price: 38038000 },
-        { id: 1009, brand: "Fiat", model: "Pulse", version: "Abarth Turbo 270 AT6", price: 39893000 },
-        { id: 1010, brand: "Fiat", model: "Mobi", version: "Trekking 1.0", price: 23976000 },
-        { id: 1011, brand: "Fiat", model: "Argo", version: "Drive 1.3L MT", price: 27759000 },
-        { id: 1012, brand: "Fiat", model: "Fastback", version: "Turbo 270 AT", price: 40450000 },
-        { id: 1013, brand: "Fiat", model: "Fastback", version: "Abarth Turbo 270 AT6", price: 44402000 },
-        { id: 1014, brand: "Fiat", model: "Fiorino", version: "Endurance 1.4 MT5", price: 27322000 },
-        { id: 1015, brand: "Fiat", model: "Fiorino", version: "Endurance 1.3 FIREFLY", price: 27322000 },
-        { id: 1016, brand: "Fiat", model: "Strada", version: "Freedom CS 1.3 MT", price: 29805000 },
-        { id: 1017, brand: "Fiat", model: "Strada", version: "Freedom 1.3 8V CD", price: 33492000 },
-        { id: 1018, brand: "Fiat", model: "Strada", version: "Volcano 1.3 8V CD CVT", price: 37992000 },
-        { id: 1019, brand: "Fiat", model: "Strada", version: "Ranch T200 CD CVT", price: 41063000 },
-        { id: 1020, brand: "Fiat", model: "Strada", version: "Ultra T200 CD CVT", price: 41183000 },
-        { id: 1021, brand: "Fiat", model: "Toro", version: "Freedom T270 AT6 4X2", price: 42179000 },
-        { id: 1022, brand: "Fiat", model: "Toro", version: "Volcano T270 AT6 4X2", price: 47870000 },
-        { id: 1023, brand: "Fiat", model: "Toro", version: "Volcano TD350 AT9 4X4", price: 51588000 },
-        { id: 1024, brand: "Fiat", model: "Toro", version: "Ultra TD350 AT9 4X4", price: 57283000 },
-        { id: 1025, brand: "Fiat", model: "Titano", version: "Endurance MT 4X2", price: 46032000 },
-        { id: 1026, brand: "Fiat", model: "Titano", version: "Endurance MT 4X4", price: 48720000 },
-        { id: 1027, brand: "Fiat", model: "Titano", version: "Freedom MT 4X4", price: 53648000 },
-        { id: 1028, brand: "Fiat", model: "Titano", version: "Freedom Plus AT 4X4", price: 58912000 },
-        { id: 1029, brand: "Fiat", model: "Titano", version: "Ranch AT 4X4", price: 63616000 }
+        { id: 1001, brand: "Fiat", model: "Cronos", version: "Like 1.3 GSE MY26", price: 28519000 },
+        { id: 1002, brand: "Fiat", model: "Cronos", version: "Drive 1.3 GSE PACK PLUS MY26", price: 34100000 },
+        { id: 1003, brand: "Fiat", model: "Cronos", version: "Drive 1.3L GSE CVT PACK PLUS MY26", price: 34305000 },
+        { id: 1004, brand: "Fiat", model: "Cronos", version: "Precision 1.3 GSE CVT MY26", price: 35546000 },
+        { id: 1005, brand: "Fiat", model: "Pulse", version: "Drive 1.3 MT5", price: 34015000 },
+        { id: 1006, brand: "Fiat", model: "Pulse", version: "Drive 1.3 CVT", price: 35224000 },
+        { id: 1007, brand: "Fiat", model: "Pulse", version: "Audace 1.0T CVT", price: 38063000 },
+        { id: 1008, brand: "Fiat", model: "Pulse", version: "Impetus 1.0T CVT", price: 39376000 },
+        { id: 1009, brand: "Fiat", model: "Pulse", version: "Abarth Turbo 270 AT6", price: 41296000 },
+        { id: 1010, brand: "Fiat", model: "Mobi", version: "Trekking 1.0", price: 24964000 },
+        { id: 1011, brand: "Fiat", model: "Argo", version: "Drive 1.3L MT", price: 27898000 },
+        { id: 1012, brand: "Fiat", model: "Fastback", version: "Turbo 270 AT", price: 42117000 },
+        { id: 1013, brand: "Fiat", model: "Fastback", version: "Abarth Turbo 270 AT6", price: 45964000 },
+        { id: 1015, brand: "Fiat", model: "Fiorino", version: "Endurance 1.3 FIREFLY", price: 27459000 },
+        { id: 1016, brand: "Fiat", model: "Strada", version: "Freedom CS 1.3 MT", price: 30555000 },
+        { id: 1017, brand: "Fiat", model: "Strada", version: "Freedom 1.3 8V CD", price: 34872000 },
+        { id: 1018, brand: "Fiat", model: "Strada", version: "Volcano 1.3 8V CD CVT", price: 38946000 },
+        { id: 1021, brand: "Fiat", model: "Toro", version: "Freedom T270 AT6 4X2", price: 43917000 },
+        { id: 1022, brand: "Fiat", model: "Toro", version: "Volcano T270 AT6 4X2", price: 49073000 },
+        { id: 1025, brand: "Fiat", model: "Titano", version: "Endurance MT 4X2", price: 46726000 },
+        { id: 1026, brand: "Fiat", model: "Titano", version: "Endurance MT 4X4", price: 49454000 },
+        { id: 1027, brand: "Fiat", model: "Titano", version: "Freedom MT 4X4", price: 54457000 },
+        { id: 1028, brand: "Fiat", model: "Titano", version: "Freedom Plus AT 4X4", price: 59800000 },
+        { id: 1029, brand: "Fiat", model: "Titano", version: "Ranch AT 4X4", price: 64575000 }
     ];
 
     // =======================================================================
     // DATOS DE VEHÍCULOS OTRAS MARCAS
     // =======================================================================
     const otherBrandsVehicles = [
-        { id: 2001, brand: "Volkswagen", model: "Polo", version: "Track MSI MT", price: 42000000 },
-        { id: 2002, brand: "Volkswagen", model: "Virtus", version: "MSI MT", price: 45000000 },
-        { id: 2003, brand: "Volkswagen", model: "Nivus", version: "Trendline 200 TSI AT", price: 49000000 },
-        { id: 2004, brand: "Volkswagen", model: "T-Cross", version: "Trendline 200 TSI AT", price: 49000000 },
-        { id: 2005, brand: "Volkswagen", model: "Amarok 4X2", version: "Trendline 4x2 140 CV", price: 49000000 },
-        { id: 2006, brand: "Volkswagen", model: "Taos", version: "Comfortline 250 TSI AT", price: 49000000 },
-        { id: 2007, brand: "Jeep", model: "Renegade", version: "Longitude T270 AT6 FWD MY25", price: 38000000 },
-        { id: 2008, brand: "Jeep", model: "Renegade", version: "Sport T270 1.3 AT6 FWD", price: 41000000 },
-        { id: 2009, brand: "Jeep", model: "Renegade", version: "S T270 1.3 AT6 MY25", price: 44000000 },
-        { id: 2010, brand: "Jeep", model: "Renegade", version: "Willys T270 AT9 4X4", price: 36000000 },
-        { id: 2011, brand: "Jeep", model: "Compass", version: "Sport T270 AT6 4X2 MY25", price: 39000000 },
-        { id: 2012, brand: "Jeep", model: "Compass", version: "Limited Plus T270 AT6 4X2 MY25", price: 42000000 },
-        { id: 2013, brand: "Jeep", model: "Compass", version: "S T270 AT6 FWD MY25", price: 42000000 },
-        { id: 2014, brand: "Jeep", model: "Compass", version: "Blackhawk 2.0T GME AT9", price: 42000000 },
-        { id: 2015, brand: "Jeep", model: "Commander", version: "Limited GSE 1.3T FWD AT6 BZ MY24", price: 42000000 },
-        { id: 2016, brand: "Jeep", model: "Commander", version: "Overland 2.0L GME AT9 4X4", price: 42000000 },
-        { id: 2017, brand: "Jeep", model: "Commander", version: "Blackhawk 2.0l GME AT9 4x4", price: 42000000 },
-        { id: 2018, brand: "Jeep", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 42000000 },
-        { id: 2019, brand: "Jeep", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 42000000 },
-        { id: 2020, brand: "Jeep", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 42000000 },
-        { id: 2021, brand: "Jeep", model: "Rampage", version: "Laramie 2.0 Night Edition GME AT 4X4", price: 42000000 }
+        { id: 2001, brand: "Peugeot", model: "208", version: "Active MT AM26", price: 29120000 },
+        { id: 2002, brand: "Peugeot", model: "208", version: "Allure MT AM26", price: 33830000 },
+        { id: 2003, brand: "Peugeot", model: "208", version: "Allure AT AM26", price: 35580000 },
+        { id: 2004, brand: "Peugeot", model: "208", version: "Allure PK T200 AM26", price: 38220000 },
+        { id: 2005, brand: "Peugeot", model: "208", version: "GT T200 AM26", price: 40290000 },
+        { id: 2006, brand: "Peugeot", model: "2008", version: "Active T200 AM26", price: 41340000 },
+        { id: 2007, brand: "Peugeot", model: "2008", version: "Allure T200 AM26", price: 45290000 },
+        { id: 2008, brand: "Peugeot", model: "2008", version: "GT T200 AM26", price: 49450000 },
+        { id: 2009, brand: "Peugeot", model: "Partner", version: "Confort 1.6 HDI AM22.5", price: 33050000 },
+        { id: 2010, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 120 AM25", price: 50590000 },
+        { id: 2011, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 AM26", price: 53830000 },
+        { id: 2012, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 6P AM26", price: 58950000 },
+        { id: 2013, brand: "Jeep", model: "Renegade", version: "Sport T270 1.3 AT6 FWD", price: 43856400 },
+        { id: 2014, brand: "Jeep", model: "Renegade", version: "Longitude T270 AT6 FWD MY25", price: 48487200 },
+        { id: 2015, brand: "Jeep", model: "Renegade", version: "S T270 1.3 AT6 MY25", price: 49576800 },
+        { id: 2016, brand: "Jeep", model: "Renegade", version: "Willys T270 AT9 4X4", price: 54616200 },
+        { id: 2017, brand: "Jeep", model: "Compass", version: "Sport T270 AT6 4X2 MY25", price: 52573200 },
+        { id: 2018, brand: "Jeep", model: "Compass", version: "Limited Plus T270 AT6 4X2 MY25", price: 56795400 },
+        { id: 2019, brand: "Jeep", model: "Compass", version: "S T270 AT6 FWD MY25", price: 57340200 },
+        { id: 2020, brand: "Jeep", model: "Compass", version: "Blackhawk 2.0T GME AT9", price: 69462000 },
+        { id: 2021, brand: "Jeep", model: "Commander", version: "Limited GSE 1.3T FWD AT6 BZ MY24", price: 65239800 },
+        { id: 2022, brand: "Jeep", model: "Commander", version: "Overland 2.0L GME AT9 4X4", price: 79268400 },
+        { id: 2023, brand: "Jeep", model: "Commander", version: "Blackhawk 2.0l GME AT9 4x4", price: 79949400 },
+        { id: 2024, brand: "Ram", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 64967400 },
+        { id: 2025, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 74092800 },
+        { id: 2026, brand: "Ram", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 65512200 },
     ];
 
     // Función para cargar vehículos
@@ -628,20 +628,56 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // =======================================================================
-// PÁGINA DE MODELOS COMERCIALES (FIAT + VOLKSWAGEN + JEEP)
+// PÁGINA DE MODELOS COMERCIALES (FIAT + PEUGEOT + JEEP)
 // =======================================================================
 function initFiatModelsPage() {
     console.log('Inicializando página de modelos comerciales...');
 
+    // 1. Función para actualizar el color del encabezado según la marca seleccionada
+function updateTableHeaderColor() {
+    const brand = (document.getElementById('brandFilter').value || '').toUpperCase();
+    const tableHeader = document.querySelector('#modelsTable thead');
+    if (!tableHeader) return;
+
+    // Quitar estilos previos
+    tableHeader.style.backgroundColor = '';
+    tableHeader.style.color = '';
+
+    if (brand === 'PEUGEOT') {
+        tableHeader.style.backgroundColor = '#1976d2'; // Azul Peugeot
+        tableHeader.style.color = '#fff';
+    } else if (brand === 'JEEP') {
+        tableHeader.style.backgroundColor = '#222'; // Negro Jeep
+        tableHeader.style.color = '#fff';
+    }
+}
+
+// 2. Llama a updateTableHeaderColor en TODOS los filtros
+document.getElementById('modelFilter').addEventListener('input', function () {
+    filterModels();
+    updateTableHeaderColor();
+});
+document.getElementById('brandFilter').addEventListener('change', function () {
+    filterModels();
+    updateTableHeaderColor();
+});
+document.getElementById('sobrepautaFilter').addEventListener('change', function () {
+    filterModels();
+    updateTableHeaderColor();
+});
+
+// 3. Llama también al iniciar para dejar el color correcto si ya hay una marca seleccionada
+updateTableHeaderColor();
+
     // Datos de los modelos Fiat
     const fiatModels = [
         {
-            auto: "FIAT",
+            marca: "FIAT",
             modelo: "MOBI TREKKING 1.O",
             financiacion: "80/20",
             cuotas: "84",
             sobrepauta: "",
-            pea1: "6-9:12 / 50%",
+            pea1: "6-9-12 / 40%",
             pea2: "24-36 / 20%",
             suscrNeutra: "$225.000",
             suscrPremio: "$265.000",
@@ -649,90 +685,51 @@ function initFiatModelsPage() {
             retiro: "6.5% + DA (2.5%)"
         },
         {
-            auto: "FIAT",
+            marca: "FIAT",
             modelo: "ABGO DRIVE PACK PLUS",
             financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "OCT 35%",
-            pea1: "4-6-9:12 / 35%",
+            sobrepauta: "NOV 30%",
+            pea1: "4-6-9-12 / 35%",
             pea2: "24-36 / 30%",
-            suscrNeutra: "$240.000",
-            suscrPremio: "$260.000",
+            suscrNeutra: "$260.000",
+            suscrPremio: "$300.000",
             bonificacion: "$350.000",
             retiro: "6.5% + DA (2.5%)"
         },
         {
-            auto: "FIAT",
+            marca: "FIAT",
             modelo: "CRONOS DRIVE PACK PLUS",
             financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "OCT 35%",
-            pea1: "4-6-9:12 / 35%",
+            sobrepauta: "NOV 30%",
+            pea1: "4-6-9-12 / 35%",
             pea2: "24-36 / 30%",
-            suscrNeutra: "$280.000",
-            suscrPremio: "$320.000",
+            suscrNeutra: "$290.000",
+            suscrPremio: "$330.000",
             bonificacion: "$350.000",
             retiro: "6% + DA (2.5%)"
         },
         {
-            auto: "FIAT",
+            marca: "FIAT",
             modelo: "CRONOS DRIVE PACK PLUS",
             financiacion: "90/10",
             cuotas: "84",
-            sobrepauta: "OCT 35%",
+            sobrepauta: "NOV 20%",
             pea1: "10-24-36 / 10%",
             pea2: "",
-            suscrNeutra: "$400.000",
-            suscrPremio: "$440.000",
+            suscrNeutra: "$410.000",
+            suscrPremio: "$450.000",
             bonificacion: "$350.000",
             retiro: "6% + DA (2.5%)"
         },
         {
-            auto: "FIAT",
+            marca: "FIAT",
             modelo: "PULSE DRIVE",
             financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "OCT 35%",
-            pea1: "4-9:12 / 35%",
-            pea2: "24-36 / 30%",
-            suscrNeutra: "$310.000",
-            suscrPremio: "$350.000",
-            bonificacion: "$500.000",
-            retiro: "6.5% + DA (2.5%)"
-        },
-        {
-            auto: "FIAT",
-            modelo: "FASTBACK TURBO 270",
-            financiacion: "60/40",
-            cuotas: "84",
-            sobrepauta: "OCT 40%",
-            pea1: "4-9:12 / 40%",
-            pea2: "24-36 / 40%",
-            suscrNeutra: "$350.000",
-            suscrPremio: "$370.000",
-            bonificacion: "$500.000",
-            retiro: "6.5% + DA (2.5%)"
-        },
-        {
-            auto: "FIAT",
-            modelo: "FIORINO ENDURANCE",
-            financiacion: "70/30",
-            cuotas: "84",
-            sobrepauta: "",
-            pea1: "4-9:12 / 40%",
-            pea2: "24-36 / 30%",
-            suscrNeutra: "$250.000",
-            suscrPremio: "$290.000",
-            bonificacion: "$350.000",
-            retiro: "6.5% + DA (2.5%)"
-        },
-        {
-            auto: "FIAT",
-            modelo: "STRADA FREEDOM",
-            financiacion: "70/30",
-            cuotas: "84",
-            sobrepauta: "",
-            pea1: "6-9:12 / 40%",
+            sobrepauta: "NOV 35%",
+            pea1: "4-9-12 / 35%",
             pea2: "24-36 / 30%",
             suscrNeutra: "$320.000",
             suscrPremio: "$360.000",
@@ -740,160 +737,212 @@ function initFiatModelsPage() {
             retiro: "6.5% + DA (2.5%)"
         },
         {
-            auto: "FIAT",
+            marca: "FIAT",
+            modelo: "FASTBACK TURBO 270",
+            financiacion: "60/40",
+            cuotas: "84",
+            sobrepauta: "NOV 40%",
+            pea1: "4-9-12-24-36 / 40%",
+            pea2: "",
+            suscrNeutra: "$360.000",
+            suscrPremio: "$380.000",
+            bonificacion: "$500.000",
+            retiro: "6.5% + DA (2.5%)"
+        },
+        {
+            marca: "FIAT",
+            modelo: "FIORINO ENDURANCE",
+            financiacion: "70/30",
+            cuotas: "84",
+            sobrepauta: "",
+            pea1: "4-9-12 / 40%",
+            pea2: "24-36 / 30%",
+            suscrNeutra: "$265.000",
+            suscrPremio: "$305.000",
+            bonificacion: "$350.000",
+            retiro: "6.5% + DA (2.5%)"
+        },
+        {
+            marca: "FIAT",
+            modelo: "STRADA FREEDOM",
+            financiacion: "70/30",
+            cuotas: "84",
+            sobrepauta: "",
+            pea1: "6-9-12 / 40%",
+            pea2: "24-36 / 30%",
+            suscrNeutra: "$325.000",
+            suscrPremio: "$365.000",
+            bonificacion: "$500.000",
+            retiro: "6.5% + DA (2.5%)"
+        },
+        {
+            marca: "FIAT",
             modelo: "TORO FREEDOM",
             financiacion: "70/30",
             cuotas: "84",
             sobrepauta: "",
-            pea1: "4-9:12 / 40%",
+            pea1: "4-9-12 / 40%",
             pea2: "24-36 / 30%",
-            suscrNeutra: "$350.000",
-            suscrPremio: "$390.000",
+            suscrNeutra: "$370.000",
+            suscrPremio: "$410.000",
             bonificacion: "$700.000",
             retiro: "6.5% + DA (2.5%)"
         },
         {
-            auto: "FIAT",
+            marca: "FIAT",
             modelo: "TITANO ENDURANCE",
             financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "OCT 35%",
-            pea1: "4-9:12 / 35%",
+            sobrepauta: "NOV 30%",
+            pea1: "4-9-12 / 35%",
             pea2: "24-36 / 30%",
-            suscrNeutra: "$435.000",
+            suscrNeutra: "$415.000",
             suscrPremio: "$455.000",
             bonificacion: "$700.000",
             retiro: "6.5% + DA (2.5%)"
         }
     ];
 
-    // Datos de los modelos Volkswagen (según la imagen proporcionada)
-    const volkswagenModels = [
+    // Datos de los modelos Peugeot (según la imagen proporcionada)
+    const peugeotModels = [
         {
-            auto: "VOLKSWAGEN",
-            modelo: " POLO TRACK MSI MT",
+            marca: "PEUGEOT",
+            modelo: "208 ALLURE 1.6 AM26",
             financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "",
-            pea1: "8,12,24-80%",
+            sobrepauta: "NOV 20%",
+            pea1: "2-6-9-12 / 30%",
             pea2: "",
+            suscrNeutra: "$320.000",
+            suscrPremio: "$360.000",
+            bonificacion: "$500.000",
+            retiro: "6% (DA SE PAGA CON LA LICITACION)"
+        },
+        {
+            marca: "PEUGEOT",
+            modelo: "208 ALLURE 1.6 AM26 ",
+            financiacion: "70/30",
+            cuotas: "120",
+            sobrepauta: "NOV 20%",
+            pea1: "2-12 / 30%",
+            pea2: "",
+            suscrNeutra: "$260.000",
+            suscrPremio: "$300.000",
+            bonificacion: "$350.000",
+            retiro: "6% (DA SE PAGA CON LA LICITACION)"
+        },
+        {
+            marca: "PEUGEOT",
+            modelo: "208 ALLURE AT AM26",
+            financiacion: "70/30",
+            cuotas: "84",
+            sobrepauta: "NOV 20%",
+            pea1: "2-6-9-12 / 30%",
+            pea2: "",
+            suscrNeutra: "$340.000",
+            suscrPremio: "$380.000",
+            bonificacion: "$500.000",
+            retiro: "6% (DA SE PAGA CON LA LICITACION)"
+        },
+        {
+            marca: "PEUGEOT",
+            modelo: "2008 ACTIVE T200 AM26",
+            financiacion: "70/30",
+            cuotas: "84",
+            sobrepauta: "NOV 30%",
+            pea1: "4-6 / 40%",
+            pea2: "9-12 / 30%",
             suscrNeutra: "$360.000",
             suscrPremio: "$400.000",
-            bonificacion: "$350.000",
-            retiro: "50% + 1.21% SE PAGA CON LA LICITACION"
+            bonificacion: "$700.000",
+            retiro: "6% (DA SE PAGA CON LA LICITACION)"
         },
         {
-            auto: "VOLKSWAGEN",
-            modelo: "VIRTUS MSI MT",
-            financiacion: "100",
-            cuotas: "84",
-            sobrepauta: "",
-            pea1: "",
-            pea2: "",
-            suscrNeutra: "$356.000",
-            suscrPremio: "$600.000",
-            bonificacion: "$550.000",
-            retiro: "6.5% + 1.21% SE PAGA CON LA LICITACION"
-        },
-        {
-            auto: "VOLKSWAGEN",
-            modelo: "NIVUS TRENDLINE 200 TSI AT",
+            marca: "PEUGEOT",
+            modelo: "2008 ALLURE T200 AM26",
             financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "",
-            pea1: "8,12,24-50%",
-            pea2: "",
-            suscrNeutra: "$460.000",
-            suscrPremio: "$500.000",
-            bonificacion: "$550.000",
-            retiro: "50% + 1.21% SE PAGA CON LA LICITACION"
+            sobrepauta: "NOV 30%",
+            pea1: "2 / 40%",
+            pea2: "6-9 / 30%",
+            suscrNeutra: "$410.000",
+            suscrPremio: "$450.000",
+            bonificacion: "$700.000",
+            retiro: "6% (DA SE PAGA CON LA LICITACION)"
         },
         {
-            auto: "VOLKSWAGEN",
-            modelo: "T-CROSS TRENDLINE 200 TSI AT",
+            marca: "PEUGEOT",
+            modelo: "PARTNER CONFORT 1.6 HDI",
             financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "",
-            pea1: "8,12,24-80%",
+            sobrepauta: "NOV 20%",
+            pea1: "6-9-12 / 30%",
             pea2: "",
-            suscrNeutra: "$451.000",
-            suscrPremio: "$550.000",
+            suscrNeutra: "$300.000",
+            suscrPremio: "$340.000",
             bonificacion: "$500.000",
-            retiro: "6.5% + 1.21% SE PAGA CON LA LICITACION"
+            retiro: "6% (DA SE PAGA CON LA LICITACION)"
         },
         {
-            auto: "VOLKSWAGEN",
-            modelo: "AMAROK 4X2 TRENDLINE 140 CV",
-            financiacion: "60/40",
+            marca: "PEUGEOT",
+            modelo: "EXPERT L3 HDI",
+            financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "",
-            pea1: "",
+            sobrepauta: "NOV 35%",
+            pea1: "6-24-36 / 30%",
             pea2: "",
-            suscrNeutra: "$490.000",
-            suscrPremio: "$530.000",
-            bonificacion: "$700.000",
-            retiro: "6.5% + 1.21% SE PAGA CON LA LICITACION"
-        },
-        {
-            auto: "VOLKSWAGEN",
-            modelo: "TAOS COMFORTLINE 250 TSI AT",
-            financiacion: "60/40",
-            cuotas: "84",
-            sobrepauta: "",
-            pea1: "",
-            pea2: "",
-            suscrNeutra: "$510.000",
-            suscrPremio: "$550.000",
-            bonificacion: "$700.000",
-            retiro: "6.5% + 1.21% SE PAGA CON LA LICITACION"
+            suscrNeutra: "470.000",
+            suscrPremio: "$510.000",
+            bonificacion: "$800.000",
+            retiro: "6% (DA SE PAGA CON LA LICITACION)"
         }
     ];
 
     // Datos de los modelos Jeep (nuevos modelos según la imagen)
     const jeepModels = [
         {
-            auto: "JEEP",
+            marca: "JEEP",
             modelo: "RENEGADE SPORT",
             financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "OCT 40%",
+            sobrepauta: "NOV 35%",
             pea1: "4-9-12/40%",
             pea2: "24-36/30%",
             suscrNeutra: "$450.000",
             suscrPremio: "$490.000",
-            bonificacion: "$500.000",
+            bonificacion: "$1.700.000 si adjudica cuota 2 caso contrario $500.000 en GR",
             retiro: "6.5% + DA (2.5%)"
         },
         {
-            auto: "JEEP",
+            marca: "JEEP",
             modelo: "COMPASS SPORT 270 AT6",
             financiacion: "70/30",
             cuotas: "84",
-            sobrepauta: "OCT 50%",
+            sobrepauta: "NOV 45%",
             pea1: "4-9-12/40%",
             pea2: "24-36/30%",
             suscrNeutra: "$510.000",
             suscrPremio: "$550.000",
-            bonificacion: "$700.000",
+            bonificacion: "$2.000.000 si adjudica cuota 2 caso contrario $500.000 en GR",
             retiro: "6.5% + DA (2.5%)"
         },
         {
-            auto: "JEEP",
+            marca: "JEEP",
             modelo: "RAM REBEL",
             financiacion: "60/40",
             cuotas: "84",
-            sobrepauta: "OCT 50%",
-            pea1: "4-9-12/40%",
-            pea2: "24-36/40%",
+            sobrepauta: "NOV 50%",
+            pea1: "4-9-12-24-36 / 40%",
+            pea2: "",
             suscrNeutra: "$540.000",
             suscrPremio: "$580.000",
-            bonificacion: "$700.000",
+            bonificacion: "$2.500.000 si adjudica cuota 2 caso contrario $500.000 en GR",
             retiro: "6% + DA (2.5%)"
         }
     ];
 
     // Combinar todos los modelos (ahora incluyendo Jeep)
-    const allModels = [...fiatModels, ...volkswagenModels, ...jeepModels];
+    const allModels = [...fiatModels, ...peugeotModels, ...jeepModels];
 
     // Función para cargar los datos en la tabla
     function loadTableData(models) {
@@ -917,7 +966,7 @@ function initFiatModelsPage() {
             }
 
             row.innerHTML = `
-                <td class="fiat-model-name">${model.auto}</td>
+                <td class="fiat-model-name">${model.marca}</td>
                 <td>${model.modelo}</td>
                 <td>${model.financiacion}</td>
                 <td>${model.cuotas}</td>
@@ -945,7 +994,7 @@ function initFiatModelsPage() {
             const matchesModel = model.modelo.toLowerCase().includes(modelFilter);
 
             // Filtrar por marca
-            const matchesBrand = brandFilter === '' || model.auto.toLowerCase() === brandFilter.toLowerCase();
+            const matchesBrand = brandFilter === '' || model.marca.toLowerCase() === brandFilter.toLowerCase();
 
             // Filtrar por sobrepauta
             let matchesSobrepauta = true;
@@ -964,7 +1013,7 @@ function initFiatModelsPage() {
     // Cargar marcas en el filtro de marca
     function loadBrandFilter() {
         const brandFilter = document.getElementById('brandFilter');
-        const brands = [...new Set(allModels.map(model => model.auto))];
+        const brands = [...new Set(allModels.map(model => model.marca))];
 
         brands.forEach(brand => {
             const option = document.createElement('option');
