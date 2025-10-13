@@ -363,8 +363,8 @@ function initComparadorPrecios() {
         { id: 2022, brand: "Jeep", model: "Commander", version: "Overland 2.0L GME AT9 4X4", price: 79268400 },
         { id: 2023, brand: "Jeep", model: "Commander", version: "Blackhawk 2.0l GME AT9 4x4", price: 79949400 },
         { id: 2024, brand: "Ram", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 64967400 },
-        { id: 2025, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 74092800 },
-        { id: 2026, brand: "Ram", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 65512200 },
+        { id: 2025, brand: "Ram", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 65512200 },
+        { id: 2026, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 74092800 },
     ];
 
     // Función para cargar vehículos
@@ -632,42 +632,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // =======================================================================
 function initFiatModelsPage() {
     console.log('Inicializando página de modelos comerciales...');
-
-    // 1. Función para actualizar el color del encabezado según la marca seleccionada
-function updateTableHeaderColor() {
-    const brand = (document.getElementById('brandFilter').value || '').toUpperCase();
-    const tableHeader = document.querySelector('#modelsTable thead');
-    if (!tableHeader) return;
-
-    // Quitar estilos previos
-    tableHeader.style.backgroundColor = '';
-    tableHeader.style.color = '';
-
-    if (brand === 'PEUGEOT') {
-        tableHeader.style.backgroundColor = '#1976d2'; // Azul Peugeot
-        tableHeader.style.color = '#fff';
-    } else if (brand === 'JEEP') {
-        tableHeader.style.backgroundColor = '#222'; // Negro Jeep
-        tableHeader.style.color = '#fff';
-    }
-}
-
-// 2. Llama a updateTableHeaderColor en TODOS los filtros
-document.getElementById('modelFilter').addEventListener('input', function () {
-    filterModels();
-    updateTableHeaderColor();
-});
-document.getElementById('brandFilter').addEventListener('change', function () {
-    filterModels();
-    updateTableHeaderColor();
-});
-document.getElementById('sobrepautaFilter').addEventListener('change', function () {
-    filterModels();
-    updateTableHeaderColor();
-});
-
-// 3. Llama también al iniciar para dejar el color correcto si ya hay una marca seleccionada
-updateTableHeaderColor();
 
     // Datos de los modelos Fiat
     const fiatModels = [
