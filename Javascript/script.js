@@ -339,7 +339,6 @@ function initComparadorPrecios() {
     // DATOS DE VEHÍCULOS OTRAS MARCAS
     // =======================================================================
     const otherBrandsVehicles = [
-        { id: 2001, brand: "Peugeot", model: "208", version: "Active MT AM26", price: 29120000 },
         { id: 2002, brand: "Peugeot", model: "208", version: "Allure MT AM26", price: 33830000 },
         { id: 2003, brand: "Peugeot", model: "208", version: "Allure AT AM26", price: 35580000 },
         { id: 2004, brand: "Peugeot", model: "208", version: "Allure PK T200 AM26", price: 38220000 },
@@ -887,7 +886,7 @@ function initFiatModelsPage() {
             pea2: "24-36/30%",
             suscrNeutra: "$510.000",
             suscrPremio: "$550.000",
-            bonificacion: "$2.000.000 si adjudica cuota 2 caso contrario $500.000 en GR",
+            bonificacion: "$2.000.000 si adjudica cuota 2 caso contrario $700.000 en GR",
             retiro: "6.5% + DA (2.5%)"
         },
         {
@@ -900,7 +899,7 @@ function initFiatModelsPage() {
             pea2: "",
             suscrNeutra: "$540.000",
             suscrPremio: "$580.000",
-            bonificacion: "$2.500.000 si adjudica cuota 2 caso contrario $500.000 en GR",
+            bonificacion: "$2.500.000 si adjudica cuota 2 caso contrario $700.000 en GR",
             retiro: "6% + DA (2.5%)"
         }
     ];
