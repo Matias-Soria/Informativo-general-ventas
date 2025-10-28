@@ -14,6 +14,12 @@
     <div class="app-container">
         <header>
             <img class="logoautocity" src="../img/logoautocity.jpg" alt="Auto City">
+            
+            <!-- BOTÓN HAMBURGUESA AGREGADO -->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+            
             <div class="navbar">
                 <ul>
                     <li><a href="../index.html">Equipamientos</a></li>
@@ -79,129 +85,137 @@
                     </tbody>
                 </table>
             </div>
-    </div>
-    <div class="calculator-section">
-    <h2>CALCULADORA DE INTEGRACIONES</h2>
-    
-    <!-- NUEVO FILTRO DE MARCA PARA LA CALCULADORA -->
-    <div class="calculator-filters">
-        <div class="calc-form-group">
-            <label for="marcaCalculadora">Filtrar por marca:</label>
-            <select id="marcaCalculadora" class="calc-select">
-                <option value="">Todas las marcas</option>
-                <!-- Las opciones se cargarán dinámicamente -->
-            </select>
-        </div>
-    </div>
-    
-    <div class="calculator-container">
-        <div class="calculator-form">
-            <div class="calc-form-group">
-                <label for="vehicleSelect">Seleccionar Vehículo:</label>
-                <select id="vehicleSelect" class="calc-select">
-                    <option value="">-- Seleccione un vehículo --</option>
-                </select>
-            </div>
 
-            <!-- El resto del formulario se mantiene igual -->
-            <div class="calc-form-group">
-                <label for="financiacionSelect">Tipo de Financiación:</label>
-                <select id="financiacionSelect" class="calc-select">
-                    <option value="">-- Seleccione financiación --</option>
-                </select>
-            </div>
-
-            <div class="calc-form-group">
-                <label for="precioVehiculo">Precio del Vehículo:</label>
-                <input type="text" id="precioVehiculo" class="calc-input" placeholder="Ingrese el precio" readonly>
-            </div>
-
-            <div class="calc-form-group">
-                <label for="tipoAdjudicacion">Tipo de Adjudicación:</label>
-                <select id="tipoAdjudicacion" class="calc-select">
-                    <option value="sobrepauta">Sobrepauta</option>
-                    <option value="pea1">PEA 1</option>
-                    <option value="pea2">PEA 2</option>
-                </select>
-            </div>
-
-            <div class="calc-form-group">
-                <label for="cuotaAdjudicar">Cuota a Adjudicar:</label>
-                <select id="cuotaAdjudicar" class="calc-select">
-                    <option value="2">Cuota 2</option>
-                    <option value="4">Cuota 4</option>
-                    <option value="6">Cuota 6</option>
-                    <option value="9">Cuota 9</option>
-                    <option value="12">Cuota 12</option>
-                    <option value="24">Cuota 24</option>
-                    <option value="36">Cuota 36</option>
-                </select>
-            </div>
-
-            <button id="calcularBtn" class="calc-btn">CALCULAR INTEGRACIÓN</button>
-        </div>
-
-            <div class="calculator-results">
-                <div class="result-card">
-                    <h3>RESUMEN DE INTEGRACIÓN</h3>
-                    <div class="result-item">
-                        <span>Precio Vehículo:</span>
-                        <span id="resultPrecio">-</span>
+            <div class="calculator-section">
+                <h2>CALCULADORA DE INTEGRACIONES</h2>
+                
+                <!-- NUEVO FILTRO DE MARCA PARA LA CALCULADORA -->
+                <div class="calculator-filters">
+                    <div class="calc-form-group">
+                        <label for="marcaCalculadora">Filtrar por marca:</label>
+                        <select id="marcaCalculadora" class="calc-select">
+                            <option value="">Todas las marcas</option>
+                            <!-- Las opciones se cargarán dinámicamente -->
+                        </select>
                     </div>
-                    <div class="result-item">
-                        <span>Porcentaje a Integrar:</span>
-                        <span id="resultPorcentaje">-</span>
+                </div>
+                
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <div class="calc-form-group">
+                            <label for="vehicleSelect">Seleccionar Vehículo:</label>
+                            <select id="vehicleSelect" class="calc-select">
+                                <option value="">-- Seleccione un vehículo --</option>
+                            </select>
+                        </div>
+
+                        <!-- El resto del formulario se mantiene igual -->
+                        <div class="calc-form-group">
+                            <label for="financiacionSelect">Tipo de Financiación:</label>
+                            <select id="financiacionSelect" class="calc-select">
+                                <option value="">-- Seleccione financiación --</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label for="precioVehiculo">Precio del Vehículo:</label>
+                            <input type="text" id="precioVehiculo" class="calc-input" placeholder="Ingrese el precio" readonly>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label for="tipoAdjudicacion">Tipo de Adjudicación:</label>
+                            <select id="tipoAdjudicacion" class="calc-select">
+                                <option value="sobrepauta">Sobrepauta</option>
+                                <option value="pea1">PEA 1</option>
+                                <option value="pea2">PEA 2</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label for="cuotaAdjudicar">Cuota a Adjudicar:</label>
+                            <select id="cuotaAdjudicar" class="calc-select">
+                                <option value="2">Cuota 2</option>
+                                <option value="4">Cuota 4</option>
+                                <option value="6">Cuota 6</option>
+                                <option value="9">Cuota 9</option>
+                                <option value="12">Cuota 12</option>
+                                <option value="24">Cuota 24</option>
+                                <option value="36">Cuota 36</option>
+                            </select>
+                        </div>
+
+                        <button id="calcularBtn" class="calc-btn">CALCULAR INTEGRACIÓN</button>
                     </div>
-                    <div class="result-item highlight">
-                        <span>Total a Integrar:</span>
-                        <span id="resultTotal">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span>Suscripción:</span>
-                        <span id="resultSuscripcion">-</span>
-                    </div>
-                    <div class="result-item final">
-                        <span>INTEGRACIÓN FINAL:</span>
-                        <span id="resultFinal">-</span>
+
+                    <div class="calculator-results">
+                        <div class="result-card">
+                            <h3>RESUMEN DE INTEGRACIÓN</h3>
+                            <div class="result-item">
+                                <span>Precio Vehículo:</span>
+                                <span id="resultPrecio">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Porcentaje a Integrar:</span>
+                                <span id="resultPorcentaje">-</span>
+                            </div>
+                            <div class="result-item highlight">
+                                <span>Total a Integrar:</span>
+                                <span id="resultTotal">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Suscripción:</span>
+                                <span id="resultSuscripcion">-</span>
+                            </div>
+                            <div class="result-item final">
+                                <span>INTEGRACIÓN FINAL:</span>
+                                <span id="resultFinal">-</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    </main>
+        </main>
 
-    <footer>
-        <img class="logoautocity" src="../img/logoautocity.jpg" alt="">
-        <div class="atencion">
-            <h3>Atención al cliente</h3>
-            <p>Teléfono: 0810-888-4000</p>
-            <p>Lunes a Viernes de 8:30 a 17:30hs</p>
-            <p>Av. Santa Ana 6363 esq. Circunvalación</p>
-        </div>
-    </footer>
+        <footer>
+            <img class="logoautocity" src="../img/logoautocity.jpg" alt="">
+            <div class="atencion">
+                <h3>Atención al cliente</h3>
+                <p>Teléfono: 0810-888-4000</p>
+                <p>Lunes a Viernes de 8:30 a 17:30hs</p>
+                <p>Av. Santa Ana 6363 esq. Circunvalación</p>
+            </div>
+        </footer>
     </div>
 
     <script src="../Javascript/script.js"></script>
 
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbarMenu = document.querySelector('.navbar ul');
-    
-    if (menuToggle && navbarMenu) {
-        menuToggle.addEventListener('click', function() {
-            navbarMenu.classList.toggle('active');
-        });
-        
-        // Cerrar menú al hacer clic fuera de él
-        document.addEventListener('click', function(event) {
-            if (!event.target.closest('.navbar') && !event.target.closest('.menu-toggle')) {
-                navbarMenu.classList.remove('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbarMenu = document.querySelector('.navbar ul');
+            
+            if (menuToggle && navbarMenu) {
+                menuToggle.addEventListener('click', function() {
+                    navbarMenu.classList.toggle('active');
+                });
+                
+                // Cerrar menú al hacer clic fuera de él
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.navbar') && !event.target.closest('.menu-toggle')) {
+                        navbarMenu.classList.remove('active');
+                    }
+                });
+                
+                // Cerrar menú al hacer clic en un enlace (MEJORA ADICIONAL)
+                const navLinks = document.querySelectorAll('.navbar a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navbarMenu.classList.remove('active');
+                    });
+                });
             }
         });
-    }
-});
-</script>
+    </script>
 </body>
 
 </html>
