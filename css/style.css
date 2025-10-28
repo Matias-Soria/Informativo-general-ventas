@@ -33,6 +33,7 @@ body {
     line-height: 1.6;
     color: var(--dark-color);
     background-color: #f9f9f9;
+    overflow-x: hidden;
 }
 
 .app-container {
@@ -40,27 +41,29 @@ body {
     flex-direction: column;
     min-height: 100vh;
     -webkit-overflow-scrolling: touch;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-/**HEADER MEJORADO**/
-
+/**HEADER MEJORADO - MOBILE FIX**/
 header {
     background-color: black;
     padding: 1rem;
-    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
     flex-wrap: wrap;
+    position: relative;
+    width: 100%;
 }
 
 .logoautocity {
     width: clamp(120px, 30vw, 200px);
     height: auto;
+    order: 1;
 }
 
-/* MENÚ HAMBURGUESA - NUEVO */
 .menu-toggle {
     display: none;
     background: none;
@@ -70,11 +73,16 @@ header {
     cursor: pointer;
     padding: 0.5rem;
     min-height: 44px;
+    order: 2;
+    z-index: 1001;
 }
 
 .navbar {
     background-color: black;
-    overflow: visible;
+    order: 3;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar ul {
@@ -99,6 +107,7 @@ header {
     min-height: 44px;
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .navbar a:hover {
@@ -110,12 +119,23 @@ header {
 .logojeep {
     width: clamp(120px, 25vw, 150px);
     height: auto;
+    order: 4;
 }
 
-/* MEDIA QUERIES PARA HEADER */
 @media (max-width: 768px) {
+    header {
+        padding: 0.75rem;
+        justify-content: space-between;
+    }
+    
     .menu-toggle {
         display: block;
+    }
+    
+    .navbar {
+        order: 4;
+        flex: 0 0 100%;
+        margin-top: 1rem;
     }
     
     .navbar ul {
@@ -127,6 +147,7 @@ header {
         left: 0;
         background-color: black;
         box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        z-index: 1000;
     }
     
     .navbar ul.active {
@@ -140,6 +161,14 @@ header {
         border-bottom: 1px solid #333;
         width: 100%;
     }
+    
+    .logoautocity, .logojeep {
+        order: 1;
+    }
+    
+    .logojeep {
+        order: 3;
+    }
 }
 
 @media (max-width: 480px) {
@@ -151,36 +180,42 @@ header {
         padding: 0.8rem;
         font-size: 1rem;
     }
+    
+    .logoautocity, .logojeep {
+        width: clamp(100px, 25vw, 140px);
+    }
 }
 
 .app-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+    padding: clamp(1rem, 3vw, 1.5rem) clamp(0.75rem, 2vw, 1rem);
     text-align: center;
     box-shadow: var(--shadow);
+    width: 100%;
 }
 
 .app-section h1 {
     font-weight: 700;
     margin-bottom: 0.8rem;
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    line-height: 1.3;
 }
 
 .app-section p {
     font-weight: 300;
     opacity: 0.9;
-    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
     max-width: min(600px, 90%);
     margin: 0 auto;
+    line-height: 1.4;
 }
 
-/* SECCIÓN DE COMPARACIÓN - MEJORADA */
 .comparator-container {
-    max-width: min(1400px, 95%);
-    width: min(95%, 1400px);
-    margin: 2rem auto;
-    padding: 0 clamp(1rem, 3vw, 2rem);
+    max-width: min(1400px, 98%);
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
     flex: 1;
 }
 
@@ -188,24 +223,25 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(1rem, 3vw, 2rem);
-    margin-bottom: 2.5rem;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
 .advanced-filters {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    min-width: 280px;
+    gap: 0.75rem;
+    min-width: min(280px, 100%);
     max-width: 400px;
+    width: 100%;
 }
 
-/* SOLO para el comparador principal */
 .comparator-container .filter-group {
     flex: 1;
-    min-width: 280px;
+    min-width: min(280px, 100%);
     max-width: 400px;
+    width: 100%;
 }
 
 .comparator-container .filter-group label {
@@ -213,18 +249,18 @@ header {
     margin-bottom: 0.5rem;
     font-weight: 500;
     color: var(--text-dark);
-    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .model-filter, .version-filter {
     width: 100%;
-    padding: 0.9rem 1.2rem;
+    padding: 0.75rem 1rem;
     border: 2px solid var(--border-color);
     border-radius: 8px;
-    font-size: 1.05rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
     background-color: white;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' m2 5 6 6 6-6'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 16px 12px;
@@ -240,7 +276,6 @@ header {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-/* VS Circle - Mejorado */
 .vs-circle-container {
     display: flex;
     justify-content: center;
@@ -262,12 +297,11 @@ header {
     box-shadow: var(--shadow);
 }
 
-/* Filtros adicionales */
 .filters {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2.5rem 0;
+    margin: 2rem 0;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 1.5rem;
@@ -305,13 +339,12 @@ header {
     transform: translateY(-2px);
 }
 
-/* Resultados - Mejorados */
 .results-container {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     background-color: white;
     width: 100%;
 }
@@ -345,7 +378,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3.5rem;
+    padding: 3rem 2rem;
     text-align: center;
     color: var(--text-light);
 }
@@ -360,7 +393,6 @@ header {
     font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-/* Items de comparación */
 .category-header {
     background-color: #e9ecef;
     padding: 1rem clamp(1rem, 3vw, 2rem);
@@ -439,7 +471,6 @@ footer {
     text-align: center;
 }
 
-/* MEJORAS RESPONSIVE PARA COMPARADOR */
 @media (max-width: 1024px) {
     .comparison-filters-container {
         gap: 1.5rem;
@@ -473,6 +504,9 @@ footer {
     .filters {
         flex-direction: column;
         align-items: stretch;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
     }
     
     .category-filter {
@@ -526,11 +560,8 @@ footer {
     }
 }
 
-/* ===== ESTILOS PARA PÁGINA DE PRECIOS ===== */
-
-/* Contenedor principal */
 .container {
-    max-width: min(1200px, 95%);
+    max-width: min(1200px, 98%);
     margin: 0 auto;
     padding: clamp(1rem, 3vw, 2rem);
 }
@@ -538,7 +569,7 @@ footer {
 .section {
     background: white;
     border-radius: 10px;
-    padding: clamp(1.5rem, 3vw, 2.5rem);
+    padding: clamp(1.5rem, 3vw, 2rem);
     margin-bottom: clamp(1.5rem, 3vw, 2rem);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
@@ -548,7 +579,6 @@ footer {
     transform: translateY(-5px);
 }
 
-/* FILTROS EN LÍNEA - MEJORADOS */
 #filter-section .filter-group-inline {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -588,7 +618,6 @@ footer {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-/* ESTILOS ESPECÍFICOS PARA EL COMPARADOR DE PRECIOS */
 #compare-section .filter-group {
     display: flex !important;
     gap: clamp(1rem, 3vw, 2rem);
@@ -632,7 +661,6 @@ footer {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-/* Mejorar apariencia de selects específicos */
 #brand-filter, #model-filter {
     padding: 0.8rem 1rem;
     border: 2px solid var(--border-color);
@@ -649,12 +677,10 @@ footer {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-/* Espacio entre secciones */
 #filter-section {
     margin-bottom: 2rem;
 }
 
-/* Resto de estilos para precios */
 h2 {
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -696,7 +722,6 @@ button:focus {
     background-color: #c0392b;
 }
 
-/* TABLAS RESPONSIVE - NUEVO */
 .table-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -762,23 +787,12 @@ tr:hover {
     background: white;
 }
 
-.positive {
-    color: #27ae60;
-    background: rgba(39, 174, 96, 0.1);
-}
-
-.negative {
-    color: var(--accent-color);
-    background: rgba(231, 76, 60, 0.1);
-}
-
 #comparison-text {
     font-size: clamp(1rem, 2vw, 1.2rem);
     margin-top: 15px;
     color: var(--dark-color);
 }
 
-/* Responsive para página de precios */
 @media (max-width: 768px) {
     #filter-section .filter-group-inline {
         grid-template-columns: 1fr;
@@ -813,6 +827,11 @@ tr:hover {
         padding: 12px 8px;
         font-size: 0.9rem;
     }
+    
+    .section {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -830,8 +849,6 @@ tr:hover {
         width: calc(100% + 2rem);
     }
 }
-
-/* ===== ESTILOS PARA PÁGINA DE MODELOS FIAT ===== */
 
 .fiat-container {
     max-width: min(1400px, 98%);
@@ -984,7 +1001,6 @@ tr:hover {
     color: #27ae60;
 }
 
-/* Estilos para destacar modelos con sobrepauta */
 .tiene-sobrepauta {
     background-color: rgba(255, 215, 0, 0.1) !important;
     border-left: 4px solid #FFD700;
@@ -998,7 +1014,6 @@ tr:hover {
     border-radius: 4px;
 }
 
-/* Responsive para página Fiat */
 @media (max-width: 1200px) {
     .fiat-container {
         padding: 0.5rem;
@@ -1061,14 +1076,15 @@ tr:hover {
     }
 }
 
-/* ===== CALCULADORA DE INTEGRACIONES - VERSIÓN COMPACTA ===== */
 .calculator-section {
     background: white;
     border-radius: 10px;
     padding: clamp(1rem, 2vw, 1.5rem);
-    margin: clamp(0.75rem, 2vw, 1.5rem) 0;
+    margin: clamp(0.75rem, 2vw, 1.5rem) auto;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     border: 1px solid #eaeaea;
+    max-width: min(1100px, 95%);
+    width: 95%;
 }
 
 .calculator-section h2 {
@@ -1087,19 +1103,19 @@ tr:hover {
     align-items: start;
 }
 
-/* FILTROS COMPACTOS */
 .calculator-filters {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     align-items: end;
     margin-bottom: 1rem;
+    justify-content: flex-start;
 }
 
 .calc-form-group {
     flex: 1;
-    min-width: 250px;
-    max-width: 350px;
+    min-width: min(400px, 100%);
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -1164,7 +1180,6 @@ tr:hover {
     box-shadow: 0 4px 12px rgba(192, 0, 0, 0.25);
 }
 
-/* RESULTADOS COMPACTOS */
 .calculator-results {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 8px;
@@ -1213,164 +1228,9 @@ tr:hover {
     color: var(--success-color);
 }
 
-/* ===== CALCULADORA DE INTEGRACIONES - ANCHO REDUCIDO ===== */
-.calculator-section {
-    background: white;
-    border-radius: 10px;
-    padding: clamp(1rem, 2vw, 1.5rem);
-    margin: clamp(0.75rem, 2vw, 1.5rem) auto; /* Centrado */
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    border: 1px solid #eaeaea;
-    max-width:1500px; /* ANCHO MÁXIMO REDUCIDO */
-    width: 90%; /* Se adapta al contenedor pero con máximo */
-}
-
-.calculator-section h2 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 1.25rem;
-    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-    border-bottom: 2px solid #C00;
-    padding-bottom: 0.4rem;
-}
-
-.calculator-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: clamp(0.75rem, 2vw, 1.5rem);
-    align-items: start;
-}
-
-/* FILTROS COMPACTOS */
-.calculator-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: end;
-    margin-bottom: 1rem;
-}
-
-.calc-form-group {
-    flex: 1;
-    min-width: 350px;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-}
-
-.calc-form-group label {
-    font-weight: 600;
-    color: var(--dark-color);
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-}
-
-.calc-select, .calc-input {
-    width: 100%;
-    padding: 0.6rem 0.8rem;
-    border: 1.5px solid var(--border-color);
-    border-radius: 6px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    background-color: white;
-    min-height: 38px;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.8rem center;
-    background-size: 14px 10px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-.calc-select:focus, .calc-input:focus {
-    border-color: var(--secondary-color);
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
-}
-
-.calculator-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.calc-btn {
-    background: linear-gradient(135deg, #C00 0%, #a00 100%);
-    color: white;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s;
-    margin-top: 0.5rem;
-    min-height: 38px;
-    width: 100%;
-    max-width: 250px;
-    align-self: center;
-}
-
-.calc-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.25);
-}
-
-/* RESULTADOS COMPACTOS */
-.calculator-results {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 8px;
-    padding: 1.25rem;
-    border: 1.5px solid #C00;
-    border-left: 3px solid #C00;
-}
-
-.result-card h3 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    border-bottom: 1.5px solid #C00;
-    padding-bottom: 0.4rem;
-}
-
-.result-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #dee2e6;
-    font-size: 0.9rem;
-}
-
-.result-item:last-child {
-    border-bottom: none;
-}
-
-.result-item.highlight {
-    background-color: rgba(52, 152, 219, 0.08);
-    margin: 0 -0.75rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-.result-item.final {
-    background-color: rgba(39, 174, 96, 0.15);
-    margin: 0.75rem -0.75rem -0.75rem -0.75rem;
-    padding: 0.75rem;
-    border-radius: 0 0 6px 6px;
-    font-weight: bold;
-    font-size: 1rem;
-    color: var(--success-color);
-}
-
-/* Responsive para calculadora con ancho reducido */
 @media (max-width: 768px) {
     .calculator-section {
-        max-width: 95%; /* Más ancho en móviles */
+        max-width: 95%;
         width: 95%;
         padding: 0.875rem;
     }
@@ -1423,21 +1283,22 @@ tr:hover {
     }
 }
 
-/* ESTADOS DE LOADING Y MEJORAS DE ACCESIBILIDAD */
 .loading {
     opacity: 0.7;
     pointer-events: none;
 }
 
-/* Prevenir zoom en inputs en iOS */
 @media (max-width: 768px) {
     input, select, textarea {
         font-size: 16px;
     }
 }
 
-/* Focus states mejorados para accesibilidad */
 button:focus, select:focus, input:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 2px;
+}
+
+* {
+    -webkit-overflow-scrolling: touch;
 }
