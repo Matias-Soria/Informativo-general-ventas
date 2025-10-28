@@ -1,4 +1,47 @@
 // =======================================================================
+// MENÚ HAMBURGUESA - VERSIÓN MEJORADA
+// =======================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Inicializando menú hamburguesa...');
+    
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbarMenu = document.querySelector('.navbar ul');
+    
+    if (menuToggle && navbarMenu) {
+        console.log('✅ Elementos del menú encontrados');
+        
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            console.log('📱 Menú hamburguesa clickeado');
+            navbarMenu.classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer clic fuera de él
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.navbar') && !event.target.closest('.menu-toggle')) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll('.navbar a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+            });
+        });
+    } else {
+        console.warn('❌ Elementos del menú no encontrados');
+    }
+});
+
+// =======================================================================
+// DEBUG - CONFIRMAR VERSIÓN NUEVA
+// =======================================================================
+console.log('✅ VERSIÓN NUEVA DEL SCRIPT CARGADA - ' + new Date().toLocaleTimeString());
+console.log('🚀 Calculadora de integraciones MEJORADA cargada');
+
+// =======================================================================
 // COMPARADOR DE EQUIPAMIENTOS (VERSIÓN CORREGIDA)
 // =======================================================================
 function initComparadorEquipamientos() {

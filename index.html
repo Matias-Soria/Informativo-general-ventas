@@ -120,34 +120,8 @@
         </footer>
     </div>
 
-    <script src="./Javascript/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navbarMenu = document.querySelector('.navbar ul');
-            
-            if (menuToggle && navbarMenu) {
-                menuToggle.addEventListener('click', function() {
-                    navbarMenu.classList.toggle('active');
-                });
-                
-                // Cerrar menú al hacer clic fuera de él
-                document.addEventListener('click', function(event) {
-                    if (!event.target.closest('.navbar') && !event.target.closest('.menu-toggle')) {
-                        navbarMenu.classList.remove('active');
-                    }
-                });
-                
-                // Cerrar menú al hacer clic en un enlace (MEJORA ADICIONAL)
-                const navLinks = document.querySelectorAll('.navbar a');
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        navbarMenu.classList.remove('active');
-                    });
-                });
-            }
-        });
-    </script>
+    <!-- SOLO UN SCRIPT - EL PRINCIPAL -->
+    <script src="./Javascript/script.js?v=4"></script>
 </body>
 
 </html>
