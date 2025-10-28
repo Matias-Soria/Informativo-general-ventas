@@ -299,16 +299,16 @@ function initComparadorEquipamientos() {
 }
 
 // =======================================================================
-// COMPARADOR DE PRECIOS
+// COMPARADOR DE PRECIOS - VERSIÓN CORREGIDA
 // =======================================================================
 function initComparadorPrecios() {
-    // Limpiar localStorage para evitar conflictos
-    localStorage.removeItem('vehicles');
+    console.log('🔄 Inicializando comparador de precios...');
 
     // =======================================================================
-    // DATOS DE VEHÍCULOS FIAT 
+    // DATOS DE VEHÍCULOS 
     // =======================================================================
-    const fiatVehicles = [
+    const vehiclesData = [
+        // FIAT
         { id: 1001, brand: "Fiat", model: "Cronos", version: "Like 1.3 GSE MY26", price: 28519000 },
         { id: 1002, brand: "Fiat", model: "Cronos", version: "Drive 1.3 GSE PACK PLUS MY26", price: 34100000 },
         { id: 1003, brand: "Fiat", model: "Cronos", version: "Drive 1.3L GSE CVT PACK PLUS MY26", price: 34305000 },
@@ -332,13 +332,9 @@ function initComparadorPrecios() {
         { id: 1026, brand: "Fiat", model: "Titano", version: "Endurance MT 4X4", price: 49454000 },
         { id: 1027, brand: "Fiat", model: "Titano", version: "Freedom MT 4X4", price: 54457000 },
         { id: 1028, brand: "Fiat", model: "Titano", version: "Freedom Plus AT 4X4", price: 59800000 },
-        { id: 1029, brand: "Fiat", model: "Titano", version: "Ranch AT 4X4", price: 64575000 }
-    ];
+        { id: 1029, brand: "Fiat", model: "Titano", version: "Ranch AT 4X4", price: 64575000 },
 
-    // =======================================================================
-    // DATOS DE VEHÍCULOS OTRAS MARCAS
-    // =======================================================================
-    const otherBrandsVehicles = [
+        // PEUGEOT
         { id: 2002, brand: "Peugeot", model: "208", version: "Allure MT AM26", price: 33830000 },
         { id: 2003, brand: "Peugeot", model: "208", version: "Allure AT AM26", price: 35580000 },
         { id: 2004, brand: "Peugeot", model: "208", version: "Allure PK T200 AM26", price: 38220000 },
@@ -350,6 +346,8 @@ function initComparadorPrecios() {
         { id: 2010, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 120 AM25", price: 50590000 },
         { id: 2011, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 AM26", price: 53830000 },
         { id: 2012, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 6P AM26", price: 58950000 },
+
+        // JEEP
         { id: 2013, brand: "Jeep", model: "Renegade", version: "Sport T270 1.3 AT6 FWD", price: 43856400 },
         { id: 2014, brand: "Jeep", model: "Renegade", version: "Longitude T270 AT6 FWD MY25", price: 48487200 },
         { id: 2015, brand: "Jeep", model: "Renegade", version: "S T270 1.3 AT6 MY25", price: 49576800 },
@@ -361,31 +359,16 @@ function initComparadorPrecios() {
         { id: 2021, brand: "Jeep", model: "Commander", version: "Limited GSE 1.3T FWD AT6 BZ MY24", price: 65239800 },
         { id: 2022, brand: "Jeep", model: "Commander", version: "Overland 2.0L GME AT9 4X4", price: 79268400 },
         { id: 2023, brand: "Jeep", model: "Commander", version: "Blackhawk 2.0l GME AT9 4x4", price: 79949400 },
+
+        // RAM
         { id: 2024, brand: "Ram", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 64967400 },
         { id: 2025, brand: "Ram", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 65512200 },
-        { id: 2026, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 74092800 },
+        { id: 2026, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 74092800 }
     ];
 
-    // Función para cargar vehículos
-    function loadVehicles() {
-        // Combinar todos los vehículos
-        const allVehicles = [...fiatVehicles, ...otherBrandsVehicles];
-
-        // Guardar en localStorage
-        localStorage.setItem('vehicles', JSON.stringify(allVehicles));
-
-        console.log('Vehículos cargados:', allVehicles.length);
-        return allVehicles;
-    }
-
-    // Cargar vehículos
-    let vehicles = loadVehicles();
-
     // =======================================================================
-    // ELEMENTOS DEL DOM
+    // ELEMENTOS DEL DOM - CON VERIFICACIÓN
     // =======================================================================
-
-    // Función segura para obtener elementos
     function getElement(id) {
         const element = document.getElementById(id);
         if (!element) {
@@ -395,7 +378,6 @@ function initComparadorPrecios() {
         return element;
     }
 
-    // Obtener elementos
     const brandFilter = getElement('brand-filter');
     const modelFilter = getElement('model-filter');
     const vehiclesList = getElement('vehicles-list');
@@ -409,27 +391,22 @@ function initComparadorPrecios() {
     const priceDifference = getElement('price-difference');
     const comparisonText = getElement('comparison-text');
 
-    // Verificar que todos los elementos necesarios existan
-    const requiredElements = [
-        brandFilter, modelFilter, vehiclesList, vehicle1Select, vehicle2Select,
-        compareButton, resetButton, comparisonResult, vehicle1Details,
-        vehicle2Details, priceDifference, comparisonText
-    ];
-
-    if (requiredElements.some(element => !element)) {
-        console.error('❌ Faltan elementos requeridos para la página de precios');
+    // Verificar elementos críticos
+    if (!brandFilter || !vehiclesList) {
+        console.error('❌ Elementos críticos no encontrados para la página de precios');
         return;
     }
 
-    console.log('✅ Todos los elementos del DOM encontrados');
+    console.log('✅ Elementos del DOM cargados correctamente');
 
     // =======================================================================
-    // FUNCIONALIDAD
+    // FUNCIONALIDAD PRINCIPAL
     // =======================================================================
+    let vehicles = vehiclesData;
 
     // Cargar marcas en el filtro
     function loadBrandFilter() {
-        const brands = [...new Set(vehicles.map(vehicle => vehicle.brand))];
+        const brands = [...new Set(vehicles.map(vehicle => vehicle.brand))].sort();
         brandFilter.innerHTML = '<option value="">Todas las marcas</option>';
 
         brands.forEach(brand => {
@@ -440,7 +417,7 @@ function initComparadorPrecios() {
         });
     }
 
-    // Cargar modelos en el filtro
+    // Cargar modelos en el filtro - CORREGIDO
     function loadModelFilter() {
         const selectedBrand = brandFilter.value;
         let filteredVehicles = vehicles;
@@ -449,7 +426,7 @@ function initComparadorPrecios() {
             filteredVehicles = vehicles.filter(vehicle => vehicle.brand === selectedBrand);
         }
 
-        const models = [...new Set(filteredVehicles.map(vehicle => vehicle.model))];
+        const models = [...new Set(filteredVehicles.map(vehicle => vehicle.model))].sort();
         modelFilter.innerHTML = '<option value="">Todos los modelos</option>';
 
         models.forEach(model => {
@@ -458,54 +435,37 @@ function initComparadorPrecios() {
             option.textContent = model;
             modelFilter.appendChild(option);
         });
+
+        // Actualizar la tabla
+        renderVehicles();
     }
 
-    // Cargar versiones en los selects de comparación
-    function loadVersionSelects(brand = '', model = '') {
-        let filteredVehicles = vehicles;
-
-        if (brand) {
-            filteredVehicles = filteredVehicles.filter(vehicle => vehicle.brand === brand);
-        }
-
-        if (model) {
-            filteredVehicles = filteredVehicles.filter(vehicle => vehicle.model === model);
-        }
-
-        vehicle1Select.innerHTML = '<option value="">-- Seleccione una versión --</option>';
-        vehicle2Select.innerHTML = '<option value="">-- Seleccione una versión --</option>';
-
-        filteredVehicles.forEach(vehicle => {
-            const option1 = document.createElement('option');
-            option1.value = vehicle.id;
-            option1.textContent = `${vehicle.brand} ${vehicle.model} ${vehicle.version} - $${vehicle.price.toLocaleString()}`;
-            vehicle1Select.appendChild(option1);
-
-            const option2 = document.createElement('option');
-            option2.value = vehicle.id;
-            option2.textContent = `${vehicle.brand} ${vehicle.model} ${vehicle.version} - $${vehicle.price.toLocaleString()}`;
-            vehicle2Select.appendChild(option2);
-        });
-    }
-
-    // Mostrar la lista de vehículos
+    // Mostrar vehículos en la tabla - CORREGIDO
     function renderVehicles() {
         vehiclesList.innerHTML = '';
 
         const selectedBrand = brandFilter.value;
         const selectedModel = modelFilter.value;
+        
         let filteredVehicles = vehicles;
 
+        // Aplicar filtros
         if (selectedBrand) {
             filteredVehicles = filteredVehicles.filter(vehicle => vehicle.brand === selectedBrand);
         }
-
+        
         if (selectedModel) {
-            filteredVehicles = filteredVehicles.filter(vehicle => vehicle.model === model);
+            filteredVehicles = filteredVehicles.filter(vehicle => vehicle.model === selectedModel);
         }
 
         if (filteredVehicles.length === 0) {
-            vehiclesList.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 30px; color: #777;">No hay vehículos para mostrar.</td></tr>';
+            vehiclesList.innerHTML = `
+                <tr>
+                    <td colspan="4" style="text-align: center; padding: 30px; color: #777;">
+                        No hay vehículos para mostrar con los filtros seleccionados
+                    </td>
+                </tr>
+            `;
             return;
         }
 
@@ -521,19 +481,46 @@ function initComparadorPrecios() {
         });
     }
 
-    // Event listeners
-    brandFilter.addEventListener('change', function () {
-        loadModelFilter();
-        renderVehicles();
-        loadVersionSelects(this.value, '');
-    });
+    // Cargar versiones en los selects de comparación
+    function loadVersionSelects() {
+        const selectedBrand = brandFilter.value;
+        const selectedModel = modelFilter.value;
+        
+        let filteredVehicles = vehicles;
 
-    modelFilter.addEventListener('change', function () {
-        renderVehicles();
-        loadVersionSelects(brandFilter.value, this.value);
-    });
+        if (selectedBrand) {
+            filteredVehicles = filteredVehicles.filter(vehicle => vehicle.brand === selectedBrand);
+        }
 
-    compareButton.addEventListener('click', function () {
+        if (selectedModel) {
+            filteredVehicles = filteredVehicles.filter(vehicle => vehicle.model === selectedModel);
+        }
+
+        // Limpiar selects
+        if (vehicle1Select) vehicle1Select.innerHTML = '<option value="">-- Seleccione una versión --</option>';
+        if (vehicle2Select) vehicle2Select.innerHTML = '<option value="">-- Seleccione una versión --</option>';
+
+        filteredVehicles.forEach(vehicle => {
+            if (vehicle1Select) {
+                const option1 = document.createElement('option');
+                option1.value = vehicle.id;
+                option1.textContent = `${vehicle.brand} ${vehicle.model} ${vehicle.version} - $${vehicle.price.toLocaleString()}`;
+                vehicle1Select.appendChild(option1);
+            }
+
+            if (vehicle2Select) {
+                const option2 = document.createElement('option');
+                option2.value = vehicle.id;
+                option2.textContent = `${vehicle.brand} ${vehicle.model} ${vehicle.version} - $${vehicle.price.toLocaleString()}`;
+                vehicle2Select.appendChild(option2);
+            }
+        });
+    }
+
+    // Comparar vehículos
+    function compareVehicles() {
+        if (!vehicle1Select || !vehicle2Select) return;
+
         const vehicle1Id = parseInt(vehicle1Select.value);
         const vehicle2Id = parseInt(vehicle2Select.value);
 
@@ -550,90 +537,92 @@ function initComparadorPrecios() {
         const vehicle1 = vehicles.find(v => v.id === vehicle1Id);
         const vehicle2 = vehicles.find(v => v.id === vehicle2Id);
 
-        const difference = vehicle1.price - vehicle2.price;
-
-        vehicle1Details.textContent = `${vehicle1.brand} ${vehicle1.model} ${vehicle1.version}: $${vehicle1.price.toLocaleString()}`;
-        vehicle2Details.textContent = `${vehicle2.brand} ${vehicle2.model} ${vehicle2.version}: $${vehicle2.price.toLocaleString()}`;
-
-        if (difference > 0) {
-            priceDifference.textContent = `Diferencia: +$${difference.toLocaleString()}`;
-            priceDifference.className = 'price-difference positive';
-            comparisonText.textContent = `El ${vehicle1.brand} ${vehicle1.model} ${vehicle1.version} es más caro que el ${vehicle2.brand} ${vehicle2.model} ${vehicle2.version}`;
-        } else if (difference < 0) {
-            priceDifference.textContent = `Diferencia: -$${Math.abs(difference).toLocaleString()}`;
-            priceDifference.className = 'price-difference negative';
-            comparisonText.textContent = `El ${vehicle1.brand} ${vehicle1.model} ${vehicle1.version} es más barato que el ${vehicle2.brand} ${vehicle2.model} ${vehicle2.version}`;
-        } else {
-            priceDifference.textContent = 'Mismo precio';
-            priceDifference.className = 'price-difference';
-            comparisonText.textContent = 'Ambas versiones tienen el mismo precio';
+        if (!vehicle1 || !vehicle2) {
+            alert('Error: No se encontraron los vehículos seleccionados.');
+            return;
         }
 
-        comparisonResult.style.display = 'block';
+        const difference = vehicle1.price - vehicle2.price;
+
+        // Mostrar detalles
+        if (vehicle1Details) vehicle1Details.textContent = `${vehicle1.brand} ${vehicle1.model} ${vehicle1.version}: $${vehicle1.price.toLocaleString()}`;
+        if (vehicle2Details) vehicle2Details.textContent = `${vehicle2.brand} ${vehicle2.model} ${vehicle2.version}: $${vehicle2.price.toLocaleString()}`;
+
+        // Mostrar diferencia
+        if (priceDifference) {
+            if (difference > 0) {
+                priceDifference.textContent = `Diferencia: +$${difference.toLocaleString()}`;
+                priceDifference.className = 'price-difference positive';
+                if (comparisonText) comparisonText.textContent = `El ${vehicle1.brand} ${vehicle1.model} es más caro que el ${vehicle2.brand} ${vehicle2.model}`;
+            } else if (difference < 0) {
+                priceDifference.textContent = `Diferencia: -$${Math.abs(difference).toLocaleString()}`;
+                priceDifference.className = 'price-difference negative';
+                if (comparisonText) comparisonText.textContent = `El ${vehicle1.brand} ${vehicle1.model} es más barato que el ${vehicle2.brand} ${vehicle2.model}`;
+            } else {
+                priceDifference.textContent = 'Mismo precio';
+                priceDifference.className = 'price-difference';
+                if (comparisonText) comparisonText.textContent = 'Ambas versiones tienen el mismo precio';
+            }
+        }
+
+        // Mostrar resultado
+        if (comparisonResult) comparisonResult.style.display = 'block';
+    }
+
+    // Reiniciar comparación
+    function resetComparison() {
+        if (vehicle1Select) vehicle1Select.value = '';
+        if (vehicle2Select) vehicle2Select.value = '';
+        if (comparisonResult) comparisonResult.style.display = 'none';
+    }
+
+    // =======================================================================
+    // EVENT LISTENERS
+    // =======================================================================
+    brandFilter.addEventListener('change', function() {
+        loadModelFilter();
+        loadVersionSelects();
     });
 
-    resetButton.addEventListener('click', function () {
-        vehicle1Select.value = '';
-        vehicle2Select.value = '';
-        comparisonResult.style.display = 'none';
+    modelFilter.addEventListener('change', function() {
+        renderVehicles();
+        loadVersionSelects();
     });
 
-    // Inicializar
+    if (compareButton) {
+        compareButton.addEventListener('click', compareVehicles);
+    }
+
+    if (resetButton) {
+        resetButton.addEventListener('click', resetComparison);
+    }
+
+    // =======================================================================
+    // INICIALIZACIÓN
+    // =======================================================================
     loadBrandFilter();
     loadModelFilter();
-    loadVersionSelects('', '');
+    loadVersionSelects();
     renderVehicles();
 
     console.log('✅ Comparador de precios inicializado correctamente');
 }
 
 // =======================================================================
-// DETECCIÓN MEJORADA DE PÁGINAS
-// =======================================================================
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM cargado - Iniciando aplicación');
-
-    // Detectar páginas de forma más precisa
-    const currentPath = window.location.pathname;
-    const isIndexPage = currentPath.endsWith('index.html') || currentPath.endsWith('/');
-    const isPreciosPage = currentPath.includes('precios.html');
-    const isPautasPage = currentPath.includes('pautas.html');
-
-    console.log('Página detectada:', {
-        index: isIndexPage,
-        precios: isPreciosPage,
-        pautas: isPautasPage,
-        path: currentPath
-    });
-
-    // Ejecutar código según el tipo de página
-    if (isIndexPage) {
-        console.log('✅ Inicializando comparador de equipamientos...');
-        initComparadorEquipamientos();
-    }
-
-    if (isPreciosPage) {
-        console.log('✅ Inicializando comparador de precios...');
-        initComparadorPrecios();
-    }
-
-    if (isPautasPage) {
-        console.log('✅ Inicializando página de modelos comerciales...');
-        initFiatModelsPage();
-    }
-});
-
-// =======================================================================
-// PÁGINA DE MODELOS COMERCIALES (FIAT + PEUGEOT + JEEP) - MEJORADA
+// PÁGINA DE PAUTAS COMERCIALES - VERSIÓN COMPLETA Y FUNCIONAL
 // =======================================================================
 function initFiatModelsPage() {
-    console.log('Inicializando página de modelos comerciales...');
+    console.log('🔄 Inicializando página de pautas comerciales...');
 
-    // Datos de los modelos con múltiples financiaciones
-    const fiatModels = [
+    // =======================================================================
+    // DATOS COMPLETOS DE PAUTAS CON PRECIOS
+    // =======================================================================
+    const allModelsData = [
+        // FIAT
         {
             marca: "FIAT",
-            modelo: "MOBI TREKKING 1.O",
+            modelo: "MOBI TREKKING 1.0",
+            precio: 24964000,
             financiaciones: [
                 {
                     tipo: "80/20",
@@ -651,6 +640,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "ARGO DRIVE PACK PLUS",
+            precio: 27898000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -668,6 +658,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "CRONOS DRIVE PACK PLUS",
+            precio: 34100000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -696,6 +687,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "PULSE DRIVE",
+            precio: 34015000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -713,6 +705,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "FASTBACK TURBO 270",
+            precio: 42117000,
             financiaciones: [
                 {
                     tipo: "60/40",
@@ -730,6 +723,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "FIORINO ENDURANCE",
+            precio: 27459000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -747,6 +741,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "STRADA FREEDOM",
+            precio: 34872000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -764,6 +759,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "TORO FREEDOM",
+            precio: 43917000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -781,6 +777,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "TITANO ENDURANCE",
+            precio: 46726000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -794,14 +791,13 @@ function initFiatModelsPage() {
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
-        }
-    ];
+        },
 
-    // Datos de los modelos Peugeot
-    const peugeotModels = [
+        // PEUGEOT
         {
             marca: "PEUGEOT",
             modelo: "208 ALLURE 1.6 AM26",
+            precio: 33830000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -813,23 +809,13 @@ function initFiatModelsPage() {
                     suscrPremio: "$360.000",
                     bonificacion: "$500.000",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
-                },
-                {
-                    tipo: "70/30",
-                    cuotas: "120",
-                    sobrepauta: "NOV 20%",
-                    pea1: "2-12 / 30%",
-                    pea2: "",
-                    suscrNeutra: "$260.000",
-                    suscrPremio: "$300.000",
-                    bonificacion: "$350.000",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
             ]
         },
         {
             marca: "PEUGEOT",
             modelo: "208 ALLURE AT AM26",
+            precio: 35580000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -847,6 +833,7 @@ function initFiatModelsPage() {
         {
             marca: "PEUGEOT",
             modelo: "2008 ACTIVE T200 AM26",
+            precio: 41340000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -864,6 +851,7 @@ function initFiatModelsPage() {
         {
             marca: "PEUGEOT",
             modelo: "2008 ALLURE T200 AM26",
+            precio: 45290000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -878,47 +866,12 @@ function initFiatModelsPage() {
                 }
             ]
         },
-        {
-            marca: "PEUGEOT",
-            modelo: "PARTNER CONFORT 1.6 HDI",
-            financiaciones: [
-                {
-                    tipo: "70/30",
-                    cuotas: "84",
-                    sobrepauta: "NOV 20%",
-                    pea1: "6-9-12 / 30%",
-                    pea2: "",
-                    suscrNeutra: "$300.000",
-                    suscrPremio: "$340.000",
-                    bonificacion: "$500.000",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
-                }
-            ]
-        },
-        {
-            marca: "PEUGEOT",
-            modelo: "EXPERT L3 HDI",
-            financiaciones: [
-                {
-                    tipo: "70/30",
-                    cuotas: "84",
-                    sobrepauta: "NOV 35%",
-                    pea1: "6-24-36 / 30%",
-                    pea2: "",
-                    suscrNeutra: "$470.000",
-                    suscrPremio: "$510.000",
-                    bonificacion: "$800.000",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
-                }
-            ]
-        }
-    ];
 
-    // Datos de los modelos Jeep
-    const jeepModels = [
+        // JEEP
         {
             marca: "JEEP",
             modelo: "RENEGADE SPORT",
+            precio: 43856400,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -936,6 +889,7 @@ function initFiatModelsPage() {
         {
             marca: "JEEP",
             modelo: "COMPASS SPORT 270 AT6",
+            precio: 52573200,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -949,45 +903,57 @@ function initFiatModelsPage() {
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
-        },
-        {
-            marca: "JEEP",
-            modelo: "RAM REBEL",
-            financiaciones: [
-                {
-                    tipo: "60/40",
-                    cuotas: "84",
-                    sobrepauta: "NOV 50%",
-                    pea1: "4-9-12-24-36 / 40%",
-                    pea2: "",
-                    suscrNeutra: "$540.000",
-                    suscrPremio: "$580.000",
-                    bonificacion: "$2.500.000 si adjudica cuota 2 caso contrario $700.000 en GR",
-                    retiro: "6% + DA (2.5%)"
-                }
-            ]
         }
     ];
 
-    // Combinar todos los modelos
-    const allModels = [...fiatModels, ...peugeotModels, ...jeepModels];
+    // =======================================================================
+    // ELEMENTOS DEL DOM PARA PAUTAS
+    // =======================================================================
+    const brandFilter = document.getElementById('brandFilter');
+    const modelFilter = document.getElementById('modelFilter');
+    const sobrepautaFilter = document.getElementById('sobrepautaFilter');
+    const resetFilters = document.getElementById('resetFilters');
+    const modelsTable = document.getElementById('modelsTable');
 
-    // Aplanar datos para la tabla (una fila por financiación)
+    if (!brandFilter || !modelsTable) {
+        console.error('❌ Elementos críticos no encontrados para la página de pautas');
+        return;
+    }
+
+    // =======================================================================
+    // FUNCIONALIDAD PRINCIPAL PAUTAS
+    // =======================================================================
+    
+    // Aplanar datos para la tabla
     const tableData = [];
-    allModels.forEach(model => {
+    allModelsData.forEach(model => {
         model.financiaciones.forEach(financiacion => {
             tableData.push({
                 marca: model.marca,
                 modelo: model.modelo,
-                ...financiacion
+                precio: model.precio,
+                tipo: financiacion.tipo,
+                cuotas: financiacion.cuotas,
+                sobrepauta: financiacion.sobrepauta,
+                pea1: financiacion.pea1,
+                pea2: financiacion.pea2,
+                suscrPremio: financiacion.suscrPremio,
+                suscrNeutra: financiacion.suscrNeutra,
+                bonificacion: financiacion.bonificacion,
+                retiro: financiacion.retiro
             });
         });
     });
 
-    // Función para cargar los datos en la tabla
+    // Cargar datos en la tabla
     function loadTableData(models) {
-        const tableBody = document.querySelector('#modelsTable tbody');
-        tableBody.innerHTML = ''; // Limpiar tabla
+        const tableBody = modelsTable.querySelector('tbody');
+        if (!tableBody) {
+            console.error('No se encontró el tbody de la tabla');
+            return;
+        }
+
+        tableBody.innerHTML = '';
 
         if (models.length === 0) {
             const row = document.createElement('tr');
@@ -1007,8 +973,8 @@ function initFiatModelsPage() {
 
             row.innerHTML = `
                 <td class="fiat-model-name">${model.marca}</td>
-                <td>${model.modelo}<br><small>Financiación: ${model.tipo}</small></td>
-                <td>${model.financiacion || model.tipo}</td>
+                <td>${model.modelo}</td>
+                <td>${model.tipo}</td>
                 <td>${model.cuotas}</td>
                 <td class="${tieneSobrepauta ? 'sobrepauta-activa' : ''}">${model.sobrepauta || '-'}</td>
                 <td>${model.pea1 || '-'}</td>
@@ -1023,25 +989,26 @@ function initFiatModelsPage() {
         });
     }
 
-    // Función para filtrar los modelos
+    // Filtrar modelos
     function filterModels() {
-        const modelFilter = document.getElementById('modelFilter').value.toLowerCase();
-        const brandFilter = document.getElementById('brandFilter').value;
-        const sobrepautaFilter = document.getElementById('sobrepautaFilter').value;
+        const modelFilterValue = modelFilter.value.toLowerCase();
+        const brandFilterValue = brandFilter.value;
+        const sobrepautaFilterValue = sobrepautaFilter.value;
 
         const filteredModels = tableData.filter(model => {
             // Filtrar por modelo (nombre)
-            const matchesModel = model.modelo.toLowerCase().includes(modelFilter) ||
-                model.marca.toLowerCase().includes(modelFilter);
+            const matchesModel = model.modelo.toLowerCase().includes(modelFilterValue) ||
+                                model.marca.toLowerCase().includes(modelFilterValue);
 
             // Filtrar por marca
-            const matchesBrand = brandFilter === '' || model.marca.toLowerCase() === brandFilter.toLowerCase();
+            const matchesBrand = brandFilterValue === '' || 
+                               model.marca.toLowerCase() === brandFilterValue.toLowerCase();
 
             // Filtrar por sobrepauta
             let matchesSobrepauta = true;
-            if (sobrepautaFilter === 'con') {
+            if (sobrepautaFilterValue === 'con') {
                 matchesSobrepauta = model.sobrepauta && model.sobrepauta.trim() !== "";
-            } else if (sobrepautaFilter === 'sin') {
+            } else if (sobrepautaFilterValue === 'sin') {
                 matchesSobrepauta = !model.sobrepauta || model.sobrepauta.trim() === "";
             }
 
@@ -1051,10 +1018,9 @@ function initFiatModelsPage() {
         loadTableData(filteredModels);
     }
 
-    // Cargar marcas en el filtro de marca
+    // Cargar marcas en el filtro
     function loadBrandFilter() {
-        const brandFilter = document.getElementById('brandFilter');
-        const brands = [...new Set(tableData.map(model => model.marca))];
+        const brands = [...new Set(tableData.map(model => model.marca))].sort();
 
         brands.forEach(brand => {
             const option = document.createElement('option');
@@ -1064,409 +1030,370 @@ function initFiatModelsPage() {
         });
     }
 
-    // Configurar event listeners
-    document.getElementById('modelFilter').addEventListener('input', filterModels);
-    document.getElementById('brandFilter').addEventListener('change', filterModels);
-    document.getElementById('sobrepautaFilter').addEventListener('change', filterModels);
+    // =======================================================================
+    // CALCULADORA DE INTEGRACIONES - VERSIÓN MEJORADA Y DEBUGGEADA
+    // =======================================================================
+    function initCalculadora() {
+        console.log('🔄 Inicializando calculadora de integraciones...');
 
-    // Configurar botón de reinicio
-    document.getElementById('resetFilters').addEventListener('click', function () {
-        document.getElementById('modelFilter').value = '';
-        document.getElementById('brandFilter').value = '';
-        document.getElementById('sobrepautaFilter').value = 'todos';
+        const marcaCalculadora = document.getElementById('marcaCalculadora');
+        const vehicleSelect = document.getElementById('vehicleSelect');
+        const financiacionSelect = document.getElementById('financiacionSelect');
+        const precioVehiculo = document.getElementById('precioVehiculo');
+        const tipoAdjudicacion = document.getElementById('tipoAdjudicacion');
+        const cuotaAdjudicar = document.getElementById('cuotaAdjudicar');
+        const calcularBtn = document.getElementById('calcularBtn');
+
+        if (!vehicleSelect || !calcularBtn) {
+            console.warn('❌ Elementos de la calculadora no encontrados');
+            return;
+        }
+
+        console.log('✅ Todos los elementos de calculadora encontrados');
+
+        // Cargar marcas en la calculadora
+        function loadMarcasCalculadora() {
+            if (!marcaCalculadora) return;
+            
+            marcaCalculadora.innerHTML = '<option value="">Todas las marcas</option>';
+            const marcas = [...new Set(allModelsData.map(model => model.marca))].sort();
+            
+            marcas.forEach(marca => {
+                const option = document.createElement('option');
+                option.value = marca;
+                option.textContent = marca;
+                marcaCalculadora.appendChild(option);
+            });
+            
+            console.log('Marcas cargadas en calculadora:', marcas.length);
+        }
+
+        // Cargar vehículos en la calculadora
+        function loadVehiclesCalculadora(marcaFiltro = '') {
+            console.log('Cargando vehículos para marca:', marcaFiltro);
+            
+            vehicleSelect.innerHTML = '<option value="">-- Seleccione un vehículo --</option>';
+            financiacionSelect.innerHTML = '<option value="">-- Seleccione financiación --</option>';
+            precioVehiculo.value = '';
+            
+            const modelsToShow = marcaFiltro 
+                ? allModelsData.filter(model => model.marca === marcaFiltro)
+                : allModelsData;
+
+            console.log('Modelos a mostrar:', modelsToShow.length);
+
+            modelsToShow.forEach(model => {
+                const option = document.createElement('option');
+                option.value = model.modelo;
+                option.textContent = `${model.marca} ${model.modelo}`;
+                option.setAttribute('data-precio', model.precio);
+                option.setAttribute('data-marca', model.marca);
+                option.setAttribute('data-financiaciones', JSON.stringify(model.financiaciones));
+                vehicleSelect.appendChild(option);
+            });
+            
+            console.log('Vehículos cargados:', modelsToShow.length);
+        }
+
+        // Cargar financiaciones cuando se selecciona un vehículo - VERSIÓN CORREGIDA
+        function loadFinanciaciones() {
+            console.log('Ejecutando loadFinanciaciones...');
+            
+            const selectedIndex = vehicleSelect.selectedIndex;
+            if (selectedIndex === -1 || selectedIndex === 0) {
+                financiacionSelect.innerHTML = '<option value="">-- Seleccione financiación --</option>';
+                precioVehiculo.value = '';
+                console.log('No hay vehículo seleccionado');
+                return;
+            }
+
+            const selectedOption = vehicleSelect.options[selectedIndex];
+            const precio = selectedOption.getAttribute('data-precio');
+            const financiacionesData = selectedOption.getAttribute('data-financiaciones');
+            
+            if (!financiacionesData) {
+                console.error('No se encontraron datos de financiaciones');
+                return;
+            }
+
+            const financiaciones = JSON.parse(financiacionesData);
+            
+            // Actualizar precio
+            precioVehiculo.value = `$${parseInt(precio).toLocaleString()}`;
+            
+            // Cargar financiaciones - LIMPIAR PRIMERO
+            financiacionSelect.innerHTML = '';
+            
+            // Agregar opción por defecto
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.textContent = '-- Seleccione financiación --';
+            financiacionSelect.appendChild(defaultOption);
+            
+            // Agregar opciones de financiación
+            financiaciones.forEach((fin, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = `${fin.tipo} - ${fin.cuotas} cuotas`;
+                financiacionSelect.appendChild(option);
+            });
+            
+            console.log('Financiaciones cargadas:', financiaciones.length);
+            console.log('Opciones en select:', financiacionSelect.options.length);
+        }
+
+        // Función mejorada para extraer números de strings como "$350.000", "1.700.000", etc.
+        function extractNumber(str) {
+            if (!str) return 0;
+            
+            console.log('Extrayendo número de:', str);
+            
+            // Caso especial para bonificaciones complejas
+            if (str.includes('si adjudica') || str.includes('caso contrario')) {
+                // Para strings como "$1.700.000 si adjudica cuota 2 caso contrario $500.000 en GR"
+                // Tomar el primer número encontrado (el más favorable)
+                const firstMatch = str.match(/\$?(\d+[\d.]*\d+)/);
+                if (firstMatch) {
+                    const numberStr = firstMatch[1].replace(/\./g, '');
+                    const result = parseInt(numberStr);
+                    console.log('Número extraído (caso complejo):', result);
+                    return result;
+                }
+            }
+            
+            // Para casos normales como "$350.000", "350.000", etc.
+            const match = str.toString().match(/\$?(\d+[\d.]*\d+)/);
+            if (match) {
+                const numberStr = match[1].replace(/\./g, '');
+                const result = parseInt(numberStr);
+                console.log('Número extraído:', result);
+                return result;
+            }
+            
+            console.log('No se pudo extraer número, retornando 0');
+            return 0;
+        }
+
+        // Función mejorada para extraer porcentaje de strings como "6-9-12 / 40%", "4-9-12/40%", etc.
+        function extractPercentage(text, cuotaBuscada) {
+            if (!text) {
+                console.log('Texto vacío para extraer porcentaje');
+                return 0;
+            }
+            
+            console.log(`Buscando porcentaje para cuota ${cuotaBuscada} en:`, text);
+            
+            // Primero intentar: buscar patrones específicos como "cuota / porcentaje%"
+            const regexEspecifico = new RegExp(`(^|\\s|,)${cuotaBuscada}\\s*[\\/-]\\s*(\\d+)%`, 'i');
+            const matchEspecifico = text.match(regexEspecifico);
+            if (matchEspecifico) {
+                const porcentaje = parseInt(matchEspecifico[2]);
+                console.log('Porcentaje encontrado (específico):', porcentaje);
+                return porcentaje;
+            }
+            
+            // Segundo intento: buscar en listas como "4-6-9-12 / 35%"
+            const listMatch = text.match(/([\d\-\/]+)\s*\/\s*(\d+)%/);
+            if (listMatch) {
+                const cuotasStr = listMatch[1];
+                const porcentaje = parseInt(listMatch[2]);
+                
+                // Verificar si la cuota buscada está en la lista
+                const cuotas = cuotasStr.split(/[-\/]/).map(c => c.trim());
+                if (cuotas.includes(cuotaBuscada.toString())) {
+                    console.log('Porcentaje encontrado (en lista):', porcentaje);
+                    return porcentaje;
+                }
+            }
+            
+            // Tercer intento: buscar porcentajes generales como "40%"
+            const porcentajeGeneral = text.match(/(\d+)%/);
+            if (porcentajeGeneral) {
+                const porcentaje = parseInt(porcentajeGeneral[1]);
+                console.log('Porcentaje general encontrado:', porcentaje);
+                return porcentaje;
+            }
+            
+            console.log('No se encontró porcentaje, retornando 0');
+            return 0;
+        }
+
+        // Calcular integración - VERSIÓN MEJORADA CON MÁS DEBUG
+        function calcularIntegracion() {
+            const selectedVehicle = vehicleSelect.options[vehicleSelect.selectedIndex];
+            const financiacionIndex = financiacionSelect.value;
+            
+            if (!selectedVehicle || !selectedVehicle.value || financiacionIndex === '') {
+                alert('Por favor, seleccione un vehículo y tipo de financiación.');
+                return;
+            }
+
+            const precio = parseInt(selectedVehicle.getAttribute('data-precio'));
+            const financiaciones = JSON.parse(selectedVehicle.getAttribute('data-financiaciones'));
+            const financiacion = financiaciones[parseInt(financiacionIndex)];
+            const tipoAdj = tipoAdjudicacion.value;
+            const cuotaAdj = parseInt(cuotaAdjudicar.value);
+
+            console.log('=== INICIO CÁLCULO ===');
+            console.log('Datos para cálculo:', {
+                vehiculo: selectedVehicle.textContent,
+                precio,
+                tipoAdjudicacion: tipoAdj,
+                cuotaAdjudicar: cuotaAdj,
+                financiacionSeleccionada: financiacion
+            });
+
+            // Calcular porcentaje según tipo de adjudicación
+            let porcentajeIntegracion = 0;
+
+            switch(tipoAdj) {
+                case 'sobrepauta':
+                    console.log('Calculando SOBREPAUTA:', financiacion.sobrepauta);
+                    if (financiacion.sobrepauta) {
+                        const match = financiacion.sobrepauta.match(/(\d+)%/);
+                        porcentajeIntegracion = match ? parseInt(match[1]) : 0;
+                        console.log('Porcentaje sobrepauta extraído:', porcentajeIntegracion);
+                    }
+                    break;
+                    
+                case 'pea1':
+                    console.log('Calculando PEA1:', financiacion.pea1);
+                    porcentajeIntegracion = extractPercentage(financiacion.pea1, cuotaAdj);
+                    break;
+                    
+                case 'pea2':
+                    console.log('Calculando PEA2:', financiacion.pea2);
+                    porcentajeIntegracion = extractPercentage(financiacion.pea2, cuotaAdj);
+                    break;
+            }
+
+            // Obtener suscripción y bonificación
+            let suscripcion = 0;
+            if (tipoAdj === 'sobrepauta' || tipoAdj === 'pea1') {
+                console.log('Usando suscripción PREMIO:', financiacion.suscrPremio);
+                suscripcion = extractNumber(financiacion.suscrPremio);
+            } else {
+                console.log('Usando suscripción NEUTRA:', financiacion.suscrNeutra);
+                suscripcion = extractNumber(financiacion.suscrNeutra);
+            }
+
+            console.log('BONIFICACIÓN:', financiacion.bonificacion);
+            const bonificacion = extractNumber(financiacion.bonificacion);
+
+            // Calcular montos
+            const totalIntegrar = Math.round(precio * (porcentajeIntegracion / 100));
+            const integracionFinal = Math.max(0, totalIntegrar + suscripcion - bonificacion);
+
+            console.log('=== RESULTADOS DEL CÁLCULO ===');
+            console.log({
+                precioVehiculo: precio,
+                porcentajeIntegracion: porcentajeIntegracion + '%',
+                totalIntegrar: totalIntegrar,
+                suscripcion: suscripcion,
+                bonificacion: bonificacion,
+                integracionFinal: integracionFinal
+            });
+
+            // Mostrar resultados
+            document.getElementById('resultPrecio').textContent = `$${precio.toLocaleString()}`;
+            document.getElementById('resultPorcentaje').textContent = `${porcentajeIntegracion}%`;
+            document.getElementById('resultTotal').textContent = `$${totalIntegrar.toLocaleString()}`;
+            document.getElementById('resultSuscripcion').textContent = `$${suscripcion.toLocaleString()}`;
+            document.getElementById('resultFinal').textContent = `$${integracionFinal.toLocaleString()}`;
+            
+            console.log('=== FIN CÁLCULO ===');
+        }
+
+        // EVENT LISTENERS MEJORADOS
+        if (marcaCalculadora) {
+            marcaCalculadora.addEventListener('change', function() {
+                console.log('Marca cambiada:', this.value);
+                loadVehiclesCalculadora(this.value);
+                // Limpiar selecciones dependientes
+                financiacionSelect.innerHTML = '<option value="">-- Seleccione financiación --</option>';
+                precioVehiculo.value = '';
+            });
+        }
+
+        vehicleSelect.addEventListener('change', function() {
+            console.log('Vehículo cambiado:', this.value, 'Índice:', this.selectedIndex);
+            loadFinanciaciones();
+        });
+
+        financiacionSelect.addEventListener('change', function() {
+            console.log('Financiación seleccionada:', this.value, 'Texto:', this.options[this.selectedIndex]?.textContent);
+        });
+
+        calcularBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Botón calcular clickeado');
+            calcularIntegracion();
+        });
+
+        // Inicializar calculadora
+        loadMarcasCalculadora();
+        loadVehiclesCalculadora();
+
+        console.log('✅ Calculadora de integraciones inicializada correctamente');
+    }
+
+    // =======================================================================
+    // EVENT LISTENERS PAUTAS
+    // =======================================================================
+    modelFilter.addEventListener('input', filterModels);
+    brandFilter.addEventListener('change', filterModels);
+    sobrepautaFilter.addEventListener('change', filterModels);
+
+    resetFilters.addEventListener('click', function() {
+        modelFilter.value = '';
+        brandFilter.value = '';
+        sobrepautaFilter.value = 'todos';
         loadTableData(tableData);
     });
 
-    // Inicializar
+    // =======================================================================
+    // INICIALIZACIÓN COMPLETA
+    // =======================================================================
     loadBrandFilter();
     loadTableData(tableData);
-    console.log('✅ Página de modelos comerciales inicializada correctamente');
+    initCalculadora();
 
-    // Inicializar calculadora
-    initCalculadoraIntegraciones(allModels);
+    console.log('✅ Página de pautas comerciales inicializada correctamente');
 }
 
 // =======================================================================
-// CALCULADORA DE INTEGRACIONES - CON FILTRO DE MARCA
+// DETECCIÓN DE PÁGINAS Y INICIALIZACIÓN
 // =======================================================================
-function initCalculadoraIntegraciones(allModelsData) {
-    console.log('Inicializando calculadora de integraciones...');
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 DOM cargado - Iniciando aplicación');
 
-    // Datos de vehículos
-    const fiatVehicles = [
-        { id: 1002, brand: "Fiat", model: "Cronos", version: "Drive 1.3 GSE PACK PLUS MY26", price: 34100000 },
-        { id: 1005, brand: "Fiat", model: "Pulse", version: "Drive 1.3 MT5", price: 34015000 },
-        { id: 1010, brand: "Fiat", model: "Mobi", version: "Trekking 1.0", price: 24964000 },
-        { id: 1011, brand: "Fiat", model: "Argo", version: "Drive 1.3L MT", price: 27898000 },
-        { id: 1012, brand: "Fiat", model: "Fastback", version: "Turbo 270 AT", price: 42117000 },
-        { id: 1015, brand: "Fiat", model: "Fiorino", version: "Endurance 1.3 FIREFLY", price: 27459000 },
-        { id: 1017, brand: "Fiat", model: "Strada", version: "Freedom 1.3 8V CD", price: 34872000 },
-        { id: 1021, brand: "Fiat", model: "Toro", version: "Freedom T270 AT6 4X2", price: 43917000 },
-        { id: 1026, brand: "Fiat", model: "Titano", version: "Endurance MT 4X4", price: 49454000 },
-    ];
+    const currentPath = window.location.pathname;
+    const isIndexPage = currentPath.endsWith('index.html') || currentPath.endsWith('/');
+    const isPreciosPage = currentPath.includes('precios.html');
+    const isPautasPage = currentPath.includes('pautas.html');
 
-    const otherBrandsVehicles = [
-        { id: 2002, brand: "Peugeot", model: "208", version: "Allure MT AM26", price: 33830000 },
-        { id: 2003, brand: "Peugeot", model: "208", version: "Allure AT AM26", price: 35580000 },
-        { id: 2006, brand: "Peugeot", model: "2008", version: "Active T200 AM26", price: 41340000 },
-        { id: 2007, brand: "Peugeot", model: "2008", version: "Allure T200 AM26", price: 45290000 },
-        { id: 2009, brand: "Peugeot", model: "Partner", version: "Confort 1.6 HDI AM22.5", price: 33050000 },
-        { id: 2010, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 120 AM25", price: 50590000 },
-        { id: 2013, brand: "Jeep", model: "Renegade", version: "Sport T270 1.3 AT6 FWD", price: 43856400 },
-        { id: 2017, brand: "Jeep", model: "Compass", version: "Sport T270 AT6 4X2 MY25", price: 52573200 },
-        { id: 2024, brand: "Ram", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 64967400 },
-    ];
-
-    // Combinar todos los vehículos
-    const allVehicles = [...fiatVehicles, ...otherBrandsVehicles];
-    
-    // Elementos del DOM
-    const marcaCalculadora = document.getElementById('marcaCalculadora');
-    const vehicleSelect = document.getElementById('vehicleSelect');
-    const financiacionSelect = document.getElementById('financiacionSelect');
-    const precioVehiculo = document.getElementById('precioVehiculo');
-    const tipoAdjudicacion = document.getElementById('tipoAdjudicacion');
-    const cuotaAdjudicar = document.getElementById('cuotaAdjudicar');
-    const calcularBtn = document.getElementById('calcularBtn');
-
-    // Elementos de resultados
-    const resultPrecio = document.getElementById('resultPrecio');
-    const resultPorcentaje = document.getElementById('resultPorcentaje');
-    const resultTotal = document.getElementById('resultTotal');
-    const resultSuscripcion = document.getElementById('resultSuscripcion');
-    const resultFinal = document.getElementById('resultFinal');
-
-    // Verificar que los elementos existan
-    if (!vehicleSelect || !calcularBtn) {
-        console.warn('Calculadora no encontrada en el DOM');
-        return;
-    }
-
-    let currentModelInfo = null;
-
-    // Cargar marcas en el filtro
-    function loadMarcasInCalculator() {
-        if (!marcaCalculadora) {
-            console.warn('Filtro de marca no encontrado en el DOM');
-            return;
-        }
-        
-        marcaCalculadora.innerHTML = '<option value="">Todas las marcas</option>';
-        const marcas = [...new Set(allVehicles.map(vehicle => vehicle.brand))].sort();
-        
-        marcas.forEach(marca => {
-            const option = document.createElement('option');
-            option.value = marca;
-            option.textContent = marca;
-            marcaCalculadora.appendChild(option);
-        });
-    }
-
-    // Cargar vehículos en el select (filtrados por marca)
-    function loadVehiclesInCalculator(marcaFiltro = '') {
-        vehicleSelect.innerHTML = '<option value="">-- Seleccione un vehículo --</option>';
-        
-        // Filtrar vehículos por marca si se seleccionó una
-        const vehiclesToShow = marcaFiltro 
-            ? allVehicles.filter(vehicle => vehicle.brand === marcaFiltro)
-            : allVehicles;
-        
-        // Ordenar por marca y modelo
-        vehiclesToShow.sort((a, b) => {
-            if (a.brand !== b.brand) {
-                return a.brand.localeCompare(b.brand);
-            }
-            return a.model.localeCompare(b.model);
-        });
-
-        vehiclesToShow.forEach(vehicle => {
-            const option = document.createElement('option');
-            option.value = vehicle.id;
-            option.textContent = `${vehicle.brand} ${vehicle.model} ${vehicle.version} - $${vehicle.price.toLocaleString()}`;
-            option.setAttribute('data-price', vehicle.price);
-            option.setAttribute('data-brand', vehicle.brand);
-            option.setAttribute('data-model', vehicle.model);
-            vehicleSelect.appendChild(option);
-        });
-
-        // Limpiar campos dependientes cuando se cambia la marca
-        precioVehiculo.value = '';
-        if (financiacionSelect) {
-            financiacionSelect.innerHTML = '<option value="">-- Seleccione financiación --</option>';
-        }
-        currentModelInfo = null;
-    }
-
-    // Cargar financiaciones cuando se selecciona un vehículo
-    function loadFinanciaciones(vehicleBrand, vehicleModel) {
-        if (!financiacionSelect) return;
-        
-        financiacionSelect.innerHTML = '<option value="">-- Seleccione financiación --</option>';
-        currentModelInfo = null;
-        
-        const modelInfo = findModelInfo(vehicleBrand, vehicleModel);
-        if (!modelInfo || !modelInfo.financiaciones) {
-            console.warn('No se encontraron financiaciones para:', vehicleBrand, vehicleModel);
-            return;
-        }
-        
-        currentModelInfo = modelInfo;
-        
-        modelInfo.financiaciones.forEach((financiacion, index) => {
-            const option = document.createElement('option');
-            option.value = index;
-            option.textContent = `${financiacion.tipo} - ${financiacion.cuotas} cuotas`;
-            financiacionSelect.appendChild(option);
-        });
-    }
-
-    // Cuando se cambia la marca en el filtro
-    if (marcaCalculadora) {
-        marcaCalculadora.addEventListener('change', function() {
-            const marcaSeleccionada = this.value;
-            loadVehiclesInCalculator(marcaSeleccionada);
-        });
-    }
-
-    // Cuando se selecciona un vehículo
-    vehicleSelect.addEventListener('change', function() {
-        const selectedOption = this.options[this.selectedIndex];
-        if (selectedOption.value) {
-            const price = selectedOption.getAttribute('data-price');
-            const brand = selectedOption.getAttribute('data-brand');
-            const model = selectedOption.getAttribute('data-model');
-            
-            precioVehiculo.value = `$${parseInt(price).toLocaleString()}`;
-            loadFinanciaciones(brand, model);
-        } else {
-            precioVehiculo.value = '';
-            if (financiacionSelect) {
-                financiacionSelect.innerHTML = '<option value="">-- Seleccione financiación --</option>';
-            }
-            currentModelInfo = null;
-        }
+    console.log('📍 Página detectada:', {
+        path: currentPath,
+        index: isIndexPage,
+        precios: isPreciosPage,
+        pautas: isPautasPage
     });
 
-    // Función para calcular la integración
-    function calcularIntegracion() {
-        const vehicleId = parseInt(vehicleSelect.value);
-        const selectedTipo = tipoAdjudicacion.value;
-        const selectedCuota = parseInt(cuotaAdjudicar.value);
-        const selectedFinanciacionIndex = financiacionSelect ? parseInt(financiacionSelect.value) : 0;
-
-        if (!vehicleId) {
-            alert('Por favor, seleccione un vehículo.');
-            return;
-        }
-
-        if (financiacionSelect && isNaN(selectedFinanciacionIndex)) {
-            alert('Por favor, seleccione un tipo de financiación.');
-            return;
-        }
-
-        try {
-            // Obtener datos del vehículo
-            const vehicle = allVehicles.find(v => v.id === vehicleId);
-            if (!vehicle) {
-                alert('Vehículo no encontrado.');
-                return;
-            }
-
-            const vehiclePrice = vehicle.price;
-            const vehicleBrand = vehicle.brand;
-            const vehicleModel = vehicle.model;
-
-            // Buscar información de pautas para este modelo
-            let modelInfo = currentModelInfo;
-            if (!modelInfo) {
-                modelInfo = findModelInfo(vehicleBrand, vehicleModel);
-            }
-            
-            if (!modelInfo) {
-                alert('No se encontró información de pautas comerciales para este modelo.');
-                return;
-            }
-
-            // Obtener la financiación seleccionada
-            const financiacion = modelInfo.financiaciones[selectedFinanciacionIndex];
-            if (!financiacion) {
-                alert('No se encontró la financiación seleccionada.');
-                return;
-            }
-
-            // Calcular porcentaje según tipo de adjudicación y cuota
-            const porcentaje = calcularPorcentaje(selectedTipo, selectedCuota, financiacion);
-            
-            // Validar porcentaje
-            if (porcentaje === 0) {
-                alert('No se pudo determinar el porcentaje para la combinación seleccionada.');
-                return;
-            }
-            
-            // Calcular montos
-            const totalIntegrar = Math.round(vehiclePrice * (porcentaje / 100));
-            const suscripcion = calcularSuscripcion(financiacion);
-            const bonificacion = calcularBonificacion(financiacion, selectedCuota);
-            const integracionFinal = totalIntegrar + suscripcion - bonificacion;
-
-            // Mostrar resultados
-            mostrarResultados(vehiclePrice, porcentaje, totalIntegrar, suscripcion, bonificacion, integracionFinal);
-            
-        } catch (error) {
-            console.error('Error en el cálculo:', error);
-            alert('Ocurrió un error en el cálculo. Por favor, verifique los datos.');
-        }
+    // Ejecutar según el tipo de página
+    if (isIndexPage) {
+        console.log('✅ Inicializando comparador de equipamientos...');
+        initComparadorEquipamientos();
     }
 
-    // Buscar información del modelo en las pautas
-    function findModelInfo(brand, model) {
-        // Normalizar búsqueda para hacerla más flexible
-        const normalizedBrand = brand.toLowerCase().trim();
-        const normalizedModel = model.toLowerCase().trim();
-        
-        // Buscar en todos los modelos
-        for (const modelData of allModelsData) {
-            const modelBrand = modelData.marca.toLowerCase().trim();
-            const modelName = modelData.modelo.toLowerCase().trim();
-            
-            // Buscar coincidencias flexibles
-            const brandMatch = modelBrand.includes(normalizedBrand) || normalizedBrand.includes(modelBrand);
-            const modelMatch = modelName.includes(normalizedModel) || normalizedModel.includes(modelName);
-            
-            if (brandMatch && modelMatch) {
-                return modelData;
-            }
-        }
-        return null;
+    if (isPreciosPage) {
+        console.log('✅ Inicializando comparador de precios...');
+        initComparadorPrecios();
     }
 
-    // Calcular porcentaje según tipo y cuota
-    function calcularPorcentaje(tipo, cuota, financiacion) {
-        switch(tipo) {
-            case 'sobrepauta':
-                return parseSobrepauta(financiacion.sobrepauta);
-            
-            case 'pea1':
-                return parsePEA(financiacion.pea1, cuota);
-            
-            case 'pea2':
-                return parsePEA(financiacion.pea2, cuota);
-            
-            default:
-                return 0;
-        }
+    if (isPautasPage) {
+        console.log('✅ Inicializando página de pautas comerciales...');
+        initFiatModelsPage();
     }
 
-    // Parsear porcentaje de sobrepauta - CORREGIDO
-    function parseSobrepauta(sobrepauta) {
-        if (!sobrepauta || sobrepauta === '-' || sobrepauta.trim() === '') return 0;
-        
-        // Buscar patrones como "NOV 30%" o simplemente "30%"
-        const match = sobrepauta.match(/(\d+)%/);
-        return match ? parseInt(match[1]) : 0;
-    }
-
-    // Parsear porcentaje de PEA - MEJORADO
-    function parsePEA(pea, cuota) {
-        if (!pea || pea === '-' || pea.trim() === '') return 0;
-        
-        console.log(`Buscando cuota ${cuota} en:`, pea);
-        
-        // Buscar el porcentaje para la cuota específica
-        // Patrones: "2-6-9-12 / 30%" o "4-9-12/40%" o "2 / 40%"
-        const cuotaPattern = new RegExp(`(^|\\s|-)${cuota}(\\s*\\/|\\s*-|\\s|$).*?(\\d+)%`, 'i');
-        const match = pea.match(cuotaPattern);
-        
-        if (match) {
-            const porcentaje = parseInt(match[3]);
-            console.log(`Encontrado porcentaje ${porcentaje}% para cuota ${cuota}`);
-            return porcentaje;
-        }
-        
-        // Si no encuentra la cuota específica, buscar el primer porcentaje disponible
-        const generalMatch = pea.match(/(\d+)%/);
-        if (generalMatch) {
-            const porcentaje = parseInt(generalMatch[1]);
-            console.log(`Usando porcentaje general ${porcentaje}% para cuota ${cuota}`);
-            return porcentaje;
-        }
-        
-        console.log(`No se encontró porcentaje para cuota ${cuota}`);
-        return 0;
-    }
-
-    // Calcular suscripción - CORREGIDO
-    function calcularSuscripcion(financiacion) {
-        const suscrText = financiacion.suscrPremio || financiacion.suscrNeutra || '$0';
-        console.log('Texto de suscripción:', suscrText);
-        
-        // Extraer el número (puede ser "290.000" o "290000")
-        const match = suscrText.match(/\$?([\d.,]+)/);
-        if (match) {
-            let amountStr = match[1];
-            // Remover puntos de miles y convertir coma decimal a punto
-            amountStr = amountStr.replace(/\./g, '').replace(',', '.');
-            const amount = parseFloat(amountStr);
-            console.log('Suscripción calculada:', amount);
-            return amount;
-        }
-        return 0;
-    }
-
-    // Calcular bonificación - CORREGIDO
-    function calcularBonificacion(financiacion, cuota) {
-        const bonifText = financiacion.bonificacion || '$0';
-        console.log('Texto de bonificación:', bonifText);
-        
-        // Verificar si aplica bonificación por adjudicar cuota 2
-        if (cuota === 2 && bonifText.includes('adjudica cuota 2')) {
-            const match = bonifText.match(/\$?([\d.,]+)\s*si adjudica cuota 2/);
-            if (match) {
-                let amountStr = match[1];
-                amountStr = amountStr.replace(/\./g, '').replace(',', '.');
-                const amount = parseFloat(amountStr);
-                console.log('Bonificación por cuota 2:', amount);
-                return amount;
-            }
-        }
-        
-        // Bonificación general (sin condición de cuota)
-        const generalMatch = bonifText.match(/\$?([\d.,]+)/);
-        if (generalMatch && !bonifText.includes('adjudica cuota 2')) {
-            let amountStr = generalMatch[1];
-            amountStr = amountStr.replace(/\./g, '').replace(',', '.');
-            const amount = parseFloat(amountStr);
-            console.log('Bonificación general:', amount);
-            return amount;
-        }
-        
-        return 0;
-    }
-
-    // Mostrar resultados - CORREGIDO
-    function mostrarResultados(precio, porcentaje, total, suscripcion, bonificacion, final) {
-        resultPrecio.textContent = `$${precio.toLocaleString()}`;
-        resultPorcentaje.textContent = `${porcentaje}%`;
-        resultTotal.textContent = `$${total.toLocaleString()}`;
-        resultSuscripcion.textContent = `$${suscripcion.toLocaleString()}`;
-        resultFinal.textContent = `$${final.toLocaleString()}`;
-        
-        console.log('Resultados finales:', {
-            precio,
-            porcentaje,
-            total,
-            suscripcion,
-            bonificacion,
-            final
-        });
-    }
-
-    // Event listener para el botón calcular
-    calcularBtn.addEventListener('click', calcularIntegracion);
-
-    // Inicializar
-    loadMarcasInCalculator();
-    loadVehiclesInCalculator();
-    
-    console.log('✅ Calculadora de integraciones con filtro de marca inicializada correctamente');
-}
+    console.log('🎯 Aplicación inicializada correctamente');
+});
