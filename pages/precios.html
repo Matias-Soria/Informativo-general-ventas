@@ -20,7 +20,7 @@
                 <li><a href="../pages/pautas.html">Pautas</a></li>
             </ul>
         </div>
-        <img class="logofiat" src="../img/Jeeplogo.png" alt="Logo Fiat">
+        <img class="logojeep" src="../img/Jeeplogo.png" alt="Logo Jeep">
     </header>
 
     <section class="app-section">
@@ -114,6 +114,26 @@
     </footer>
 
     <script src="../Javascript/script.js"></script>
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbarMenu = document.querySelector('.navbar ul');
+    
+    if (menuToggle && navbarMenu) {
+        menuToggle.addEventListener('click', function() {
+            navbarMenu.classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer clic fuera de él
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.navbar') && !event.target.closest('.menu-toggle')) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+    }
+});
+</script>
 </body>
 
 </html>

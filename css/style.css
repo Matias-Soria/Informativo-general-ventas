@@ -18,6 +18,16 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -29,34 +39,50 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    -webkit-overflow-scrolling: touch;
 }
 
-/**HEADER**/
+/**HEADER MEJORADO**/
 
 header {
     background-color: black;
-    padding: 10px;
-    position: sticky;
+    padding: 1rem;
+    top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 1000;
+    flex-wrap: wrap;
 }
 
 .logoautocity {
-    width: 200px;
+    width: clamp(120px, 30vw, 200px);
     height: auto;
+}
+
+/* MENÚ HAMBURGUESA - NUEVO */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    min-height: 44px;
 }
 
 .navbar {
     background-color: black;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    transition: all 0.3s ease;
 }
 
 .navbar li {
@@ -67,7 +93,12 @@ header {
 .navbar a {
     text-decoration: none;
     color: white;
-    font-size: 25px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    padding: 0.5rem 1rem;
+    display: block;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar a:hover {
@@ -76,15 +107,56 @@ header {
     transform: scale(1.1);
 }
 
-.logofiat {
-    width: 150px;
+.logojeep {
+    width: clamp(120px, 25vw, 150px);
     height: auto;
+}
+
+/* MEDIA QUERIES PARA HEADER */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .navbar ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: black;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    
+    .navbar ul.active {
+        display: flex;
+    }
+    
+    .navbar li {
+        display: block;
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid #333;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+    
+    .navbar a {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
 }
 
 .app-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 2.5rem 2rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2rem);
     text-align: center;
     box-shadow: var(--shadow);
 }
@@ -92,23 +164,23 @@ header {
 .app-section h1 {
     font-weight: 700;
     margin-bottom: 0.8rem;
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
 }
 
 .app-section p {
     font-weight: 300;
     opacity: 0.9;
-    font-size: 1.1rem;
-    max-width: 600px;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    max-width: min(600px, 90%);
     margin: 0 auto;
 }
 
-/* SECCIÓN DE COMPARACIÓN - MODIFICADA PARA SER MÁS AMPLIA */
+/* SECCIÓN DE COMPARACIÓN - MEJORADA */
 .comparator-container {
-    max-width: 1400px;
-    width: 95%;
+    max-width: min(1400px, 95%);
+    width: min(95%, 1400px);
     margin: 2rem auto;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 3vw, 2rem);
     flex: 1;
 }
 
@@ -116,7 +188,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
 }
@@ -141,7 +213,7 @@ header {
     margin-bottom: 0.5rem;
     font-weight: 500;
     color: var(--text-dark);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 .model-filter, .version-filter {
@@ -159,6 +231,7 @@ header {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    min-height: 44px;
 }
 
 .model-filter:focus, .version-filter:focus {
@@ -167,7 +240,7 @@ header {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-/* VS Circle - Más grande y con mejor separación */
+/* VS Circle - Mejorado */
 .vs-circle-container {
     display: flex;
     justify-content: center;
@@ -178,18 +251,18 @@ header {
 .vs-circle {
     background-color: var(--accent-color);
     color: white;
-    width: 70px;
-    height: 70px;
+    width: clamp(50px, 10vw, 70px);
+    height: clamp(50px, 10vw, 70px);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 2vw, 1.4rem);
     box-shadow: var(--shadow);
 }
 
-/* Filtros adicionales - Más expansivos */
+/* Filtros adicionales */
 .filters {
     display: flex;
     justify-content: space-between;
@@ -211,6 +284,7 @@ header {
     font-size: 1.05rem;
     background-color: white;
     min-width: 250px;
+    min-height: 44px;
 }
 
 .reset-btn {
@@ -223,14 +297,15 @@ header {
     transition: all 0.3s;
     font-weight: 500;
     font-size: 1.05rem;
+    min-height: 44px;
 }
 
 .reset-btn:hover {
-    background-color: 5a6268;
+    background-color: #5a6268;
     transform: translateY(-2px);
 }
 
-/* Resultados - Más amplios y con mejor estructura */
+/* Resultados - Mejorados */
 .results-container {
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -243,22 +318,22 @@ header {
 
 .results-header {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: minmax(200px, 3fr) 1fr 1fr;
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
     color: white;
     font-weight: 600;
-    padding: 1.5rem;
+    padding: 1.5rem clamp(0.5rem, 2vw, 2rem);
 }
 
 .feature-col {
-    padding-left: 2rem;
+    padding-left: clamp(0.5rem, 2vw, 2rem);
     text-align: left;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .model-col {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .results-grid {
@@ -278,27 +353,27 @@ header {
 .empty-state img {
     margin-bottom: 1.5rem;
     opacity: 0.7;
-    width: 120px;
+    width: clamp(80px, 20vw, 120px);
 }
 
 .empty-state p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-/* Items de comparación - Más expansivos */
+/* Items de comparación */
 .category-header {
     background-color: #e9ecef;
-    padding: 1rem 2rem;
+    padding: 1rem clamp(1rem, 3vw, 2rem);
     font-weight: 600;
     color: var(--secondary-color);
     border-bottom: 1px solid var(--border-color);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 .comparison-item {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    padding: 1.2rem 2rem;
+    grid-template-columns: minmax(200px, 3fr) 1fr 1fr;
+    padding: 1.2rem clamp(0.5rem, 2vw, 2rem);
     border-bottom: 1px solid var(--border-color);
     align-items: center;
     transition: background-color 0.2s;
@@ -318,13 +393,13 @@ header {
 
 .comparison-feature {
     padding-right: 1.5rem;
-    font-size: 1.05rem;
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
 }
 
 .comparison-value {
     text-align: center;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     padding: 0.7rem;
     border-radius: 6px;
     margin: 0 auto;
@@ -354,34 +429,25 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
 }
 
 .atencion {
     color: white;
     align-items: center;
+    text-align: center;
 }
 
-/* Responsive para la sección de comparación */
-@media (max-width: 1200px) {
-    .comparator-container {
-        max-width: 100%;
-        padding: 0 1.5rem;
-    }
-}
-
-@media (max-width: 992px) {
+/* MEJORAS RESPONSIVE PARA COMPARADOR */
+@media (max-width: 1024px) {
     .comparison-filters-container {
-        gap: 2rem;
+        gap: 1.5rem;
     }
     
-    .comparator-container .filter-group {
+    .advanced-filters {
         min-width: 100%;
         max-width: 100%;
-    }
-    
-    .results-header,
-    .comparison-item {
-        grid-template-columns: 2fr 1fr 1fr;
     }
 }
 
@@ -399,29 +465,9 @@ footer {
         margin: 1rem 0;
     }
     
-    .advanced-filters {
+    .comparator-container .filter-group {
         min-width: 100%;
         max-width: 100%;
-    }
-    
-    .results-header,
-    .comparison-item {
-        grid-template-columns: 1.5fr 1fr 1fr;
-        padding: 1rem;
-    }
-    
-    .feature-col {
-        padding-left: 1rem;
-    }
-    
-    .comparison-feature {
-        font-size: 0.95rem;
-        padding-right: 0.5rem;
-    }
-    
-    .comparison-value {
-        font-size: 1.1rem;
-        padding: 0.5rem;
     }
     
     .filters {
@@ -433,14 +479,50 @@ footer {
         min-width: 100%;
     }
     
-    .vs-circle {
-        width: 60px;
-        height: 60px;
-        font-size: 1.2rem;
+    .model-filter, .version-filter {
+        padding: 0.8rem 1rem;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .results-header,
+    .comparison-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .feature-col, .model-col {
+        text-align: center !important;
+        padding-left: 0 !important;
+    }
+    
+    .comparison-feature {
+        font-weight: 600;
+        background-color: #f8f9fa;
+        padding: 0.5rem;
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .comparison-value {
+        margin: 0.5rem 0;
+    }
+    
+    .category-header {
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .comparator-container {
+        padding: 0 0.5rem;
     }
     
     .model-filter, .version-filter {
-        padding: 0.8rem 1rem;
+        font-size: 16px;
     }
 }
 
@@ -448,16 +530,16 @@ footer {
 
 /* Contenedor principal */
 .container {
-    max-width: 1200px;
+    max-width: min(1200px, 95%);
     margin: 0 auto;
-    padding: 20px 20px 40px;
+    padding: clamp(1rem, 3vw, 2rem);
 }
 
 .section {
     background: white;
     border-radius: 10px;
-    padding: 25px;
-    margin-bottom: 30px;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
@@ -466,19 +548,18 @@ footer {
     transform: translateY(-5px);
 }
 
-/* FILTROS EN LÍNEA - SOLO PARA FILTROS DE BÚSQUEDA */
+/* FILTROS EN LÍNEA - MEJORADOS */
 #filter-section .filter-group-inline {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
     justify-content: flex-start;
     align-items: end;
 }
 
 #filter-section .filter-group-inline .form-group {
-    flex: 1;
     min-width: 250px;
-    max-width: 350px;
+    max-width: 100%;
 }
 
 #filter-section .filter-group-inline .form-group label {
@@ -486,7 +567,7 @@ footer {
     margin-bottom: 8px;
     font-weight: 500;
     color: var(--dark-color);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 #filter-section .filter-group-inline .form-group select, 
@@ -497,6 +578,7 @@ footer {
     border-radius: 6px;
     font-size: 16px;
     transition: border-color 0.3s;
+    min-height: 44px;
 }
 
 #filter-section .filter-group-inline .form-group select:focus, 
@@ -506,10 +588,10 @@ footer {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-/* ESTILOS ESPECÍFICOS PARA EL COMPARADOR DE PRECIOS - CORREGIDO */
+/* ESTILOS ESPECÍFICOS PARA EL COMPARADOR DE PRECIOS */
 #compare-section .filter-group {
     display: flex !important;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
     flex-wrap: wrap;
     justify-content: center;
     align-items: end;
@@ -518,7 +600,7 @@ footer {
 
 #compare-section .vehicle-select {
     flex: 1;
-    min-width: 300px;
+    min-width: min(300px, 100%);
     max-width: 400px;
 }
 
@@ -531,7 +613,7 @@ footer {
     margin-bottom: 8px;
     font-weight: 500;
     color: var(--dark-color);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 #compare-section .form-group select {
@@ -541,6 +623,7 @@ footer {
     border-radius: 6px;
     font-size: 16px;
     transition: border-color 0.3s;
+    min-height: 44px;
 }
 
 #compare-section .form-group select:focus {
@@ -557,6 +640,7 @@ footer {
     font-size: 1rem;
     background-color: white;
     transition: all 0.3s ease;
+    min-height: 44px;
 }
 
 #brand-filter:focus, #model-filter:focus {
@@ -577,7 +661,7 @@ h2 {
     padding-bottom: 12px;
     border-bottom: 2px solid var(--light-color);
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
 }
 
 button {
@@ -590,12 +674,18 @@ button {
     font-size: 16px;
     font-weight: 600;
     transition: all 0.3s;
+    min-height: 44px;
 }
 
 button:hover {
     background-color: #2980b9;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
 
 .btn-danger {
@@ -606,6 +696,14 @@ button:hover {
     background-color: #c0392b;
 }
 
+/* TABLAS RESPONSIVE - NUEVO */
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -613,10 +711,11 @@ table {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
     overflow: hidden;
+    min-width: 600px;
 }
 
 th, td {
-    padding: 16px 20px;
+    padding: clamp(12px, 2vw, 16px) clamp(12px, 2vw, 20px);
     text-align: left;
     border-bottom: 1px solid #eaeaea;
 }
@@ -625,7 +724,7 @@ th {
     background-color: var(--light-color);
     font-weight: 600;
     color: var(--dark-color);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 tr:hover {
@@ -642,6 +741,7 @@ tr:hover {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .comparison-result {
@@ -654,7 +754,7 @@ tr:hover {
 }
 
 .price-difference {
-    font-size: 28px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: bold;
     margin: 20px 0;
     padding: 15px;
@@ -673,7 +773,7 @@ tr:hover {
 }
 
 #comparison-text {
-    font-size: 18px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     margin-top: 15px;
     color: var(--dark-color);
 }
@@ -681,7 +781,7 @@ tr:hover {
 /* Responsive para página de precios */
 @media (max-width: 768px) {
     #filter-section .filter-group-inline {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
     
@@ -708,21 +808,42 @@ tr:hover {
         width: 100%;
         margin-bottom: 10px;
     }
+    
+    th, td {
+        padding: 12px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    #filter-section .filter-group-inline {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-container {
+        margin: 0.5rem -1rem;
+        width: calc(100% + 2rem);
+    }
 }
 
 /* ===== ESTILOS PARA PÁGINA DE MODELOS FIAT ===== */
 
 .fiat-container {
-    max-width: 1400px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: min(1400px, 98%);
+    margin: 1rem auto;
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
 }
 
 .fiat-page-title {
     text-align: center;
-    margin: 2rem 0;
+    margin: clamp(1rem, 3vw, 2rem) 0;
     color: var(--primary-color);
-    font-size: 2.2rem;
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
     position: relative;
     padding-bottom: 0.5rem;
     font-weight: 600;
@@ -745,9 +866,9 @@ tr:hover {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     margin-bottom: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
     align-items: center;
     transition: transform 0.3s ease;
     margin-top: 20px;
@@ -765,7 +886,7 @@ tr:hover {
 
 .fiat-filters label {
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
     color: var(--dark-color);
 }
 
@@ -776,6 +897,8 @@ tr:hover {
     min-width: 200px;
     font-size: 1rem;
     transition: border-color 0.3s;
+    min-height: 44px;
+    width: 100%;
 }
 
 .fiat-filters input:focus, .fiat-filters select:focus {
@@ -796,6 +919,7 @@ tr:hover {
     transition: all 0.3s;
     align-self: flex-end;
     margin-top: 1.8rem;
+    min-height: 44px;
 }
 
 .fiat-reset-btn:hover {
@@ -812,6 +936,7 @@ tr:hover {
     overflow-x: auto;
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
+    -webkit-overflow-scrolling: touch;
 }
 
 .fiat-models-table:hover {
@@ -821,24 +946,24 @@ tr:hover {
 .fiat-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 1200px;
+    min-width: 800px;
 }
 
 .fiat-table th {
     background-color: #C00;
     color: white;
-    padding: 1.2rem 0.8rem;
+    padding: clamp(1rem, 2vw, 1.2rem) clamp(0.5rem, 1vw, 0.8rem);
     text-align: left;
     font-weight: 500;
     position: sticky;
     top: 0;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 .fiat-table td {
-    padding: 1rem 0.8rem;
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(0.5rem, 1vw, 0.8rem);
     border-bottom: 1px solid var(--border-color);
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .fiat-table tr:nth-child(even) {
@@ -859,21 +984,39 @@ tr:hover {
     color: #27ae60;
 }
 
-/* Responsive para tabla Fiat */
+/* Estilos para destacar modelos con sobrepauta */
+.tiene-sobrepauta {
+    background-color: rgba(255, 215, 0, 0.1) !important;
+    border-left: 4px solid #FFD700;
+}
+
+.sobrepauta-activa {
+    font-weight: bold;
+    color: #FF8C00;
+    background-color: rgba(255, 140, 0, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Responsive para página Fiat */
 @media (max-width: 1200px) {
     .fiat-container {
         padding: 0.5rem;
     }
     
-    .fiat-table th, .fiat-table td {
-        padding: 0.8rem 0.5rem;
-        font-size: 0.95rem;
+    .fiat-filters {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .fiat-table {
+        min-width: 600px;
     }
     
     .fiat-filters {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        padding: 1rem;
     }
     
     .fiat-filters input, .fiat-filters select {
@@ -882,15 +1025,9 @@ tr:hover {
     
     .fiat-reset-btn {
         align-self: stretch;
-        margin-top: 0;
+        margin-top: 0.5rem;
     }
     
-    .fiat-page-title {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 768px) {
     .fiat-page-title {
         font-size: 1.6rem;
     }
@@ -910,39 +1047,397 @@ tr:hover {
     }
 }
 
-/* Estilos para destacar modelos con sobrepauta */
-.tiene-sobrepauta {
-    background-color: rgba(255, 215, 0, 0.1) !important;
-    border-left: 4px solid #FFD700;
+@media (max-width: 360px) {
+    .fiat-filters {
+        grid-template-columns: 1fr;
+    }
+    
+    .fiat-reset-btn {
+        margin-top: 0.5rem;
+    }
+    
+    .fiat-container {
+        padding: 0.25rem;
+    }
 }
 
-.sobrepauta-activa {
-    font-weight: bold;
-    color: #FF8C00;
-    background-color: rgba(255, 140, 0, 0.1);
-    padding: 4px 8px;
-    border-radius: 4px;
+/* ===== CALCULADORA DE INTEGRACIONES - VERSIÓN COMPACTA ===== */
+.calculator-section {
+    background: white;
+    border-radius: 10px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    margin: clamp(0.75rem, 2vw, 1.5rem) 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eaeaea;
 }
 
-/* Estilos para los filtros Fiat */
-.fiat-filters {
+.calculator-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    border-bottom: 2px solid #C00;
+    padding-bottom: 0.4rem;
+}
+
+.calculator-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    align-items: start;
 }
 
-.fiat-filter-group {
+/* FILTROS COMPACTOS */
+.calculator-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1rem;
+}
+
+.calc-form-group {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
 }
 
-.fiat-filter-group label {
-    margin-bottom: 0.5rem;
+.calc-form-group label {
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.calc-select, .calc-input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    min-height: 38px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 14px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.calc-select:focus, .calc-input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.calc-btn {
+    background: linear-gradient(135deg, #C00 0%, #a00 100%);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+    min-height: 38px;
+    width: 100%;
+    max-width: 250px;
+    align-self: center;
+}
+
+.calc-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.25);
+}
+
+/* RESULTADOS COMPACTOS */
+.calculator-results {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    padding: 1.25rem;
+    border: 1.5px solid #C00;
+    border-left: 3px solid #C00;
+}
+
+.result-card h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 1.5px solid #C00;
+    padding-bottom: 0.4rem;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.9rem;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item.highlight {
+    background-color: rgba(52, 152, 219, 0.08);
+    margin: 0 -0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
     font-weight: 600;
 }
 
-.fiat-reset-btn {
-    align-self: end;
-    margin-top: auto;
+.result-item.final {
+    background-color: rgba(39, 174, 96, 0.15);
+    margin: 0.75rem -0.75rem -0.75rem -0.75rem;
+    padding: 0.75rem;
+    border-radius: 0 0 6px 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--success-color);
+}
+
+/* ===== CALCULADORA DE INTEGRACIONES - ANCHO REDUCIDO ===== */
+.calculator-section {
+    background: white;
+    border-radius: 10px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    margin: clamp(0.75rem, 2vw, 1.5rem) auto; /* Centrado */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eaeaea;
+    max-width:1500px; /* ANCHO MÁXIMO REDUCIDO */
+    width: 90%; /* Se adapta al contenedor pero con máximo */
+}
+
+.calculator-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    border-bottom: 2px solid #C00;
+    padding-bottom: 0.4rem;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    align-items: start;
+}
+
+/* FILTROS COMPACTOS */
+.calculator-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1rem;
+}
+
+.calc-form-group {
+    flex: 1;
+    min-width: 350px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.calc-form-group label {
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.calc-select, .calc-input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    min-height: 38px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 14px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.calc-select:focus, .calc-input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.calc-btn {
+    background: linear-gradient(135deg, #C00 0%, #a00 100%);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+    min-height: 38px;
+    width: 100%;
+    max-width: 250px;
+    align-self: center;
+}
+
+.calc-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.25);
+}
+
+/* RESULTADOS COMPACTOS */
+.calculator-results {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    padding: 1.25rem;
+    border: 1.5px solid #C00;
+    border-left: 3px solid #C00;
+}
+
+.result-card h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 1.5px solid #C00;
+    padding-bottom: 0.4rem;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.9rem;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item.highlight {
+    background-color: rgba(52, 152, 219, 0.08);
+    margin: 0 -0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.result-item.final {
+    background-color: rgba(39, 174, 96, 0.15);
+    margin: 0.75rem -0.75rem -0.75rem -0.75rem;
+    padding: 0.75rem;
+    border-radius: 0 0 6px 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--success-color);
+}
+
+/* Responsive para calculadora con ancho reducido */
+@media (max-width: 768px) {
+    .calculator-section {
+        max-width: 95%; /* Más ancho en móviles */
+        width: 95%;
+        padding: 0.875rem;
+    }
+    
+    .calculator-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .calculator-results {
+        order: -1;
+        padding: 1rem;
+    }
+    
+    .calculator-filters {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    
+    .calc-form-group {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .calc-btn {
+        max-width: 100%;
+        padding: 0.6rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-section {
+        max-width: 98%;
+        width: 98%;
+        padding: 0.75rem;
+        margin: 0.5rem auto;
+    }
+    
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        padding: 0.4rem 0;
+    }
+    
+    .result-item span:last-child {
+        font-weight: 600;
+        font-size: 0.85rem;
+    }
+}
+
+/* ESTADOS DE LOADING Y MEJORAS DE ACCESIBILIDAD */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Prevenir zoom en inputs en iOS */
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px;
+    }
+}
+
+/* Focus states mejorados para accesibilidad */
+button:focus, select:focus, input:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
