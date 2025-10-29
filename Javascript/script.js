@@ -1,28 +1,28 @@
 // =======================================================================
 // MENÚ HAMBURGUESA - VERSIÓN MEJORADA
 // =======================================================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('🚀 Inicializando menú hamburguesa...');
-    
+
     const menuToggle = document.querySelector('.menu-toggle');
     const navbarMenu = document.querySelector('.navbar ul');
-    
+
     if (menuToggle && navbarMenu) {
         console.log('✅ Elementos del menú encontrados');
-        
-        menuToggle.addEventListener('click', function(e) {
+
+        menuToggle.addEventListener('click', function (e) {
             e.stopPropagation();
             console.log('📱 Menú hamburguesa clickeado');
             navbarMenu.classList.toggle('active');
         });
-        
+
         // Cerrar menú al hacer clic fuera de él
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             if (!event.target.closest('.navbar') && !event.target.closest('.menu-toggle')) {
                 navbarMenu.classList.remove('active');
             }
         });
-        
+
         // Cerrar menú al hacer clic en un enlace
         const navLinks = document.querySelectorAll('.navbar a');
         navLinks.forEach(link => {
@@ -489,14 +489,14 @@ function initComparadorPrecios() {
 
         const selectedBrand = brandFilter.value;
         const selectedModel = modelFilter.value;
-        
+
         let filteredVehicles = vehicles;
 
         // Aplicar filtros
         if (selectedBrand) {
             filteredVehicles = filteredVehicles.filter(vehicle => vehicle.brand === selectedBrand);
         }
-        
+
         if (selectedModel) {
             filteredVehicles = filteredVehicles.filter(vehicle => vehicle.model === selectedModel);
         }
@@ -528,7 +528,7 @@ function initComparadorPrecios() {
     function loadVersionSelects() {
         const selectedBrand = brandFilter.value;
         const selectedModel = modelFilter.value;
-        
+
         let filteredVehicles = vehicles;
 
         if (selectedBrand) {
@@ -622,12 +622,12 @@ function initComparadorPrecios() {
     // =======================================================================
     // EVENT LISTENERS
     // =======================================================================
-    brandFilter.addEventListener('change', function() {
+    brandFilter.addEventListener('change', function () {
         loadModelFilter();
         loadVersionSelects();
     });
 
-    modelFilter.addEventListener('change', function() {
+    modelFilter.addEventListener('change', function () {
         renderVehicles();
         loadVersionSelects();
     });
@@ -671,7 +671,7 @@ function initFiatModelsPage() {
                     tipo: "80/20",
                     cuotas: "84",
                     sobrepauta: "",
-                    pea1: "6-9-12 / 40%",
+                    pea1: "6-9-12 / 30%",
                     pea2: "24-36 / 20%",
                     suscrNeutra: "$250.000",
                     suscrPremio: "$290.000",
@@ -946,7 +946,26 @@ function initFiatModelsPage() {
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
+        },
+        {
+            marca: "RAM",
+            modelo: "RAMPAGE REBEL 2.0L GME AT9 4X4",
+            precio: 64967400,
+            financiaciones: [
+                {
+                    tipo: "60/40",
+                    cuotas: "84",
+                    sobrepauta: "DIC 50%",
+                    pea1: "4-9-12-24-36/40%",
+                    pea2: "",
+                    suscrNeutra: "$540.000",
+                    suscrPremio: "$580.000",
+                    bonificacion: "$2.500.000 si adjudica cuota 2 caso contrario $700.000 en GR",
+                    retiro: "6.5% + DA (2.5%)"
+                }
+            ]
         }
+
     ];
 
     // =======================================================================
@@ -966,7 +985,7 @@ function initFiatModelsPage() {
     // =======================================================================
     // FUNCIONALIDAD PRINCIPAL PAUTAS
     // =======================================================================
-    
+
     // Aplanar datos para la tabla
     const tableData = [];
     allModelsData.forEach(model => {
@@ -1041,11 +1060,11 @@ function initFiatModelsPage() {
         const filteredModels = tableData.filter(model => {
             // Filtrar por modelo (nombre)
             const matchesModel = model.modelo.toLowerCase().includes(modelFilterValue) ||
-                                model.marca.toLowerCase().includes(modelFilterValue);
+                model.marca.toLowerCase().includes(modelFilterValue);
 
             // Filtrar por marca
-            const matchesBrand = brandFilterValue === '' || 
-                               model.marca.toLowerCase() === brandFilterValue.toLowerCase();
+            const matchesBrand = brandFilterValue === '' ||
+                model.marca.toLowerCase() === brandFilterValue.toLowerCase();
 
             // Filtrar por sobrepauta
             let matchesSobrepauta = true;
@@ -1097,29 +1116,29 @@ function initFiatModelsPage() {
         // Cargar marcas en la calculadora
         function loadMarcasCalculadora() {
             if (!marcaCalculadora) return;
-            
+
             marcaCalculadora.innerHTML = '<option value="">Todas las marcas</option>';
             const marcas = [...new Set(allModelsData.map(model => model.marca))].sort();
-            
+
             marcas.forEach(marca => {
                 const option = document.createElement('option');
                 option.value = marca;
                 option.textContent = marca;
                 marcaCalculadora.appendChild(option);
             });
-            
+
             console.log('Marcas cargadas en calculadora:', marcas.length);
         }
 
         // Cargar vehículos en la calculadora
         function loadVehiclesCalculadora(marcaFiltro = '') {
             console.log('Cargando vehículos para marca:', marcaFiltro);
-            
+
             vehicleSelect.innerHTML = '<option value="">-- Seleccione un vehículo --</option>';
             financiacionSelect.innerHTML = '<option value="">-- Seleccione financiación --</option>';
             precioVehiculo.value = '';
-            
-            const modelsToShow = marcaFiltro 
+
+            const modelsToShow = marcaFiltro
                 ? allModelsData.filter(model => model.marca === marcaFiltro)
                 : allModelsData;
 
@@ -1134,14 +1153,14 @@ function initFiatModelsPage() {
                 option.setAttribute('data-financiaciones', JSON.stringify(model.financiaciones));
                 vehicleSelect.appendChild(option);
             });
-            
+
             console.log('Vehículos cargados:', modelsToShow.length);
         }
 
         // Cargar financiaciones cuando se selecciona un vehículo - VERSIÓN CORREGIDA
         function loadFinanciaciones() {
             console.log('Ejecutando loadFinanciaciones...');
-            
+
             const selectedIndex = vehicleSelect.selectedIndex;
             if (selectedIndex === -1 || selectedIndex === 0) {
                 financiacionSelect.innerHTML = '<option value="">-- Seleccione financiación --</option>';
@@ -1153,26 +1172,26 @@ function initFiatModelsPage() {
             const selectedOption = vehicleSelect.options[selectedIndex];
             const precio = selectedOption.getAttribute('data-precio');
             const financiacionesData = selectedOption.getAttribute('data-financiaciones');
-            
+
             if (!financiacionesData) {
                 console.error('No se encontraron datos de financiaciones');
                 return;
             }
 
             const financiaciones = JSON.parse(financiacionesData);
-            
+
             // Actualizar precio
             precioVehiculo.value = `$${parseInt(precio).toLocaleString()}`;
-            
+
             // Cargar financiaciones - LIMPIAR PRIMERO
             financiacionSelect.innerHTML = '';
-            
+
             // Agregar opción por defecto
             const defaultOption = document.createElement('option');
             defaultOption.value = '';
             defaultOption.textContent = '-- Seleccione financiación --';
             financiacionSelect.appendChild(defaultOption);
-            
+
             // Agregar opciones de financiación
             financiaciones.forEach((fin, index) => {
                 const option = document.createElement('option');
@@ -1180,7 +1199,7 @@ function initFiatModelsPage() {
                 option.textContent = `${fin.tipo} - ${fin.cuotas} cuotas`;
                 financiacionSelect.appendChild(option);
             });
-            
+
             console.log('Financiaciones cargadas:', financiaciones.length);
             console.log('Opciones en select:', financiacionSelect.options.length);
         }
@@ -1188,9 +1207,9 @@ function initFiatModelsPage() {
         // Función mejorada para extraer números de strings como "$350.000", "1.700.000", etc.
         function extractNumber(str) {
             if (!str) return 0;
-            
+
             console.log('Extrayendo número de:', str);
-            
+
             // Caso especial para bonificaciones complejas
             if (str.includes('si adjudica') || str.includes('caso contrario')) {
                 // Para strings como "$1.700.000 si adjudica cuota 2 caso contrario $500.000 en GR"
@@ -1203,7 +1222,7 @@ function initFiatModelsPage() {
                     return result;
                 }
             }
-            
+
             // Para casos normales como "$350.000", "350.000", etc.
             const match = str.toString().match(/\$?(\d+[\d.]*\d+)/);
             if (match) {
@@ -1212,7 +1231,7 @@ function initFiatModelsPage() {
                 console.log('Número extraído:', result);
                 return result;
             }
-            
+
             console.log('No se pudo extraer número, retornando 0');
             return 0;
         }
@@ -1223,9 +1242,9 @@ function initFiatModelsPage() {
                 console.log('Texto vacío para extraer porcentaje');
                 return 0;
             }
-            
+
             console.log(`Buscando porcentaje para cuota ${cuotaBuscada} en:`, text);
-            
+
             // Primero intentar: buscar patrones específicos como "cuota / porcentaje%"
             const regexEspecifico = new RegExp(`(^|\\s|,)${cuotaBuscada}\\s*[\\/-]\\s*(\\d+)%`, 'i');
             const matchEspecifico = text.match(regexEspecifico);
@@ -1234,13 +1253,13 @@ function initFiatModelsPage() {
                 console.log('Porcentaje encontrado (específico):', porcentaje);
                 return porcentaje;
             }
-            
+
             // Segundo intento: buscar en listas como "4-6-9-12 / 35%"
             const listMatch = text.match(/([\d\-\/]+)\s*\/\s*(\d+)%/);
             if (listMatch) {
                 const cuotasStr = listMatch[1];
                 const porcentaje = parseInt(listMatch[2]);
-                
+
                 // Verificar si la cuota buscada está en la lista
                 const cuotas = cuotasStr.split(/[-\/]/).map(c => c.trim());
                 if (cuotas.includes(cuotaBuscada.toString())) {
@@ -1248,7 +1267,7 @@ function initFiatModelsPage() {
                     return porcentaje;
                 }
             }
-            
+
             // Tercer intento: buscar porcentajes generales como "40%"
             const porcentajeGeneral = text.match(/(\d+)%/);
             if (porcentajeGeneral) {
@@ -1256,7 +1275,7 @@ function initFiatModelsPage() {
                 console.log('Porcentaje general encontrado:', porcentaje);
                 return porcentaje;
             }
-            
+
             console.log('No se encontró porcentaje, retornando 0');
             return 0;
         }
@@ -1265,7 +1284,7 @@ function initFiatModelsPage() {
         function calcularIntegracion() {
             const selectedVehicle = vehicleSelect.options[vehicleSelect.selectedIndex];
             const financiacionIndex = financiacionSelect.value;
-            
+
             if (!selectedVehicle || !selectedVehicle.value || financiacionIndex === '') {
                 alert('Por favor, seleccione un vehículo y tipo de financiación.');
                 return;
@@ -1289,7 +1308,7 @@ function initFiatModelsPage() {
             // Calcular porcentaje según tipo de adjudicación
             let porcentajeIntegracion = 0;
 
-            switch(tipoAdj) {
+            switch (tipoAdj) {
                 case 'sobrepauta':
                     console.log('Calculando SOBREPAUTA:', financiacion.sobrepauta);
                     if (financiacion.sobrepauta) {
@@ -1298,12 +1317,12 @@ function initFiatModelsPage() {
                         console.log('Porcentaje sobrepauta extraído:', porcentajeIntegracion);
                     }
                     break;
-                    
+
                 case 'pea1':
                     console.log('Calculando PEA1:', financiacion.pea1);
                     porcentajeIntegracion = extractPercentage(financiacion.pea1, cuotaAdj);
                     break;
-                    
+
                 case 'pea2':
                     console.log('Calculando PEA2:', financiacion.pea2);
                     porcentajeIntegracion = extractPercentage(financiacion.pea2, cuotaAdj);
@@ -1320,12 +1339,9 @@ function initFiatModelsPage() {
                 suscripcion = extractNumber(financiacion.suscrNeutra);
             }
 
-            console.log('BONIFICACIÓN:', financiacion.bonificacion);
-            const bonificacion = extractNumber(financiacion.bonificacion);
-
             // Calcular montos
             const totalIntegrar = Math.round(precio * (porcentajeIntegracion / 100));
-            const integracionFinal = Math.max(0, totalIntegrar + suscripcion - bonificacion);
+            const integracionFinal = Math.max(0, totalIntegrar + suscripcion);
 
             console.log('=== RESULTADOS DEL CÁLCULO ===');
             console.log({
@@ -1333,7 +1349,6 @@ function initFiatModelsPage() {
                 porcentajeIntegracion: porcentajeIntegracion + '%',
                 totalIntegrar: totalIntegrar,
                 suscripcion: suscripcion,
-                bonificacion: bonificacion,
                 integracionFinal: integracionFinal
             });
 
@@ -1343,13 +1358,13 @@ function initFiatModelsPage() {
             document.getElementById('resultTotal').textContent = `$${totalIntegrar.toLocaleString()}`;
             document.getElementById('resultSuscripcion').textContent = `$${suscripcion.toLocaleString()}`;
             document.getElementById('resultFinal').textContent = `$${integracionFinal.toLocaleString()}`;
-            
+
             console.log('=== FIN CÁLCULO ===');
         }
 
         // EVENT LISTENERS MEJORADOS
         if (marcaCalculadora) {
-            marcaCalculadora.addEventListener('change', function() {
+            marcaCalculadora.addEventListener('change', function () {
                 console.log('Marca cambiada:', this.value);
                 loadVehiclesCalculadora(this.value);
                 // Limpiar selecciones dependientes
@@ -1358,16 +1373,16 @@ function initFiatModelsPage() {
             });
         }
 
-        vehicleSelect.addEventListener('change', function() {
+        vehicleSelect.addEventListener('change', function () {
             console.log('Vehículo cambiado:', this.value, 'Índice:', this.selectedIndex);
             loadFinanciaciones();
         });
 
-        financiacionSelect.addEventListener('change', function() {
+        financiacionSelect.addEventListener('change', function () {
             console.log('Financiación seleccionada:', this.value, 'Texto:', this.options[this.selectedIndex]?.textContent);
         });
 
-        calcularBtn.addEventListener('click', function(e) {
+        calcularBtn.addEventListener('click', function (e) {
             e.preventDefault();
             console.log('Botón calcular clickeado');
             calcularIntegracion();
@@ -1387,7 +1402,7 @@ function initFiatModelsPage() {
     brandFilter.addEventListener('change', filterModels);
     sobrepautaFilter.addEventListener('change', filterModels);
 
-    resetFilters.addEventListener('click', function() {
+    resetFilters.addEventListener('click', function () {
         modelFilter.value = '';
         brandFilter.value = '';
         sobrepautaFilter.value = 'todos';
@@ -1407,7 +1422,7 @@ function initFiatModelsPage() {
 // =======================================================================
 // DETECCIÓN DE PÁGINAS Y INICIALIZACIÓN
 // =======================================================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('🚀 DOM cargado - Iniciando aplicación');
 
     const currentPath = window.location.pathname;
