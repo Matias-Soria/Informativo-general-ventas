@@ -1425,10 +1425,15 @@ function initFiatModelsPage() {
 document.addEventListener('DOMContentLoaded', function () {
     console.log('🚀 DOM cargado - Iniciando aplicación');
 
-    const currentPath = window.location.pathname;
-    const isIndexPage = currentPath.endsWith('index.html') || currentPath.endsWith('/');
-    const isPreciosPage = currentPath.includes('precios.html');
-    const isPautasPage = currentPath.includes('pautas.html');
+    const currentPath = window.location.pathname.toLowerCase();
+    const cleanPath = currentPath.replace(/\/$/, ''); // quita la barra final si existe
+
+    const isIndexPage = cleanPath.endsWith('/index.html') || cleanPath === '' || cleanPath === '/';
+    const isPreciosPage = cleanPath.includes('/precios') || cleanPath.includes('precios.html');
+    const isPautasPage = cleanPath.includes('/pautas') || cleanPath.includes('pautas.html');
+
+    console.log('📍 Página detectada:', cleanPath);
+    console.log({ index: isIndexPage, precios: isPreciosPage, pautas: isPautasPage });
 
     console.log('📍 Página detectada:', {
         path: currentPath,
