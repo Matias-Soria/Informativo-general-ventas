@@ -909,6 +909,42 @@ function initFiatModelsPage() {
                 }
             ]
         },
+        {
+            marca: "PEUGEOT",
+            modelo: "PARTNER CONFORT 1.6 HDI",
+            precio: 33050000,
+            financiaciones: [
+                {
+                    tipo: "70/30",
+                    cuotas: "84",
+                    sobrepauta: "NOV 30%",
+                    pea1: "6-9-12 / 30%",
+                    pea2: "",
+                    suscrNeutra: "$300.000",
+                    suscrPremio: "$340.000",
+                    bonificacion: "$500.000",
+                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
+                }
+            ]
+        },
+        {
+            marca: "PEUGEOT",
+            modelo: "EXPERT L3 HDI 120 AM25",
+            precio: 53830000,
+            financiaciones: [
+                {
+                    tipo: "70/30",
+                    cuotas: "84",
+                    sobrepauta: "NOV 30%",
+                    pea1: "6-24-36 / 30%",
+                    pea2: "",
+                    suscrNeutra: "$470.000",
+                    suscrPremio: "$510.000",
+                    bonificacion: "$800.000",
+                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
+                }
+            ]
+        },
 
         // JEEP
         {
