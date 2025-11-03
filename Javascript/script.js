@@ -352,61 +352,60 @@ function initComparadorPrecios() {
     // =======================================================================
     const vehiclesData = [
         // FIAT
-        { id: 1001, brand: "Fiat", model: "Cronos", version: "Like 1.3 GSE MY26", price: 28519000 },
-        { id: 1002, brand: "Fiat", model: "Cronos", version: "Drive 1.3 GSE PACK PLUS MY26", price: 34100000 },
-        { id: 1003, brand: "Fiat", model: "Cronos", version: "Drive 1.3L GSE CVT PACK PLUS MY26", price: 34305000 },
-        { id: 1004, brand: "Fiat", model: "Cronos", version: "Precision 1.3 GSE CVT MY26", price: 35546000 },
-        { id: 1005, brand: "Fiat", model: "Pulse", version: "Drive 1.3 MT5", price: 34015000 },
-        { id: 1006, brand: "Fiat", model: "Pulse", version: "Drive 1.3 CVT", price: 35224000 },
-        { id: 1007, brand: "Fiat", model: "Pulse", version: "Audace 1.0T CVT", price: 38063000 },
-        { id: 1008, brand: "Fiat", model: "Pulse", version: "Impetus 1.0T CVT", price: 39376000 },
-        { id: 1009, brand: "Fiat", model: "Pulse", version: "Abarth Turbo 270 AT6", price: 41296000 },
-        { id: 1010, brand: "Fiat", model: "Mobi", version: "Trekking 1.0", price: 24964000 },
-        { id: 1011, brand: "Fiat", model: "Argo", version: "Drive 1.3L MT", price: 27898000 },
-        { id: 1012, brand: "Fiat", model: "Fastback", version: "Turbo 270 AT", price: 42117000 },
-        { id: 1013, brand: "Fiat", model: "Fastback", version: "Abarth Turbo 270 AT6", price: 45964000 },
-        { id: 1015, brand: "Fiat", model: "Fiorino", version: "Endurance 1.3 FIREFLY", price: 27459000 },
-        { id: 1016, brand: "Fiat", model: "Strada", version: "Freedom CS 1.3 MT", price: 30555000 },
-        { id: 1017, brand: "Fiat", model: "Strada", version: "Freedom 1.3 8V CD", price: 34872000 },
-        { id: 1018, brand: "Fiat", model: "Strada", version: "Volcano 1.3 8V CD CVT", price: 38946000 },
-        { id: 1021, brand: "Fiat", model: "Toro", version: "Freedom T270 AT6 4X2", price: 43917000 },
-        { id: 1022, brand: "Fiat", model: "Toro", version: "Volcano T270 AT6 4X2", price: 49073000 },
-        { id: 1025, brand: "Fiat", model: "Titano", version: "Endurance MT 4X2", price: 46726000 },
-        { id: 1026, brand: "Fiat", model: "Titano", version: "Endurance MT 4X4", price: 49454000 },
-        { id: 1027, brand: "Fiat", model: "Titano", version: "Freedom MT 4X4", price: 54457000 },
-        { id: 1028, brand: "Fiat", model: "Titano", version: "Freedom Plus AT 4X4", price: 59800000 },
-        { id: 1029, brand: "Fiat", model: "Titano", version: "Ranch AT 4X4", price: 64575000 },
+        { id: 1001, brand: "Fiat", model: "Mobi", version: "Trekking 1.0", price: 26613000 },
+        { id: 1002, brand: "Fiat", model: "Argo", version: "Drive 1.3L MT", price: 29293000 },
+        { id: 1003, brand: "Fiat", model: "Cronos", version: "Like 1.3 GSE MY26", price: 29945000 },
+        { id: 1004, brand: "Fiat", model: "Cronos", version: "Drive 1.3 GSE PACK PLUS MY26", price: 35805000 },
+        { id: 1005, brand: "Fiat", model: "Cronos", version: "Drive 1.3L GSE CVT PACK PLUS MY26", price: 36021000 },
+        { id: 1006, brand: "Fiat", model: "Cronos", version: "Precision 1.3 GSE CVT MY26", price: 37324000 },
+        { id: 1007, brand: "Fiat", model: "Pulse", version: "Drive 1.3 MT5", price: 35716000 },
+        { id: 1008, brand: "Fiat", model: "Pulse", version: "Drive 1.3 CVT", price: 36986000 },
+        { id: 1009, brand: "Fiat", model: "Pulse", version: "Audace 1.0T CVT", price: 39967000 },
+        { id: 1010, brand: "Fiat", model: "Pulse", version: "Impetus 1.0T CVT", price: 41345000 },
+        { id: 1011, brand: "Fiat", model: "Pulse", version: "Abarth Turbo 270 AT6", price: 43361000 },
+        { id: 1012, brand: "Fiat", model: "Fastback", version: "Turbo 270 AT", price: 44223000 },
+        { id: 1013, brand: "Fiat", model: "Fastback", version: "Abarth Turbo 270 AT6", price: 48263000 },
+        { id: 1014, brand: "Fiat", model: "Fiorino", version: "Endurance 1.3 FIREFLY", price: 28832000 },
+        { id: 1015, brand: "Fiat", model: "Strada", version: "Freedom CS 1.3 MT", price: 32083000 },
+        { id: 1016, brand: "Fiat", model: "Strada", version: "Freedom 1.3 8V CD", price: 36616000 },
+        { id: 1017, brand: "Fiat", model: "Strada", version: "Volcano 1.3 8V CD CVT", price: 40894000 },
+        { id: 1018, brand: "Fiat", model: "Toro", version: "Freedom T270 AT6 4X2", price: 46113000},
+        { id: 1019, brand: "Fiat", model: "Toro", version: "Volcano T270 AT6 4X2", price: 51527000 },
+        { id: 1020, brand: "Fiat", model: "Titano", version: "Endurance MT 4X2", price: 49063000 },
+        { id: 1021, brand: "Fiat", model: "Titano", version: "Endurance MT 4X4", price: 51927000 },
+        { id: 1022, brand: "Fiat", model: "Titano", version: "Freedom MT 4X4", price: 57180000 },
+        { id: 1023, brand: "Fiat", model: "Titano", version: "Freedom Plus AT 4X4", price: 62790000 },
+        { id: 1024, brand: "Fiat", model: "Titano", version: "Ranch AT 4X4", price: 67804000 },
 
         // PEUGEOT
-        { id: 2002, brand: "Peugeot", model: "208", version: "Allure MT AM26", price: 33830000 },
-        { id: 2003, brand: "Peugeot", model: "208", version: "Allure AT AM26", price: 35580000 },
-        { id: 2004, brand: "Peugeot", model: "208", version: "Allure PK T200 AM26", price: 38220000 },
-        { id: 2005, brand: "Peugeot", model: "208", version: "GT T200 AM26", price: 40290000 },
-        { id: 2006, brand: "Peugeot", model: "2008", version: "Active T200 AM26", price: 41340000 },
-        { id: 2007, brand: "Peugeot", model: "2008", version: "Allure T200 AM26", price: 45290000 },
-        { id: 2008, brand: "Peugeot", model: "2008", version: "GT T200 AM26", price: 49450000 },
-        { id: 2009, brand: "Peugeot", model: "Partner", version: "Confort 1.6 HDI AM22.5", price: 33050000 },
-        { id: 2010, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 120 AM25", price: 50590000 },
-        { id: 2011, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 AM26", price: 53830000 },
-        { id: 2012, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 6P AM26", price: 58950000 },
+        { id: 2002, brand: "Peugeot", model: "208", version: "Allure MT AM26", price: 35530000 },
+        { id: 2003, brand: "Peugeot", model: "208", version: "Allure AT AM26", price: 37360000 },
+        { id: 2004, brand: "Peugeot", model: "208", version: "Allure PK T200 AM26", price: 40140000 },
+        { id: 2005, brand: "Peugeot", model: "208", version: "GT T200 AM26", price: 42310000 },
+        { id: 2006, brand: "Peugeot", model: "2008", version: "Active T200 AM26", price: 43410000 },
+        { id: 2007, brand: "Peugeot", model: "2008", version: "Allure T200 AM26", price: 47560000 },
+        { id: 2008, brand: "Peugeot", model: "2008", version: "GT T200 AM26", price: 51930000 },
+        { id: 2009, brand: "Peugeot", model: "Partner", version: "Confort 1.6 HDI AM22.5", price: 35700000 },
+        { id: 2010, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 AM26", price: 56530000 },
+        { id: 2011, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 6P AM26", price: 61900000 },
 
         // JEEP
-        { id: 2013, brand: "Jeep", model: "Renegade", version: "Sport T270 1.3 AT6 FWD", price: 43856400 },
-        { id: 2014, brand: "Jeep", model: "Renegade", version: "Longitude T270 AT6 FWD MY25", price: 48487200 },
-        { id: 2015, brand: "Jeep", model: "Renegade", version: "S T270 1.3 AT6 MY25", price: 49576800 },
-        { id: 2016, brand: "Jeep", model: "Renegade", version: "Willys T270 AT9 4X4", price: 54616200 },
-        { id: 2017, brand: "Jeep", model: "Compass", version: "Sport T270 AT6 4X2 MY25", price: 52573200 },
-        { id: 2018, brand: "Jeep", model: "Compass", version: "Limited Plus T270 AT6 4X2 MY25", price: 56795400 },
-        { id: 2019, brand: "Jeep", model: "Compass", version: "S T270 AT6 FWD MY25", price: 57340200 },
-        { id: 2020, brand: "Jeep", model: "Compass", version: "Blackhawk 2.0T GME AT9", price: 69462000 },
-        { id: 2021, brand: "Jeep", model: "Commander", version: "Limited GSE 1.3T FWD AT6 BZ MY24", price: 65239800 },
-        { id: 2022, brand: "Jeep", model: "Commander", version: "Overland 2.0L GME AT9 4X4", price: 79268400 },
-        { id: 2023, brand: "Jeep", model: "Commander", version: "Blackhawk 2.0l GME AT9 4x4", price: 79949400 },
+        { id: 2012, brand: "Jeep", model: "Renegade", version: "Sport T270 1.3 AT6 FWD", price: 46046000 },
+        { id: 2013, brand: "Jeep", model: "Renegade", version: "Longitude T270 AT6 FWD MY25", price: 50908000 },
+        { id: 2014, brand: "Jeep", model: "Renegade", version: "S T270 1.3 AT6 MY25", price: 52052000 },
+        { id: 2015, brand: "Jeep", model: "Renegade", version: "Willys T270 AT9 4X4", price: 57343000 },
+        { id: 2016, brand: "Jeep", model: "Compass", version: "Sport T270 AT6 4X2 MY25", price: 55198000 },
+        { id: 2017, brand: "Jeep", model: "Compass", version: "Limited Plus T270 AT6 4X2 MY25", price: 59631000 },
+        { id: 2018, brand: "Jeep", model: "Compass", version: "S T270 AT6 FWD MY25", price: 60203000 },
+        { id: 2019, brand: "Jeep", model: "Compass", version: "Blackhawk 2.0T GME AT9", price: 72930000 },
+        { id: 2020, brand: "Jeep", model: "Commander", version: "Limited GSE 1.3T FWD AT6 BZ MY24", price: 68497000 },
+        { id: 2021, brand: "Jeep", model: "Commander", version: "Overland 2.0L GME AT9 4X4", price: 83226000 },
+        { id: 2022, brand: "Jeep", model: "Commander", version: "Blackhawk 2.0l GME AT9 4x4", price: 83941000 },
 
         // RAM
-        { id: 2024, brand: "Ram", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 64967400 },
-        { id: 2025, brand: "Ram", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 65512200 },
-        { id: 2026, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 74092800 }
+        { id: 2023, brand: "Ram", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 68210000 },
+        { id: 2024, brand: "Ram", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 68783000 },
+        { id: 2025, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 77792000 }
     ];
 
     // =======================================================================
@@ -665,7 +664,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "MOBI TREKKING 1.0",
-            precio: 24964000,
+            precio: 26213000,
             financiaciones: [
                 {
                     tipo: "80/20",
@@ -683,7 +682,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "ARGO DRIVE PACK PLUS",
-            precio: 27898000,
+            precio: 29293000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -701,7 +700,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "CRONOS DRIVE PACK PLUS",
-            precio: 34100000,
+            precio: 35805000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -730,7 +729,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "PULSE DRIVE",
-            precio: 34015000,
+            precio: 35716000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -748,7 +747,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "FASTBACK TURBO 270",
-            precio: 42117000,
+            precio: 44223000,
             financiaciones: [
                 {
                     tipo: "60/40",
@@ -766,7 +765,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "FIORINO ENDURANCE",
-            precio: 27459000,
+            precio: 28832000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -784,7 +783,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "STRADA FREEDOM",
-            precio: 34872000,
+            precio: 36616000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -802,7 +801,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "TORO FREEDOM",
-            precio: 43917000,
+            precio: 46113000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -820,7 +819,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "TITANO ENDURANCE",
-            precio: 46726000,
+            precio: 51927000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -840,7 +839,7 @@ function initFiatModelsPage() {
         {
             marca: "PEUGEOT",
             modelo: "208 ALLURE 1.6 AM26",
-            precio: 33830000,
+            precio: 35530000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -858,7 +857,7 @@ function initFiatModelsPage() {
         {
             marca: "PEUGEOT",
             modelo: "208 ALLURE AT AM26",
-            precio: 35580000,
+            precio: 37360000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -876,7 +875,7 @@ function initFiatModelsPage() {
         {
             marca: "PEUGEOT",
             modelo: "2008 ACTIVE T200 AM26",
-            precio: 41340000,
+            precio: 43410000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -894,7 +893,7 @@ function initFiatModelsPage() {
         {
             marca: "PEUGEOT",
             modelo: "2008 ALLURE T200 AM26",
-            precio: 45290000,
+            precio: 47560000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -912,7 +911,7 @@ function initFiatModelsPage() {
         {
             marca: "PEUGEOT",
             modelo: "PARTNER CONFORT 1.6 HDI",
-            precio: 33050000,
+            precio: 35700000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -930,7 +929,7 @@ function initFiatModelsPage() {
         {
             marca: "PEUGEOT",
             modelo: "EXPERT L3 HDI 120 AM25",
-            precio: 53830000,
+            precio: 56530000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -950,7 +949,7 @@ function initFiatModelsPage() {
         {
             marca: "JEEP",
             modelo: "RENEGADE SPORT",
-            precio: 43856400,
+            precio: 46046000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -968,7 +967,7 @@ function initFiatModelsPage() {
         {
             marca: "JEEP",
             modelo: "COMPASS SPORT 270 AT6",
-            precio: 52573200,
+            precio: 55198000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -986,7 +985,7 @@ function initFiatModelsPage() {
         {
             marca: "RAM",
             modelo: "RAMPAGE REBEL 2.0L GME AT9 4X4",
-            precio: 64967400,
+            precio: 68211000,
             financiaciones: [
                 {
                     tipo: "60/40",
