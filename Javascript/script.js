@@ -687,7 +687,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 30%",
+                    sobrepauta: "DIC 30%",
                     pea1: "4-6-9-12 / 35%",
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$285.000",
@@ -705,7 +705,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 30%",
+                    sobrepauta: "DIC 30%",
                     pea1: "4-6-9-12 / 35%",
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$315.000",
@@ -716,7 +716,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "90/10",
                     cuotas: "84",
-                    sobrepauta: "NOV 20%",
+                    sobrepauta: "DIC 20%",
                     pea1: "10-24-36 / 10%",
                     pea2: "",
                     suscrNeutra: "$425.000",
@@ -734,7 +734,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 35%",
+                    sobrepauta: "DIC 35%",
                     pea1: "4-9-12 / 35%",
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$345.000",
@@ -752,7 +752,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "60/40",
                     cuotas: "84",
-                    sobrepauta: "NOV 40%",
+                    sobrepauta: "DIC 40%",
                     pea1: "4-9-12-24-36 / 40%",
                     pea2: "",
                     suscrNeutra: "$365.000",
@@ -824,7 +824,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 30%",
+                    sobrepauta: "DIC 30%",
                     pea1: "4-9-12 / 35%",
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$440.000",
@@ -844,7 +844,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 20%",
+                    sobrepauta: "DIC 20%",
                     pea1: "2-6-9-12 / 30%",
                     pea2: "",
                     suscrNeutra: "$320.000",
@@ -862,7 +862,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 20%",
+                    sobrepauta: "DIC 20%",
                     pea1: "2-6-9-12 / 30%",
                     pea2: "",
                     suscrNeutra: "$340.000",
@@ -880,7 +880,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 30%",
+                    sobrepauta: "DIC 30%",
                     pea1: "4-6 / 40%",
                     pea2: "9-12 / 30%",
                     suscrNeutra: "$360.000",
@@ -898,7 +898,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 30%",
+                    sobrepauta: "DIC 30%",
                     pea1: "2 / 40%",
                     pea2: "6-9 / 30%",
                     suscrNeutra: "$410.000",
@@ -916,7 +916,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 30%",
+                    sobrepauta: "DIC 30%",
                     pea1: "6-9-12 / 30%",
                     pea2: "",
                     suscrNeutra: "$300.000",
@@ -934,7 +934,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "NOV 30%",
+                    sobrepauta: "DIC 30%",
                     pea1: "6-24-36 / 30%",
                     pea2: "",
                     suscrNeutra: "$470.000",
@@ -957,9 +957,9 @@ function initFiatModelsPage() {
                     sobrepauta: "DIC 40%",
                     pea1: "4-9-12/40%",
                     pea2: "24-36/30%",
-                    suscrNeutra: "$450.000",
-                    suscrPremio: "$490.000",
-                    bonificacion: "$1.700.000 si adjudica cuota 2 caso contrario $500.000 en GR",
+                    suscrNeutra: "$470.000",
+                    suscrPremio: "$510.000",
+                    bonificacion: "$500.000",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -975,9 +975,9 @@ function initFiatModelsPage() {
                     sobrepauta: "DIC 50%",
                     pea1: "4-9-12/40%",
                     pea2: "24-36/30%",
-                    suscrNeutra: "$510.000",
-                    suscrPremio: "$550.000",
-                    bonificacion: "$2.000.000 si adjudica cuota 2 caso contrario $700.000 en GR",
+                    suscrNeutra: "$540.000",
+                    suscrPremio: "$580.000",
+                    bonificacion: "$700.000",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -993,9 +993,9 @@ function initFiatModelsPage() {
                     sobrepauta: "DIC 50%",
                     pea1: "4-9-12-24-36/40%",
                     pea2: "",
-                    suscrNeutra: "$540.000",
-                    suscrPremio: "$580.000",
-                    bonificacion: "$2.500.000 si adjudica cuota 2 caso contrario $700.000 en GR",
+                    suscrNeutra: "$570.000",
+                    suscrPremio: "$610.000",
+                    bonificacion: "$700.000",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
