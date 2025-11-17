@@ -957,8 +957,8 @@ function initFiatModelsPage() {
                     sobrepauta: "DIC 40%",
                     pea1: "4-9-12/40%",
                     pea2: "24-36/30%",
-                    suscrNeutra: "$470.000",
-                    suscrPremio: "$510.000",
+                    suscrNeutra: "$490.000",
+                    suscrPremio: "$530.000",
                     bonificacion: "$500.000",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -975,8 +975,8 @@ function initFiatModelsPage() {
                     sobrepauta: "DIC 50%",
                     pea1: "4-9-12/40%",
                     pea2: "24-36/30%",
-                    suscrNeutra: "$540.000",
-                    suscrPremio: "$580.000",
+                    suscrNeutra: "$580.000",
+                    suscrPremio: "$620.000",
                     bonificacion: "$700.000",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -993,8 +993,8 @@ function initFiatModelsPage() {
                     sobrepauta: "DIC 50%",
                     pea1: "4-9-12-24-36/40%",
                     pea2: "",
-                    suscrNeutra: "$570.000",
-                    suscrPremio: "$610.000",
+                    suscrNeutra: "$620.000",
+                    suscrPremio: "$660.000",
                     bonificacion: "$700.000",
                     retiro: "6.5% + DA (2.5%)"
                 }
