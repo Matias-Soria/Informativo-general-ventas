@@ -405,7 +405,9 @@ function initComparadorPrecios() {
         // RAM
         { id: 2023, brand: "Ram", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 68210000 },
         { id: 2024, brand: "Ram", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 68783000 },
-        { id: 2025, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 77792000 }
+        { id: 2025, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 77792000 },
+        { id: 2026, brand: "Ram", model: "Dakota", version: "Warlock 2.2 Turbo 4X4", price: 69000000 },
+        { id: 2027, brand: "Ram", model: "Dakota", version: "Laramie 2.2 Turbo 4X4", price: 71000000 }
     ];
 
     // =======================================================================
@@ -595,11 +597,11 @@ function initComparadorPrecios() {
             if (difference > 0) {
                 priceDifference.textContent = `Diferencia: +$${difference.toLocaleString()}`;
                 priceDifference.className = 'price-difference positive';
-                if (comparisonText) comparisonText.textContent = `El ${vehicle1.brand} ${vehicle1.model} es más caro que el ${vehicle2.brand} ${vehicle2.model}`;
+                if (comparisonText) comparisonText.textContent = `El ${vehicle1.brand} ${vehicle1.model} ${vehicle1.version} es más caro que el ${vehicle2.brand} ${vehicle2.model} ${vehicle2.version}`;
             } else if (difference < 0) {
                 priceDifference.textContent = `Diferencia: -$${Math.abs(difference).toLocaleString()}`;
                 priceDifference.className = 'price-difference negative';
-                if (comparisonText) comparisonText.textContent = `El ${vehicle1.brand} ${vehicle1.model} es más barato que el ${vehicle2.brand} ${vehicle2.model}`;
+                if (comparisonText) comparisonText.textContent = `El ${vehicle1.brand} ${vehicle1.model} ${vehicle1.version} es más barato que el ${vehicle2.brand} ${vehicle2.model} ${vehicle2.version}`;
             } else {
                 priceDifference.textContent = 'Mismo precio';
                 priceDifference.className = 'price-difference';
@@ -996,6 +998,24 @@ function initFiatModelsPage() {
                     suscrNeutra: "$620.000",
                     suscrPremio: "$660.000",
                     bonificacion: "$700.000",
+                    retiro: "6.5% + DA (2.5%)"
+                }
+            ]
+        },
+        {
+            marca: "RAM",
+            modelo: "DAKOTA WARLOCK 2.2 TURBO AT8 4X4",
+            precio: 69000000,
+            financiaciones: [
+                {
+                    tipo: "70/30",
+                    cuotas: "84",
+                    sobrepauta: "ENE 30%",
+                    pea1: "4-9-12/35%",
+                    pea2: "24-36/30%",
+                    suscrNeutra: "$660.000",
+                    suscrPremio: "$700.000",
+                    bonificacion: "",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
