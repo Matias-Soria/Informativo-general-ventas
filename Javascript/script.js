@@ -676,7 +676,7 @@ function initFiatModelsPage() {
                     pea2: "24-36 / 20%",
                     suscrNeutra: "$250.000",
                     suscrPremio: "$290.000",
-                    bonificacion: "$350.000",
+                    bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -694,7 +694,7 @@ function initFiatModelsPage() {
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$285.000",
                     suscrPremio: "$325.000",
-                    bonificacion: "$350.000",
+                    bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -712,7 +712,7 @@ function initFiatModelsPage() {
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$315.000",
                     suscrPremio: "$355.000",
-                    bonificacion: "$500.000 para licitacion + $500.000 en GR",
+                    bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR",
                     retiro: "6% + DA (2.5%)"
                 },
                 {
@@ -723,7 +723,7 @@ function initFiatModelsPage() {
                     pea2: "",
                     suscrNeutra: "$425.000",
                     suscrPremio: "$465.000",
-                    bonificacion: "$500.000 para licitacion + $500.000 en GR",
+                    bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR",
                     retiro: "6% + DA (2.5%)"
                 }
             ]
@@ -741,7 +741,7 @@ function initFiatModelsPage() {
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$345.000",
                     suscrPremio: "$385.000",
-                    bonificacion: "$500.000",
+                    bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -759,7 +759,7 @@ function initFiatModelsPage() {
                     pea2: "",
                     suscrNeutra: "$365.000",
                     suscrPremio: "$405.000",
-                    bonificacion: "$500.000",
+                    bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -777,7 +777,7 @@ function initFiatModelsPage() {
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$290.000",
                     suscrPremio: "$330.000",
-                    bonificacion: "$350.000",
+                    bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -795,7 +795,7 @@ function initFiatModelsPage() {
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$350.000",
                     suscrPremio: "$390.000",
-                    bonificacion: "$500.000",
+                    bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -813,7 +813,7 @@ function initFiatModelsPage() {
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$395.000",
                     suscrPremio: "$435.000",
-                    bonificacion: "$700.000",
+                    bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -831,7 +831,7 @@ function initFiatModelsPage() {
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$440.000",
                     suscrPremio: "$480.000",
-                    bonificacion: "$500.000 para licitacion + $1.000.000 en GR",
+                    bonificacion: "$500.000 para licitacion en cuota 2 + $1.000.000 en GR",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -979,7 +979,7 @@ function initFiatModelsPage() {
                     pea2: "24-36/30%",
                     suscrNeutra: "$490.000",
                     suscrPremio: "$530.000",
-                    bonificacion: "PATENTAMIENTO 100% BONIF. SOLO SI ADJUDICA EN CUOTA 2",
+                    bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -997,7 +997,7 @@ function initFiatModelsPage() {
                     pea2: "24-36/30%",
                     suscrNeutra: "$580.000",
                     suscrPremio: "$620.000",
-                    bonificacion: "PATENTAMIENTO 100% BONIF. SOLO SI ADJUDICA EN CUOTA 2",
+                    bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -1015,7 +1015,7 @@ function initFiatModelsPage() {
                     pea2: "",
                     suscrNeutra: "$620.000",
                     suscrPremio: "$660.000",
-                    bonificacion: "PATENTAMIENTO 100% BONIF. SOLO SI ADJUDICA EN CUOTA 2",
+                    bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -1033,7 +1033,7 @@ function initFiatModelsPage() {
                     pea2: "24-36/30%",
                     suscrNeutra: "$660.000",
                     suscrPremio: "$700.000",
-                    bonificacion: "PATENTAMIENTO 100% BONIF. SOLO SI ADJUDICA EN CUOTA 2",
+                    bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
