@@ -6788,5 +6788,559 @@
                     "categoria": "Tecnología"
                 }
             ]
+        },
+        {
+        "modelo": "RAM Dakota",
+        "version": "Warlock 2.2 TURBO AT8 4X4",
+        "nombreCompleto": "Warlock 2.2 TURBO AT8 4X4",
+        "equipamiento": [
+                {
+                    "nombre": "Tercera luz de stop con luz en caja de carga",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Paragolpes Satin Grey",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Parrilla Satin Grey",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Espejos laterales eléctricamente retráctiles con desempañador",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Espejos laterales Satin Grey con comando eléctrico y luz de giro",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Faros Full LED delanteros y traseros",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Faros antiniebla LED con función cornering",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Llantas de aleación 17''",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Estribos laterales",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Molduras exteriores negras",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Protector de carter",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Cobertor de caja de carga",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Portón de caja de carga con asistencia",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Gancho para sujeción en caja de carga",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Barra antivuelco RAMBAR",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Identificación Warlock en laterales de caja de carga",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Climatizador Automático Bi-Zona",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Ajuste de volante en altura y profundidad",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Apoyabrazo trasero con portavaso",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Asientos delanteros con regulación eléctrica",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Tapizado interior en cuero negro",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Central multimedia de 12,3'' con Android Auto® y Apple Carplay",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Consola Central con apoyabrazos, portavasos y almacenamiento vertical para celular",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Consola Central de Doble Altura y conectividad USB A & C & 12V",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Instrumental digital de 7´´",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Cargador de celular por inducción Ram Charger",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Revestimiento interior de techo en color negro",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Salidas de ventilación para plazas traseras con puerto USB C",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Comandos al volante",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Volante revestido en cuero",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "6 Airbags (frontales, laterales, cortina)",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Apoyacabezas regulables en altura",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Airbags laterales tipo cortina delanteros y traseros",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Asistente de mantenimiento de carril",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Detector de punto ciego",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Control crucero adaptativo",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Frenado de emergencia",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Tercer cinturón inercial trasero",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Sistema de control de estabilidad y tracción (ESC)",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Control de ascenso y descenso en pendientes",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Frenos a disco con ABS & EBD",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Sistema de sujeción ISOFIX",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Arranque por botón",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sistema de tracción 4AUTO, 2H & 4L (con reductora 4:1)",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "4 Modos de manejo: Normal, Sport, Nieve, Arena",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Cámara 540°",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Controles de audio y teléfono al volante",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Dirección asistida eléctricamente",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Freno de estacionamiento eléctrico",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sensores de estacionamiento trasero y delantero",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sistema de Audio 6 parlantes + 2 tweeters",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sistema de Sonido DTS (Digital Theater System) multicanal",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sistema de monitoreo de presión de neumáticos",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Llave multifunción Smart Key",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                }
+            ]
+        },
+        {
+        "modelo": "RAM Dakota",
+        "version": "Laramie 2.2 TURBO AT8 4X4",
+        "nombreCompleto": "Laramie 2.2 TURBO AT8 4X4",
+        "equipamiento": [
+                {
+                    "nombre": "Tercera luz de stop con luz en caja de carga",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Paragolpes color carroceria",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Parrilla Cromada",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Espejos laterales eléctricamente retráctiles con desempañador",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Espejos laterales Cromados con comando eléctrico y luz de giro",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Faros Full LED delanteros y traseros",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "RAM LED Lightbar",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Faros antiniebla LED con función cornering",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Llantas de aleación 18''",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Estribos laterales",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Molduras exteriores inferiores color carrocería",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Protector de carter",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Cobertor de caja de carga",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Portón de caja de carga con asistencia",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Gancho para sujeción en caja de carga",
+                    "incluido": true,
+                    "categoria": "Exterior"
+                },
+                {
+                    "nombre": "Climatizador Automático Bi-Zona",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Ajuste de volante en altura y profundidad",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Apoyabrazo trasero con portavaso",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Asientos delanteros con regulación eléctrica",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Tapizado interior en cuero negro",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Central multimedia de 12,3'' con Android Auto® y Apple Carplay",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Consola Central con apoyabrazos, portavasos y almacenamiento vertical para celular",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Consola Central de Doble Altura y conectividad USB A & C & 12V",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Instrumental digital de 7´´",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Cargador de celular por inducción Ram Charger",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Revestimiento interior de techo en color negro",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Salidas de ventilación para plazas traseras con puerto USB C",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Comandos al volante",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "Volante revestido en cuero",
+                    "incluido": true,
+                    "categoria": "Confort"
+                },
+                {
+                    "nombre": "6 Airbags (frontales, laterales, cortina)",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Apoyacabezas regulables en altura",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Airbags laterales tipo cortina delanteros y traseros",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Asistente de mantenimiento de carril",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Detector de punto ciego",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Alerta de trafico cruzado",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Control crucero adaptativo",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Frenado de emergencia",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Tercer cinturón inercial trasero",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Sistema de control de estabilidad y tracción (ESC)",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Control de ascenso y descenso en pendientes",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Frenos a disco con ABS & EBD",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Sistema de sujeción ISOFIX",
+                    "incluido": true,
+                    "categoria": "Seguridad"
+                },
+                {
+                    "nombre": "Arranque por botón",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sistema de tracción 4AUTO, 2H & 4L (con reductora 4:1)",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "4 Modos de manejo: Normal, Sport, Nieve, Arena",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Cámara 540°",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Controles de audio y teléfono al volante",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Dirección asistida eléctricamente",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Freno de estacionamiento eléctrico",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sensores de estacionamiento trasero y delantero",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sistema de Audio 6 parlantes + 2 tweeters",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sistema de Sonido DTS (Digital Theater System) multicanal",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Sistema de monitoreo de presión de neumáticos",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                },
+                {
+                    "nombre": "Llave multifunción Smart Key",
+                    "incluido": true,
+                    "categoria": "Tecnología"
+                }
+            ]
         }
 ]
