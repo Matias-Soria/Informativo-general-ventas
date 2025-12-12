@@ -20,6 +20,9 @@
 
 html {
     font-size: 14px;
+    scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -34,6 +37,9 @@ body {
     color: var(--dark-color);
     background-color: #f9f9f9;
     overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .app-container {
@@ -43,12 +49,13 @@ body {
     -webkit-overflow-scrolling: touch;
     width: 100%;
     overflow-x: hidden;
+    max-width: 100vw;
 }
 
-/**HEADER MEJORADO - MOBILE FIX**/
+/** HEADER MEJORADO - RESPONSIVE FIXED **/
 header {
     background-color: black;
-    padding: 1rem;
+    padding: 0.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,6 +63,7 @@ header {
     flex-wrap: wrap;
     position: relative;
     width: 100%;
+    gap: 0.5rem;
 }
 
 .logoautocity {
@@ -73,6 +81,7 @@ header {
     cursor: pointer;
     padding: 0.5rem;
     min-height: 44px;
+    min-width: 44px;
     order: 2;
     z-index: 1001;
 }
@@ -105,8 +114,10 @@ header {
     padding: 0.5rem 1rem;
     display: block;
     min-height: 44px;
+    min-width: 44px;
     display: flex;
     align-items: center;
+    justify-content: center;
     white-space: nowrap;
 }
 
@@ -122,32 +133,54 @@ header {
     order: 4;
 }
 
+/* MOBILE: 768px y menos */
 @media (max-width: 768px) {
     header {
-        padding: 0.75rem;
+        padding: 0.5rem;
         justify-content: space-between;
+        gap: 0.5rem;
     }
     
     .menu-toggle {
         display: block;
+        order: 2;
+    }
+    
+    .logoautocity {
+        order: 1;
+        width: clamp(100px, 25vw, 140px);
+    }
+    
+    .logojeep {
+        order: 3;
+        width: clamp(100px, 25vw, 140px);
     }
     
     .navbar {
         order: 4;
         flex: 0 0 100%;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
+        display: none;
+    }
+    
+    .navbar.active {
+        display: block;
     }
     
     .navbar ul {
         display: none;
         width: 100%;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 70px;
         left: 0;
+        right: 0;
         background-color: black;
         box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         z-index: 1000;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .navbar ul.active {
@@ -157,32 +190,36 @@ header {
     .navbar li {
         display: block;
         text-align: center;
-        padding: 1rem;
+        padding: 0.75rem;
         border-bottom: 1px solid #333;
         width: 100%;
-    }
-    
-    .logoautocity, .logojeep {
-        order: 1;
-    }
-    
-    .logojeep {
-        order: 3;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 0.5rem;
     }
     
     .navbar a {
         padding: 0.8rem;
         font-size: 1rem;
+        justify-content: center;
+    }
+}
+
+/* MOBILE PEQUEÑO: 480px y menos */
+@media (max-width: 480px) {
+    header {
+        padding: 0.4rem;
+    }
+    
+    .navbar a {
+        padding: 0.7rem;
+        font-size: 0.95rem;
     }
     
     .logoautocity, .logojeep {
-        width: clamp(100px, 25vw, 140px);
+        width: clamp(90px, 22vw, 120px);
+    }
+    
+    .menu-toggle {
+        font-size: 1.3rem;
+        padding: 0.4rem;
     }
 }
 
@@ -212,10 +249,11 @@ header {
 }
 
 .comparator-container {
-    max-width: min(1400px, 98%);
+    max-width: min(1400px, 100%);
     width: 100%;
     margin: 1rem auto;
-    padding: 0 clamp(0.5rem, 2vw, 1rem);
+    padding: 0 max(0.5rem, env(safe-area-inset-left));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
     flex: 1;
 }
 
@@ -319,6 +357,8 @@ header {
     background-color: white;
     min-width: 250px;
     min-height: 44px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .reset-btn {
@@ -332,11 +372,16 @@ header {
     font-weight: 500;
     font-size: 1.05rem;
     min-height: 44px;
+    min-width: 44px;
 }
 
 .reset-btn:hover {
     background-color: #5a6268;
     transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
 }
 
 .results-container {
@@ -471,6 +516,7 @@ footer {
     text-align: center;
 }
 
+/* TABLET: 768px - 1024px */
 @media (max-width: 1024px) {
     .comparison-filters-container {
         gap: 1.5rem;
@@ -480,8 +526,15 @@ footer {
         min-width: 100%;
         max-width: 100%;
     }
+    
+    .results-header,
+    .comparison-item {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 0.75rem;
+    }
 }
 
+/* MOBILE MEDIANO: 768px y menos */
 @media (max-width: 768px) {
     .comparator-container {
         padding: 0 1rem;
@@ -511,21 +564,31 @@ footer {
     
     .category-filter {
         min-width: 100%;
+        max-width: 100%;
     }
     
     .model-filter, .version-filter {
         padding: 0.8rem 1rem;
         font-size: 16px;
+        width: 100%;
+    }
+    
+    .results-header,
+    .comparison-item {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 0.5rem;
+        padding: 1rem;
     }
 }
 
-@media (max-width: 640px) {
+/* MOBILE PEQUEÑO: 576px y menos */
+@media (max-width: 576px) {
     .results-header,
     .comparison-item {
         grid-template-columns: 1fr;
         gap: 0.5rem;
         text-align: center;
-        padding: 1rem;
+        padding: 0.75rem;
     }
     
     .feature-col, .model-col {
@@ -536,20 +599,24 @@ footer {
     .comparison-feature {
         font-weight: 600;
         background-color: #f8f9fa;
-        padding: 0.5rem;
-        border-radius: 4px;
+        padding: 0.75rem;
+        border-radius: 6px;
         margin-bottom: 0.5rem;
+        font-size: 0.9rem;
     }
     
     .comparison-value {
-        margin: 0.5rem 0;
+        margin: 0.25rem 0;
+        font-size: 1.1rem;
     }
     
     .category-header {
         text-align: center;
+        padding: 0.75rem;
     }
 }
 
+/* MOBILE MUY PEQUEÑO: 380px y menos */
 @media (max-width: 380px) {
     .comparator-container {
         padding: 0 0.5rem;
@@ -557,6 +624,12 @@ footer {
     
     .model-filter, .version-filter {
         font-size: 16px;
+        padding: 0.7rem 0.8rem;
+    }
+    
+    .comparison-feature {
+        font-size: 0.85rem;
+        padding: 0.6rem;
     }
 }
 
@@ -588,8 +661,9 @@ footer {
 }
 
 #filter-section .filter-group-inline .form-group {
-    min-width: 250px;
+    min-width: 100%;
     max-width: 100%;
+    width: 100%;
 }
 
 #filter-section .filter-group-inline .form-group label {
@@ -669,6 +743,7 @@ footer {
     background-color: white;
     transition: all 0.3s ease;
     min-height: 44px;
+    width: 100%;
 }
 
 #brand-filter:focus, #model-filter:focus {
@@ -701,6 +776,7 @@ button {
     font-weight: 600;
     transition: all 0.3s;
     min-height: 44px;
+    min-width: 44px;
 }
 
 button:hover {
@@ -727,6 +803,7 @@ button:focus {
     -webkit-overflow-scrolling: touch;
     margin: 1rem 0;
     border-radius: 8px;
+    width: 100%;
 }
 
 table {
@@ -793,6 +870,7 @@ tr:hover {
     color: var(--dark-color);
 }
 
+/* RESPONSIVE PARA FILTROS Y TABLAS */
 @media (max-width: 768px) {
     #filter-section .filter-group-inline {
         grid-template-columns: 1fr;
@@ -816,11 +894,12 @@ tr:hover {
     
     .actions {
         flex-direction: column;
+        gap: 0.75rem;
     }
     
     button {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
     
     th, td {
@@ -832,17 +911,6 @@ tr:hover {
         padding: 1.5rem;
         margin-bottom: 1.5rem;
     }
-}
-
-@media (max-width: 480px) {
-    .section {
-        padding: 1rem;
-        border-radius: 8px;
-    }
-    
-    #filter-section .filter-group-inline {
-        grid-template-columns: 1fr;
-    }
     
     .table-container {
         margin: 0.5rem -1rem;
@@ -850,10 +918,32 @@ tr:hover {
     }
 }
 
+@media (max-width: 480px) {
+    .section {
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+    
+    #filter-section .filter-group-inline {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-container {
+        margin: 0.5rem -0.5rem;
+        width: calc(100% + 1rem);
+    }
+    
+    table {
+        min-width: 500px;
+    }
+}
+
 .fiat-container {
-    max-width: min(1400px, 98%);
+    max-width: min(1400px, 100%);
     margin: 1rem auto;
-    padding: 0 clamp(0.5rem, 2vw, 1rem);
+    padding: 0 max(0.5rem, env(safe-area-inset-left));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
 }
 
 .fiat-page-title {
@@ -911,7 +1001,7 @@ tr:hover {
     padding: 0.8rem;
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    min-width: 200px;
+    min-width: 100%;
     font-size: 1rem;
     transition: border-color 0.3s;
     min-height: 44px;
@@ -937,6 +1027,7 @@ tr:hover {
     align-self: flex-end;
     margin-top: 1.8rem;
     min-height: 44px;
+    min-width: 44px;
 }
 
 .fiat-reset-btn:hover {
@@ -954,6 +1045,7 @@ tr:hover {
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
     -webkit-overflow-scrolling: touch;
+    width: 100%;
 }
 
 .fiat-models-table:hover {
@@ -1032,6 +1124,7 @@ tr:hover {
     .fiat-filters {
         grid-template-columns: 1fr;
         padding: 1rem;
+        gap: 1rem;
     }
     
     .fiat-filters input, .fiat-filters select {
@@ -1041,6 +1134,7 @@ tr:hover {
     .fiat-reset-btn {
         align-self: stretch;
         margin-top: 0.5rem;
+        width: 100%;
     }
     
     .fiat-page-title {
@@ -1062,17 +1156,23 @@ tr:hover {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .fiat-filters {
         grid-template-columns: 1fr;
+        padding: 0.75rem;
     }
     
     .fiat-reset-btn {
         margin-top: 0.5rem;
+        padding: 0.7rem 1rem;
     }
     
     .fiat-container {
         padding: 0.25rem;
+    }
+    
+    .fiat-table {
+        min-width: 500px;
     }
 }
 
@@ -1114,8 +1214,8 @@ tr:hover {
 
 .calc-form-group {
     flex: 1;
-    min-width: min(400px, 100%);
-    max-width: 500px;
+    min-width: min(100%, 100%);
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -1144,6 +1244,7 @@ tr:hover {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    font-size: 16px;
 }
 
 .calc-select:focus, .calc-input:focus {
@@ -1170,6 +1271,7 @@ tr:hover {
     transition: all 0.3s;
     margin-top: 0.5rem;
     min-height: 38px;
+    min-width: 44px;
     width: 100%;
     max-width: 250px;
     align-self: center;
@@ -1228,11 +1330,13 @@ tr:hover {
     color: var(--success-color);
 }
 
+/* RESPONSIVE CALCULADORA */
 @media (max-width: 768px) {
     .calculator-section {
         max-width: 95%;
         width: 95%;
         padding: 0.875rem;
+        margin: 0.5rem auto;
     }
     
     .calculator-container {
@@ -1259,6 +1363,13 @@ tr:hover {
     .calc-btn {
         max-width: 100%;
         padding: 0.6rem 1.25rem;
+        min-height: 44px;
+    }
+    
+    .calc-select, .calc-input {
+        min-height: 44px;
+        padding: 0.8rem;
+        font-size: 16px;
     }
 }
 
@@ -1275,11 +1386,19 @@ tr:hover {
         align-items: flex-start;
         gap: 0.2rem;
         padding: 0.4rem 0;
+        font-size: 0.85rem;
     }
     
     .result-item span:last-child {
         font-weight: 600;
         font-size: 0.85rem;
+        align-self: flex-end;
+    }
+    
+    .result-item.highlight,
+    .result-item.final {
+        margin: 0;
+        padding: 0.5rem;
     }
 }
 
@@ -1288,9 +1407,10 @@ tr:hover {
     pointer-events: none;
 }
 
+/* FIX PARA INPUT EN iOS */
 @media (max-width: 768px) {
     input, select, textarea {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 }
 
@@ -1301,4 +1421,84 @@ button:focus, select:focus, input:focus {
 
 * {
     -webkit-overflow-scrolling: touch;
+}
+
+/* FIX ESPECÍFICO PARA iOS SAFARI */
+@supports (-webkit-touch-callout: none) {
+    .navbar ul {
+        -webkit-overflow-scrolling: touch;
+        max-height: 70vh;
+    }
+    
+    input, select, textarea {
+        font-size: 16px;
+    }
+    
+    .calculator-section,
+    .comparator-container,
+    .fiat-container {
+        padding-left: max(0.5rem, env(safe-area-inset-left));
+        padding-right: max(0.5rem, env(safe-area-inset-right));
+    }
+}
+
+/* MEJORAS DE ACCESIBILIDAD Y TAP TARGETS */
+@media (max-width: 480px) {
+    button, 
+    .reset-btn, 
+    .calc-btn,
+    .fiat-reset-btn,
+    .navbar a,
+    .menu-toggle {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .model-filter, 
+    .version-filter,
+    .calc-select,
+    .calc-input,
+    #brand-filter, 
+    #model-filter,
+    .fiat-filters input,
+    .fiat-filters select {
+        min-height: 44px;
+        padding: 0.8rem !important;
+        font-size: 16px !important;
+    }
+    
+    /* Asegurar que los formularios sean fácilmente usables */
+    form {
+        font-size: 16px;
+    }
+    
+    /* Mejorar legibilidad en móvil */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+    }
+}
+
+/* PREVENIR DESBORDAMIENTOS EN PANTALLAS MUY PEQUEÑAS */
+@media (max-width: 360px) {
+    .app-section h1 {
+        font-size: 1.2rem;
+    }
+    
+    .app-section p {
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    .fiat-page-title {
+        font-size: 1.3rem;
+    }
+    
+    .calculator-section h2 {
+        font-size: 1.1rem;
+    }
 }
