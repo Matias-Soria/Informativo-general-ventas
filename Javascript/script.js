@@ -772,7 +772,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "",
+                    sobrepauta: "FEB 30%",
                     pea1: "4-9-12 / 40%",
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$290.000",
@@ -790,7 +790,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "",
+                    sobrepauta: "FEB 35%",
                     pea1: "6-9-12 / 40%",
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$350.000",
@@ -808,7 +808,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "",
+                    sobrepauta: "FEB 30%",
                     pea1: "4-9-12 / 40%",
                     pea2: "24-36 / 30%",
                     suscrNeutra: "$395.000",
@@ -1010,7 +1010,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "60/40",
                     cuotas: "84",
-                    sobrepauta: "FEB 50%",
+                    sobrepauta: "FEB 35%",
                     pea1: "4-9-12-24-36/40%",
                     pea2: "",
                     suscrNeutra: "$620.000",
