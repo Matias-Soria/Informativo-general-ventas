@@ -667,16 +667,16 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "MOBI TREKKING 1.0",
-            precio: 26643000,
+            precio: 27070000,
             financiaciones: [
                 {
                     tipo: "80/20",
                     cuotas: "84",
                     sobrepauta: "",
-                    pea1: "6-9-12 / 30%",
-                    pea2: "24-36 / 20%",
-                    suscrNeutra: "$250.000",
-                    suscrPremio: "$290.000",
+                    pea1: "6-12 / 30%",
+                    pea2: "",
+                    suscrNeutra: "$260.000",
+                    suscrPremio: "$300.000",
                     bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -685,16 +685,16 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "ARGO DRIVE PACK PLUS",
-            precio: 29774000,
+            precio: 29780000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 30%",
-                    pea1: "4-6-9-12 / 35%",
-                    pea2: "24-36 / 30%",
-                    suscrNeutra: "$285.000",
-                    suscrPremio: "$325.000",
+                    sobrepauta: "MAR 30%",
+                    pea1: "4-6-12 / 30%",
+                    pea2: "",
+                    suscrNeutra: "$300.000",
+                    suscrPremio: "$340.000",
                     bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -703,27 +703,38 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "CRONOS DRIVE PACK PLUS",
-            precio: 36429000,
+            precio: 37020000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 20%",
-                    pea1: "4-6-9-12 / 35%",
-                    pea2: "24-36 / 30%",
-                    suscrNeutra: "$315.000",
-                    suscrPremio: "$355.000",
+                    sobrepauta: "MAR 20%",
+                    pea1: "2-4-6-9-12 / 30%",
+                    pea2: "",
+                    suscrNeutra: "$340.000",
+                    suscrPremio: "$380.000",
                     bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR",
                     retiro: "6% + DA (2.5%)"
                 },
                 {
                     tipo: "90/10",
                     cuotas: "84",
-                    sobrepauta: "FEB 20%",
-                    pea1: "10-24-36 / 10%",
+                    sobrepauta: "MAR 20%",
+                    pea1: "10 / 20%",
                     pea2: "",
-                    suscrNeutra: "$425.000",
-                    suscrPremio: "$465.000",
+                    suscrNeutra: "$450.000",
+                    suscrPremio: "$490.000",
+                    bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR",
+                    retiro: "6% + DA (2.5%)"
+                },
+                {
+                    tipo: "80/20",
+                    cuotas: "84",
+                    sobrepauta: "MAR 20%",
+                    pea1: "6-9-12 / 20%",
+                    pea2: "",
+                    suscrNeutra: "$420.000",
+                    suscrPremio: "$460.000",
                     bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR",
                     retiro: "6% + DA (2.5%)"
                 }
@@ -732,16 +743,16 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "PULSE DRIVE",
-            precio: 36302000,
+            precio: 36670000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 30%",
-                    pea1: "4-9-12 / 35%",
-                    pea2: "24-36 / 30%",
-                    suscrNeutra: "$345.000",
-                    suscrPremio: "$385.000",
+                    sobrepauta: "MAR 30%",
+                    pea1: "4-6-12 / 30%",
+                    pea2: "",
+                    suscrNeutra: "$360.000",
+                    suscrPremio: "$400.000",
                     bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -750,16 +761,16 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "FASTBACK TURBO 270",
-            precio: 44949000,
+            precio: 45310000,
             financiaciones: [
                 {
-                    tipo: "60/40",
+                    tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 30%",
-                    pea1: "4-9-12-24-36 / 40%",
+                    sobrepauta: "MAR 30%",
+                    pea1: "4-6-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$365.000",
-                    suscrPremio: "$405.000",
+                    suscrNeutra: "$380.000",
+                    suscrPremio: "$420.000",
                     bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -768,16 +779,16 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "FIORINO ENDURANCE",
-            precio: 29305000,
+            precio: 29310000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 30%",
-                    pea1: "4-9-12 / 40%",
-                    pea2: "24-36 / 30%",
-                    suscrNeutra: "$290.000",
-                    suscrPremio: "$330.000",
+                    sobrepauta: "MAR 30%",
+                    pea1: "4-6-12 / 30%",
+                    pea2: "",
+                    suscrNeutra: "$300.000",
+                    suscrPremio: "$340.000",
                     bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -786,16 +797,16 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "STRADA FREEDOM",
-            precio: 37217000,
+            precio: 37520000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 35%",
-                    pea1: "6-9-12 / 40%",
-                    pea2: "24-36 / 30%",
-                    suscrNeutra: "$350.000",
-                    suscrPremio: "$390.000",
+                    sobrepauta: "MAR 35%",
+                    pea1: "6-12 / 35%",
+                    pea2: "",
+                    suscrNeutra: "$370.000",
+                    suscrPremio: "$410.000",
                     bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -804,16 +815,16 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "TORO FREEDOM",
-            precio: 46870000,
+            precio: 47250000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 30%",
-                    pea1: "4-9-12 / 40%",
-                    pea2: "24-36 / 30%",
-                    suscrNeutra: "$395.000",
-                    suscrPremio: "$435.000",
+                    sobrepauta: "MAR 30%",
+                    pea1: "4-6-12 / 30%",
+                    pea2: "",
+                    suscrNeutra: "$410.000",
+                    suscrPremio: "$450.000",
                     bonificacion: "$400.000 para licitación en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -822,16 +833,16 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "TITANO ENDURANCE",
-            precio: 52468000,
+            precio: 58240000,
             financiaciones: [
                 {
-                    tipo: "70/30",
+                    tipo: "60/40",
                     cuotas: "84",
-                    sobrepauta: "FEB 20%",
-                    pea1: "4-9-12 / 35%",
-                    pea2: "24-36 / 30%",
-                    suscrNeutra: "$440.000",
-                    suscrPremio: "$480.000",
+                    sobrepauta: "MAR 20%",
+                    pea1: "4-6-12 / 40%",
+                    pea2: "",
+                    suscrNeutra: "$460.000",
+                    suscrPremio: "$500.000",
                     bonificacion: "$500.000 para licitacion en cuota 2 + $1.000.000 en GR",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -841,14 +852,14 @@ function initFiatModelsPage() {
         // PEUGEOT
         {
             marca: "PEUGEOT",
-            modelo: "208 ALLURE 1.6 AM26",
+            modelo: "208 ALLURE 1.6 AM26.5",
             precio: 36180000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "120",
-                    sobrepauta: "FEB 10%",
-                    pea1: "2-12 / 30%",
+                    sobrepauta: "MAR 35%",
+                    pea1: "12 / 30%",
                     pea2: "",
                     suscrNeutra: "$260.000",
                     suscrPremio: "$300.000",
@@ -859,17 +870,17 @@ function initFiatModelsPage() {
         },
         {
             marca: "PEUGEOT",
-            modelo: "208 ALLURE 1.6 AM26",
+            modelo: "208 ALLURE 1.6 AM26.5",
             precio: 36180000,
             financiaciones: [
                 {
                     tipo: "80/20",
                     cuotas: "84",
-                    sobrepauta: "FEB 10%",
-                    pea1: "2-6-9-12 / 30%",
+                    sobrepauta: "MAR 25%",
+                    pea1: "2-6-9-12 / 20%",
                     pea2: "",
-                    suscrNeutra: "$320.000",
-                    suscrPremio: "$360.000",
+                    suscrNeutra: "$340.000",
+                    suscrPremio: "$380.000",
                     bonificacion: "$500.000",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
@@ -877,17 +888,17 @@ function initFiatModelsPage() {
         },
         {
             marca: "PEUGEOT",
-            modelo: "208 ALLURE AT AM26",
+            modelo: "208 ALLURE AT AM26.5",
             precio: 38050000,
             financiaciones: [
                 {
                     tipo: "80/20",
                     cuotas: "84",
-                    sobrepauta: "FEB 10%",
-                    pea1: "2-6-9-12 / 30%",
+                    sobrepauta: "MAR 25%",
+                    pea1: "2-6-9-12 / 20%",
                     pea2: "",
-                    suscrNeutra: "$340.000",
-                    suscrPremio: "$380.000",
+                    suscrNeutra: "$390.000",
+                    suscrPremio: "$430.000",
                     bonificacion: "$500.000",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
@@ -901,11 +912,11 @@ function initFiatModelsPage() {
                 {
                     tipo: "80/20",
                     cuotas: "84",
-                    sobrepauta: "FEB 20%",
-                    pea1: "4-6 / 40%",
-                    pea2: "9-12 / 30%",
-                    suscrNeutra: "$360.000",
-                    suscrPremio: "$400.000",
+                    sobrepauta: "MAR 25%",
+                    pea1: "2-6-9-12 / 20%",
+                    pea2: "",
+                    suscrNeutra: "$410.000",
+                    suscrPremio: "$450.000",
                     bonificacion: "$700.000",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
@@ -919,11 +930,11 @@ function initFiatModelsPage() {
                 {
                     tipo: "80/20",
                     cuotas: "84",
-                    sobrepauta: "FEB 20%",
-                    pea1: "2 / 40%",
-                    pea2: "6-9 / 30%",
-                    suscrNeutra: "$410.000",
-                    suscrPremio: "$450.000",
+                    sobrepauta: "MAR 25%",
+                    pea1: "2-6-9-12 / 20%",
+                    pea2: "",
+                    suscrNeutra: "$460.000",
+                    suscrPremio: "$500.000",
                     bonificacion: "$700.000",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
@@ -937,11 +948,11 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "ENE 20%",
-                    pea1: "6-9-12 / 30%",
+                    sobrepauta: "MAR 30%",
+                    pea1: "2-4 / 30%",
                     pea2: "",
-                    suscrNeutra: "$300.000",
-                    suscrPremio: "$340.000",
+                    suscrNeutra: "$330.000",
+                    suscrPremio: "$370.000",
                     bonificacion: "$500.000",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
@@ -955,11 +966,11 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 30%",
-                    pea1: "6-24-36 / 30%",
+                    sobrepauta: "MAR 35%",
+                    pea1: "4-6-9-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$470.000",
-                    suscrPremio: "$510.000",
+                    suscrNeutra: "$510.000",
+                    suscrPremio: "$550.000",
                     bonificacion: "$800.000",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
@@ -975,11 +986,11 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 35%",
-                    pea1: "4-9-12/40%",
-                    pea2: "24-36/30%",
-                    suscrNeutra: "$490.000",
-                    suscrPremio: "$530.000",
+                    sobrepauta: "MAR 35%",
+                    pea1: "2-4-9-12/30%",
+                    pea2: "",
+                    suscrNeutra: "$440.000",
+                    suscrPremio: "$480.000",
                     bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2 + 6 medias cuotas puras",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -993,11 +1004,11 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 35%",
-                    pea1: "4-9-12/40%",
-                    pea2: "24-36/30%",
-                    suscrNeutra: "$580.000",
-                    suscrPremio: "$620.000",
+                    sobrepauta: "MAR 35%",
+                    pea1: "4-6-12/30%",
+                    pea2: "",
+                    suscrNeutra: "$590.000",
+                    suscrPremio: "$630.000",
                     bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2",
                     retiro: "6.5% + DA (2.5%)"
                 }
@@ -1009,10 +1020,10 @@ function initFiatModelsPage() {
             precio: 70071300,
             financiaciones: [
                 {
-                    tipo: "60/40",
+                    tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 35%",
-                    pea1: "4-9-12-24-36/40%",
+                    sobrepauta: "MAR 35%",
+                    pea1: "4-6-12/30%",
                     pea2: "",
                     suscrNeutra: "$620.000",
                     suscrPremio: "$660.000",
@@ -1024,12 +1035,12 @@ function initFiatModelsPage() {
         {
             marca: "RAM",
             modelo: "DAKOTA WARLOCK 2.2 TURBO AT8 4X4",
-            precio: 69560000,
+            precio: 69000000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "FEB 30%",
+                    sobrepauta: "MAR 30%",
                     pea1: "4-9-12/35%",
                     pea2: "24-36/30%",
                     suscrNeutra: "$660.000",
