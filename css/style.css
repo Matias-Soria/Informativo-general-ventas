@@ -116,8 +116,8 @@ header {
     transform: scale(1.1);
 }
 
-.logojeep {
-    width: clamp(120px, 25vw, 150px);
+.logostellantis {
+    width: clamp(300px, 25vw, 300px);
     height: auto;
     order: 4;
 }

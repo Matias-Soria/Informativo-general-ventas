@@ -713,7 +713,7 @@ function initFiatModelsPage() {
                     pea2: "",
                     suscrNeutra: "$340.000",
                     suscrPremio: "$380.000",
-                    bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR",
+                    bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR + 6 medias cuotas puras solo si adjudica en cuota 2",
                     retiro: "6% + DA (2.5%)"
                 },
                 {
@@ -863,7 +863,7 @@ function initFiatModelsPage() {
                     pea2: "",
                     suscrNeutra: "$260.000",
                     suscrPremio: "$300.000",
-                    bonificacion: "$350.000",
+                    bonificacion: "$350.000 + 6 medias cuotas puras solo si adjudica en cuota 2",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
             ]
@@ -881,7 +881,7 @@ function initFiatModelsPage() {
                     pea2: "",
                     suscrNeutra: "$340.000",
                     suscrPremio: "$380.000",
-                    bonificacion: "$500.000",
+                    bonificacion: "$500.000 + 6 medias cuotas puras solo si adjudica en cuota 2",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
             ]
@@ -899,7 +899,7 @@ function initFiatModelsPage() {
                     pea2: "",
                     suscrNeutra: "$390.000",
                     suscrPremio: "$430.000",
-                    bonificacion: "$500.000",
+                    bonificacion: "$500.000 + 6 medias cuotas puras solo si adjudica en cuota 2",
                     retiro: "6% (DA SE PAGA CON LA LICITACION)"
                 }
             ]
@@ -991,7 +991,7 @@ function initFiatModelsPage() {
                     pea2: "",
                     suscrNeutra: "$440.000",
                     suscrPremio: "$480.000",
-                    bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2 + 6 medias cuotas puras",
+                    bonificacion: "Patentamiento 100% Bonif. + 6 medias cuotas puras solo si adjudica en cuota 2 ",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
