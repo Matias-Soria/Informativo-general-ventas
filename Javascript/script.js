@@ -352,63 +352,65 @@ function initComparadorPrecios() {
     // =======================================================================
     const vehiclesData = [
         // FIAT
-        { id: 1001, brand: "Fiat", model: "Mobi", version: "Trekking 1.0", price: 27070000 },
-        { id: 1002, brand: "Fiat", model: "Argo", version: "Drive 1.3L MT", price: 29780000 },
-        { id: 1003, brand: "Fiat", model: "Argo", version: "Drive 1.3L CVT", price: 32480000 },
-        { id: 1004, brand: "Fiat", model: "Cronos", version: "Like 1.3 GSE MY26", price: 30960000 },
-        { id: 1005, brand: "Fiat", model: "Cronos", version: "Drive 1.3 GSE PACK PLUS MY26", price: 37020000 },
-        { id: 1006, brand: "Fiat", model: "Cronos", version: "Drive 1.3L GSE CVT PACK PLUS MY26", price: 37240000 },
-        { id: 1007, brand: "Fiat", model: "Cronos", version: "Precision 1.3 GSE CVT MY26", price: 38590000 },
-        { id: 1008, brand: "Fiat", model: "Pulse", version: "Drive 1.3 MT5", price: 36670000 },
-        { id: 1009, brand: "Fiat", model: "Pulse", version: "Drive 1.3 CVT", price: 37970000 },
-        { id: 1010, brand: "Fiat", model: "Pulse", version: "Audace 1.0T CVT", price: 41030000 },
-        { id: 1011, brand: "Fiat", model: "Pulse", version: "Impetus 1.0T CVT", price: 42450000 },
-        { id: 1012, brand: "Fiat", model: "Pulse", version: "Abarth Turbo 270 AT6", price: 44520000 },
-        { id: 1013, brand: "Fiat", model: "Fastback", version: "Turbo 270 AT", price: 45310000 },
-        { id: 1014, brand: "Fiat", model: "Fastback", version: "Abarth Turbo 270 AT6", price: 49450000 },
-        { id: 1015, brand: "Fiat", model: "Fiorino", version: "Endurance 1.3 FIREFLY", price: 29310000 },
-        { id: 1016, brand: "Fiat", model: "Strada", version: "Freedom CS 1.3 MT", price: 32880000 },
-        { id: 1017, brand: "Fiat", model: "Strada", version: "Freedom 1.3 8V CD", price: 37520000 },
-        { id: 1018, brand: "Fiat", model: "Strada", version: "Volcano 1.3 8V CD CVT", price: 41900000 },
-        { id: 1019, brand: "Fiat", model: "Toro", version: "Freedom T270 AT6 4X2", price: 47250000 },
-        { id: 1020, brand: "Fiat", model: "Toro", version: "Volcano T270 AT6 4X2", price: 52800000 },
-        { id: 1021, brand: "Fiat", model: "Titano", version: "Endurance MT 4X2", price: 49980000 },
-        { id: 1022, brand: "Fiat", model: "Titano", version: "Endurance MT 4X4", price: 52890000 },
-        { id: 1023, brand: "Fiat", model: "Titano", version: "Freedom MT 4X4", price: 58240000 },
-        { id: 1024, brand: "Fiat", model: "Titano", version: "Freedom Plus AT 4X4", price: 63960000 },
-        { id: 1025, brand: "Fiat", model: "Titano", version: "Ranch AT 4X4", price: 69060000 },
+        { id: 1001, brand: "Fiat", model: "Mobi", version: "Trekking 1.0", price: 27210000 },
+        { id: 1002, brand: "Fiat", model: "Argo", version: "Drive 1.3L MT", price: 29930000 },
+        { id: 1003, brand: "Fiat", model: "Argo", version: "Drive 1.3L CVT", price: 32650000 },
+        { id: 1004, brand: "Fiat", model: "Cronos", version: "Like 1.3 GSE MY26", price: 31120000 },
+        { id: 1005, brand: "Fiat", model: "Cronos", version: "Drive 1.3 GSE PACK PLUS MY26", price: 37210000 },
+        { id: 1006, brand: "Fiat", model: "Cronos", version: "Drive 1.3L GSE CVT PACK PLUS MY26", price: 37430000 },
+        { id: 1007, brand: "Fiat", model: "Cronos", version: "Precision 1.3 GSE CVT MY26", price: 38790000 },
+        { id: 1008, brand: "Fiat", model: "Pulse", version: "Drive 1.3 MT5", price: 36860000 },
+        { id: 1009, brand: "Fiat", model: "Pulse", version: "Drive 1.3 CVT", price: 38160000 },
+        { id: 1010, brand: "Fiat", model: "Pulse", version: "Audace 1.0T CVT", price: 41240000 },
+        { id: 1011, brand: "Fiat", model: "Pulse", version: "Impetus 1.0T CVT", price: 42670000 },
+        { id: 1012, brand: "Fiat", model: "Pulse", version: "Abarth Turbo 270 AT6", price: 44750000 },
+        { id: 1013, brand: "Fiat", model: "Fastback", version: "Turbo 270 AT", price: 45540000 },
+        { id: 1014, brand: "Fiat", model: "Fastback", version: "Abarth Turbo 270 AT6", price: 49700000 },
+        { id: 1015, brand: "Fiat", model: "Fiorino", version: "Endurance 1.3 FIREFLY", price: 29460000 },
+        { id: 1016, brand: "Fiat", model: "Strada", version: "Freedom CS 1.3 MT", price: 33050000 },
+        { id: 1017, brand: "Fiat", model: "Strada", version: "Freedom 1.3 8V CD", price: 37710000 },
+        { id: 1018, brand: "Fiat", model: "Strada", version: "Volcano 1.3 8V CD CVT", price: 42110000 },
+        { id: 1019, brand: "Fiat", model: "Toro", version: "Freedom T270 AT6 4X2", price: 47490000 },
+        { id: 1020, brand: "Fiat", model: "Toro", version: "Volcano T270 AT6 4X2", price: 53070000},
+        { id: 1021, brand: "Fiat", model: "Titano", version: "Endurance MT 4X2", price: 50230000 },
+        { id: 1022, brand: "Fiat", model: "Titano", version: "Endurance MT 4X4", price: 53160000 },
+        { id: 1023, brand: "Fiat", model: "Titano", version: "Freedom MT 4X4", price: 58540000 },
+        { id: 1024, brand: "Fiat", model: "Titano", version: "Freedom Plus AT 4X4", price: 64280000 },
+        { id: 1025, brand: "Fiat", model: "Titano", version: "Ranch AT 4X4", price: 69410000 },
 
         // PEUGEOT
-        { id: 2002, brand: "Peugeot", model: "208", version: "Allure MT AM26", price: 36180000 },
-        { id: 2003, brand: "Peugeot", model: "208", version: "Allure AT AM26", price: 38050000 },
-        { id: 2004, brand: "Peugeot", model: "208", version: "Allure PK T200 AM26", price: 40880000 },
-        { id: 2005, brand: "Peugeot", model: "208", version: "GT T200 AM26", price: 43090000 },
-        { id: 2006, brand: "Peugeot", model: "2008", version: "Active T200 AM26", price: 44510000 },
-        { id: 2007, brand: "Peugeot", model: "2008", version: "Allure T200 AM26", price: 48760000 },
-        { id: 2008, brand: "Peugeot", model: "2008", version: "GT T200 AM26", price: 53250000 },
-        { id: 2009, brand: "Peugeot", model: "Partner", version: "Confort 1.6 HDI AM22.5", price: 38070000 },
+        { id: 2002, brand: "Peugeot", model: "208", version: "Allure MT AM26", price: 36370000 },
+        { id: 2003, brand: "Peugeot", model: "208", version: "Allure AT AM26", price: 38250000 },
+        { id: 2004, brand: "Peugeot", model: "208", version: "Allure PK T200 AM26", price: 41090000 },
+        { id: 2005, brand: "Peugeot", model: "208", version: "GT T200 AM26", price: 43310000 },
+        { id: 2006, brand: "Peugeot", model: "2008", version: "Active T200 AM26", price: 44740000 },
+        { id: 2007, brand: "Peugeot", model: "2008", version: "Allure T200 AM26", price: 49010000 },
+        { id: 2008, brand: "Peugeot", model: "2008", version: "GT T200 AM26", price: 53520000 },
+        { id: 2009, brand: "Peugeot", model: "Partner", version: "Confort 1.6 HDI AM22.5", price: 38270000 },
         { id: 2010, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 AM26", price: 57500000 },
         { id: 2011, brand: "Peugeot", model: "Expert", version: "Expert L3 HDI 150 6P AM26", price: 62960000 },
+        { id: 2012, brand: "Peugeot", model: "Boxer", version: "Boxer L2H2 HDI 140 AM26", price: 69910000 },
+        { id: 2013, brand: "Peugeot", model: "Boxer", version: "Boxer L3H2 HDI 140 AM26", price: 75160000 },
 
         // JEEP
-        { id: 2012, brand: "Jeep", model: "Renegade", version: "Sport T270 1.3 AT6 FWD", price: 47301800 },
-        { id: 2013, brand: "Jeep", model: "Renegade", version: "Longitude T270 AT6 FWD MY25", price: 52296400 },
-        { id: 2014, brand: "Jeep", model: "Renegade", version: "S T270 1.3 AT6 MY25", price: 53471600 },
-        { id: 2015, brand: "Jeep", model: "Renegade", version: "Willys T270 AT9 4X4", price: 58906900 },
-        { id: 2016, brand: "Jeep", model: "Compass", version: "Sport T270 AT6 4X2 MY25", price: 56703400 },
-        { id: 2017, brand: "Jeep", model: "Compass", version: "Limited Plus T270 AT6 4X2 MY25", price: 61257300 },
-        { id: 2018, brand: "Jeep", model: "Compass", version: "S T270 AT6 FWD MY25", price: 61844900 },
-        { id: 2019, brand: "Jeep", model: "Compass", version: "Blackhawk 2.0T GME AT9", price: 74919000 },
-        { id: 2020, brand: "Jeep", model: "Commander", version: "Limited GSE 1.3T FWD AT6 BZ MY24", price: 70365100 },
-        { id: 2021, brand: "Jeep", model: "Commander", version: "Overland 2.0L GME AT9 4X4", price: 85495800 },
-        { id: 2022, brand: "Jeep", model: "Commander", version: "Blackhawk 2.0l GME AT9 4x4", price: 86230300 },
+        { id: 2014, brand: "Jeep", model: "Renegade", version: "Sport T270 1.3 AT6 FWD", price: 47595600 },
+        { id: 2015, brand: "Jeep", model: "Renegade", version: "Longitude T270 AT6 FWD MY25", price: 52296400 },
+        { id: 2016, brand: "Jeep", model: "Renegade", version: "S T270 1.3 AT6 MY25", price: 53471600 },
+        { id: 2017, brand: "Jeep", model: "Renegade", version: "Willys T270 AT9 4X4", price: 58906900 },
+        { id: 2018, brand: "Jeep", model: "Compass", version: "Sport T270 AT6 4X2 MY25", price: 56997200 },
+        { id: 2019, brand: "Jeep", model: "Compass", version: "Limited Plus T270 AT6 4X2 MY25", price: 61257300 },
+        { id: 2020, brand: "Jeep", model: "Compass", version: "S T270 AT6 FWD MY25", price: 61844900 },
+        { id: 2021, brand: "Jeep", model: "Compass", version: "Blackhawk 2.0T GME AT9", price: 74919000 },
+        { id: 2022, brand: "Jeep", model: "Commander", version: "Limited GSE 1.3T FWD AT6 BZ MY24", price: 70365100 },
+        { id: 2023, brand: "Jeep", model: "Commander", version: "Overland 2.0L GME AT9 4X4", price: 85495800 },
+        { id: 2024, brand: "Jeep", model: "Commander", version: "Blackhawk 2.0l GME AT9 4x4", price: 86230300 },
 
         // RAM
-        { id: 2023, brand: "Ram", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 70071300 },
-        { id: 2024, brand: "Ram", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 70658900 },
-        { id: 2025, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 79913600 },
-        { id: 2026, brand: "Ram", model: "Dakota", version: "Warlock 2.2 Turbo 4X4", price: 69560000 },
-        { id: 2027, brand: "Ram", model: "Dakota", version: "Laramie 2.2 Turbo 4X4", price: 71570000 }
+        { id: 2025, brand: "Ram", model: "Rampage", version: "Rebel 2.0L GME AT9 4X4", price: 70365100 },
+        { id: 2026, brand: "Ram", model: "Rampage", version: "Laramie 2.0L GME AT9 4X4", price: 70952700 },
+        { id: 2027, brand: "Ram", model: "Rampage", version: "R/T 2.0L GME AT9 4X4", price: 79913600 },
+        { id: 2028, brand: "Ram", model: "Dakota", version: "Warlock 2.2 Turbo 4X4", price: 69000000 },
+        { id: 2029, brand: "Ram", model: "Dakota", version: "Laramie 2.2 Turbo 4X4", price: 71000000 }
     ];
 
     // =======================================================================
@@ -667,7 +669,7 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "MOBI TREKKING 1.0",
-            precio: 27070000,
+            precio: 27210000,
             financiaciones: [
                 {
                     tipo: "80/20",
@@ -675,9 +677,9 @@ function initFiatModelsPage() {
                     sobrepauta: "",
                     pea1: "6-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$260.000",
-                    suscrPremio: "$300.000",
-                    bonificacion: "$400.000 para licitación en cuota 2",
+                    suscrNeutra: "",
+                    suscrPremio: "$290.000",
+                    bonificacion: "$400.000 para licitación en cuota 2 + polarizado + 3 meses de seguro al 50%",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -685,83 +687,83 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "ARGO DRIVE PACK PLUS",
-            precio: 29780000,
+            precio: 29930000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "MAR 30%",
+                    sobrepauta: "MAR y ABR 30%",
                     pea1: "4-6-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$300.000",
-                    suscrPremio: "$340.000",
-                    bonificacion: "$400.000 para licitación en cuota 2",
-                    retiro: "6.5% + DA (2.5%)"
+                    suscrNeutra: "",
+                    suscrPremio: "$390.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + DA (2.5%) + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "FIAT",
             modelo: "CRONOS DRIVE PACK PLUS",
-            precio: 37020000,
+            precio: 37210000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "MAR 20%",
-                    pea1: "2-4-6-9-12 / 30%",
+                    sobrepauta: "MAR y ABR 20%",
+                    pea1: "2-4-9-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$340.000",
-                    suscrPremio: "$380.000",
-                    bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR + 6 medias cuotas puras solo si adjudica en cuota 2",
-                    retiro: "6% + DA (2.5%)"
-                },
-                {
-                    tipo: "90/10",
-                    cuotas: "84",
-                    sobrepauta: "MAR 20%",
-                    pea1: "10 / 20%",
-                    pea2: "",
-                    suscrNeutra: "$450.000",
-                    suscrPremio: "$490.000",
-                    bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR",
-                    retiro: "6% + DA (2.5%)"
+                    suscrNeutra: "",
+                    suscrPremio: "$390.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50% + 6 medias cuotas puras solo si adjudica en cuota 2",
+                    retiro: "Inscr. de prenda + DA (2.5%) + Flete + renta y muni"
                 },
                 {
                     tipo: "80/20",
                     cuotas: "84",
-                    sobrepauta: "MAR 20%",
+                    sobrepauta: "MAR y ABR 20%",
                     pea1: "6-9-12 / 20%",
                     pea2: "",
-                    suscrNeutra: "$420.000",
-                    suscrPremio: "$460.000",
-                    bonificacion: "$500.000 para licitacion en cuota 2 + $500.000 en GR",
-                    retiro: "6% + DA (2.5%)"
+                    suscrNeutra: "",
+                    suscrPremio: "$490.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + DA (2.5%) + Flete + renta y muni"
+                },
+                {
+                    tipo: "90/10",
+                    cuotas: "84",
+                    sobrepauta: "MAR y ABR 20%",
+                    pea1: "10 / 20%",
+                    pea2: "",
+                    suscrNeutra: "",
+                    suscrPremio: "$540.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + DA (2.5%) + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "FIAT",
             modelo: "PULSE DRIVE",
-            precio: 36670000,
+            precio: 36860000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "MAR 30%",
+                    sobrepauta: "MAR y ABR30%",
                     pea1: "4-6-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$360.000",
-                    suscrPremio: "$400.000",
-                    bonificacion: "$400.000 para licitación en cuota 2",
-                    retiro: "6.5% + DA (2.5%)"
+                    suscrNeutra: "",
+                    suscrPremio: "$420.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + DA (2.5%) + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "FIAT",
             modelo: "FASTBACK TURBO 270",
-            precio: 45310000,
+            precio: 45540000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -769,27 +771,27 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 30%",
                     pea1: "4-6-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$380.000",
+                    suscrNeutra: "",
                     suscrPremio: "$420.000",
-                    bonificacion: "$400.000 para licitación en cuota 2",
-                    retiro: "6.5% + DA (2.5%)"
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + DA (2.5%) + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "FIAT",
             modelo: "FIORINO ENDURANCE",
-            precio: 29310000,
+            precio: 29460000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "MAR 30%",
+                    sobrepauta: "MAR y ABR30%",
                     pea1: "4-6-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$300.000",
-                    suscrPremio: "$340.000",
-                    bonificacion: "$400.000 para licitación en cuota 2",
+                    suscrNeutra: "",
+                    suscrPremio: "$370.000",
+                    bonificacion: "GNC Bonificado + Polarizado + 3 meses de seguro al 50%",
                     retiro: "6.5% + DA (2.5%)"
                 }
             ]
@@ -797,54 +799,54 @@ function initFiatModelsPage() {
         {
             marca: "FIAT",
             modelo: "STRADA FREEDOM",
-            precio: 37520000,
+            precio: 37710000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "MAR 35%",
+                    sobrepauta: "MAR y ABR 35%",
                     pea1: "6-12 / 35%",
                     pea2: "",
-                    suscrNeutra: "$370.000",
-                    suscrPremio: "$410.000",
-                    bonificacion: "$400.000 para licitación en cuota 2",
-                    retiro: "6.5% + DA (2.5%)"
+                    suscrNeutra: "",
+                    suscrPremio: "$390.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + DA (2.5%) + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "FIAT",
             modelo: "TORO FREEDOM",
-            precio: 47250000,
+            precio: 47490000,
             financiaciones: [
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "MAR 30%",
+                    sobrepauta: "MAR y ABR 30%",
                     pea1: "4-6-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$410.000",
+                    suscrNeutra: "",
                     suscrPremio: "$450.000",
-                    bonificacion: "$400.000 para licitación en cuota 2",
-                    retiro: "6.5% + DA (2.5%)"
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + DA (2.5%) + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "FIAT",
             modelo: "TITANO ENDURANCE",
-            precio: 58240000,
+            precio: 58540000,
             financiaciones: [
                 {
                     tipo: "60/40",
                     cuotas: "84",
-                    sobrepauta: "MAR 20%",
-                    pea1: "4-6-12 / 40%",
+                    sobrepauta: "MAR y ABR 20%",
+                    pea1: "4-9-12 / 40%",
                     pea2: "",
-                    suscrNeutra: "$460.000",
-                    suscrPremio: "$500.000",
-                    bonificacion: "$500.000 para licitacion en cuota 2 + $1.000.000 en GR",
-                    retiro: "6.5% + DA (2.5%)"
+                    suscrNeutra: "",
+                    suscrPremio: "$450.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + DA (2.5%) + Flete + renta y muni"
                 }
             ]
         },
@@ -852,8 +854,8 @@ function initFiatModelsPage() {
         // PEUGEOT
         {
             marca: "PEUGEOT",
-            modelo: "208 ALLURE 1.6 AM26.5",
-            precio: 36180000,
+            modelo: "208 ALLURE 1.6 AM26.5 120 CUOTAS",
+            precio: 36370000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -861,17 +863,17 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 35%",
                     pea1: "12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$260.000",
-                    suscrPremio: "$300.000",
-                    bonificacion: "$350.000 + 6 medias cuotas puras solo si adjudica en cuota 2",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
+                    suscrNeutra: "",
+                    suscrPremio: "$290.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50% + 6 medias cuotas puras solo si adjudica en cuota 2",
+                    retiro: "Inscr. de prenda + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "PEUGEOT",
             modelo: "208 ALLURE 1.6 AM26.5",
-            precio: 36180000,
+            precio: 36370000,
             financiaciones: [
                 {
                     tipo: "80/20",
@@ -879,17 +881,17 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 25%",
                     pea1: "2-6-9-12 / 20%",
                     pea2: "",
-                    suscrNeutra: "$340.000",
-                    suscrPremio: "$380.000",
-                    bonificacion: "$500.000 + 6 medias cuotas puras solo si adjudica en cuota 2",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
+                    suscrNeutra: "",
+                    suscrPremio: "$370.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50% + 6 medias cuotas puras solo si adjudica en cuota 2",
+                    retiro: "Inscr. de prenda + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "PEUGEOT",
             modelo: "208 ALLURE AT AM26.5",
-            precio: 38050000,
+            precio: 38250000,
             financiaciones: [
                 {
                     tipo: "80/20",
@@ -897,17 +899,17 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 25%",
                     pea1: "2-6-9-12 / 20%",
                     pea2: "",
-                    suscrNeutra: "$390.000",
+                    suscrNeutra: "",
                     suscrPremio: "$430.000",
-                    bonificacion: "$500.000 + 6 medias cuotas puras solo si adjudica en cuota 2",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50% + 6 medias cuotas puras solo si adjudica en cuota 2",
+                    retiro: "Inscr. de prenda + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "PEUGEOT",
             modelo: "2008 ACTIVE T200 AM26",
-            precio: 44510000,
+            precio: 44740000,
             financiaciones: [
                 {
                     tipo: "80/20",
@@ -915,17 +917,17 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 25%",
                     pea1: "2-6-9-12 / 20%",
                     pea2: "",
-                    suscrNeutra: "$410.000",
+                    suscrNeutra: "",
                     suscrPremio: "$450.000",
-                    bonificacion: "$700.000",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50% + 6 medias cuotas puras solo si adjudica en cuota 2",
+                    retiro: "Inscr. de prenda + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "PEUGEOT",
             modelo: "2008 ALLURE T200 AM26",
-            precio: 48760000,
+            precio: 49010000,
             financiaciones: [
                 {
                     tipo: "80/20",
@@ -933,17 +935,17 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 25%",
                     pea1: "2-6-9-12 / 20%",
                     pea2: "",
-                    suscrNeutra: "$460.000",
-                    suscrPremio: "$500.000",
-                    bonificacion: "$700.000",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
+                    suscrNeutra: "",
+                    suscrPremio: "$540.000",
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50% + 6 medias cuotas puras solo si adjudica en cuota 2",
+                    retiro: "Inscr. de prenda + Flete + renta y muni"
                 }
             ]
         },
         {
             marca: "PEUGEOT",
             modelo: "PARTNER CONFORT 1.6 HDI",
-            precio: 38070000,
+            precio: 38270000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -951,10 +953,10 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 30%",
                     pea1: "2-4 / 30%",
                     pea2: "",
-                    suscrNeutra: "$330.000",
+                    suscrNeutra: "",
                     suscrPremio: "$370.000",
-                    bonificacion: "$500.000",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + Flete + renta y muni"
                 }
             ]
         },
@@ -969,10 +971,10 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 35%",
                     pea1: "4-6-9-12 / 30%",
                     pea2: "",
-                    suscrNeutra: "$510.000",
+                    suscrNeutra: "",
                     suscrPremio: "$550.000",
-                    bonificacion: "$800.000",
-                    retiro: "6% (DA SE PAGA CON LA LICITACION)"
+                    bonificacion: "Patentamiento 100% bonif. + Polarizado + 3 meses de seguro al 50%",
+                    retiro: "Inscr. de prenda + Flete + renta y muni"
                 }
             ]
         },
@@ -981,7 +983,7 @@ function initFiatModelsPage() {
         {
             marca: "JEEP",
             modelo: "RENEGADE SPORT T270 AT6",
-            precio: 47301800,
+            precio: 47595000,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -989,17 +991,17 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 35%",
                     pea1: "2-4-9-12/30%",
                     pea2: "",
-                    suscrNeutra: "$440.000",
-                    suscrPremio: "$480.000",
+                    suscrNeutra: "",
+                    suscrPremio: "$460.000",
                     bonificacion: "Patentamiento 100% Bonif. + 6 medias cuotas puras solo si adjudica en cuota 2 ",
-                    retiro: "6.5% + DA (2.5%)"
+                    retiro: "Inscr. de prenda + DA (6,5%) + renta y muni"
                 }
             ]
         },
         {
             marca: "JEEP",
             modelo: "COMPASS SPORT T270 AT6",
-            precio: 56703400,
+            precio: 56997200,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -1007,17 +1009,17 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 35%",
                     pea1: "4-6-12/30%",
                     pea2: "",
-                    suscrNeutra: "$590.000",
-                    suscrPremio: "$630.000",
+                    suscrNeutra: "",
+                    suscrPremio: "$600.000",
                     bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2",
-                    retiro: "6.5% + DA (2.5%)"
+                    retiro: "Inscr. de prenda + DA (6,5%) + renta y muni"
                 }
             ]
         },
         {
             marca: "RAM",
             modelo: "RAMPAGE REBEL 2.0L GME AT9 4X4",
-            precio: 70071300,
+            precio: 70365100,
             financiaciones: [
                 {
                     tipo: "70/30",
@@ -1025,10 +1027,10 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 35%",
                     pea1: "4-6-12/30%",
                     pea2: "",
-                    suscrNeutra: "$620.000",
-                    suscrPremio: "$660.000",
+                    suscrNeutra: "",
+                    suscrPremio: "$670.000",
                     bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2",
-                    retiro: "6.5% + DA (2.5%)"
+                    retiro: "Inscr. de prenda + DA (6,5%) + renta y muni"
                 }
             ]
         },
@@ -1043,10 +1045,10 @@ function initFiatModelsPage() {
                     sobrepauta: "MAR 30%",
                     pea1: "4-9-12/35%",
                     pea2: "24-36/30%",
-                    suscrNeutra: "$660.000",
-                    suscrPremio: "$700.000",
+                    suscrNeutra: "",
+                    suscrPremio: "$600.000",
                     bonificacion: "Patentamiento 100% Bonif. solo si adjudica en cuota 2",
-                    retiro: "6.5% + DA (2.5%)"
+                    retiro: "Inscr. de prenda + DA (6,5%) + renta y muni"
                 }
             ]
         }
