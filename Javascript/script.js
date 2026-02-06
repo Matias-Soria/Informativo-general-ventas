@@ -860,7 +860,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "120",
-                    sobrepauta: "MAR 35%",
+                    sobrepauta: "MAR y ABR 35%",
                     pea1: "12 / 30%",
                     pea2: "",
                     suscrNeutra: "",
@@ -878,7 +878,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "80/20",
                     cuotas: "84",
-                    sobrepauta: "MAR 25%",
+                    sobrepauta: "MAR y ABR 25%",
                     pea1: "2-6-9-12 / 20%",
                     pea2: "",
                     suscrNeutra: "",
@@ -896,7 +896,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "80/20",
                     cuotas: "84",
-                    sobrepauta: "MAR 25%",
+                    sobrepauta: "MAR Y ABR 25%",
                     pea1: "2-6-9-12 / 20%",
                     pea2: "",
                     suscrNeutra: "",
@@ -914,7 +914,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "80/20",
                     cuotas: "84",
-                    sobrepauta: "MAR 25%",
+                    sobrepauta: "MAR Y ABR 25%",
                     pea1: "2-6-9-12 / 20%",
                     pea2: "",
                     suscrNeutra: "",
@@ -932,7 +932,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "80/20",
                     cuotas: "84",
-                    sobrepauta: "MAR 25%",
+                    sobrepauta: "MAR Y ABR 25%",
                     pea1: "2-6-9-12 / 20%",
                     pea2: "",
                     suscrNeutra: "",
@@ -950,7 +950,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "MAR 30%",
+                    sobrepauta: "MAR Y ABR 20%",
                     pea1: "2-4 / 30%",
                     pea2: "",
                     suscrNeutra: "",
@@ -968,7 +968,7 @@ function initFiatModelsPage() {
                 {
                     tipo: "70/30",
                     cuotas: "84",
-                    sobrepauta: "MAR 35%",
+                    sobrepauta: "MAR Y ABR 35%",
                     pea1: "4-6-9-12 / 30%",
                     pea2: "",
                     suscrNeutra: "",
