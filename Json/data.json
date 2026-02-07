@@ -3743,6 +3743,1510 @@
         ]
     },
     {
+        "modelo": "Peugeot 208",
+        "version": "Allure MT AM 26.5",
+        "nombreCompleto": "PEUGEOT 208 ALLURE MT AM 26.5",
+        "equipamiento": [
+            {
+                "nombre": "Embellecedor de grilla delantera negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros delanteros halógenos",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros colmillos DRL Tri-LED ",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Manijas de puerta color carrocería",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Espejos exteriores color negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Embellecedor entre faros traseros color negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Salida de escape color Metálica oscura ",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Llantas 16'' aleacion (Kenobi Bee)",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Color llantas Gris Anthra",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Frenos ABS con Repartidor Electrónico de Frenado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de Estabilidad (ESP) y de Tracción (ASR)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Ayuda al arranque en pendiente",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags frontales conductor y pasajero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags laterales delanteros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Cámara de visión trasera",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Fijaciones de Asientos ISOFIX y TOP TETHER",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alarma Antirrobo Perimetral",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Rueda de auxilio de 15'' (125/80 R15)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de crucero y limitador de velocidad",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Dirección Asistida Eléctrica Variable",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante multifunción",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Pantalla multimedia táctil 10''",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Mirror Screen (Apple CarPlay / Android Auto)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Parlantes 4P + 2TW",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tomas USB 2",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Antena corta",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Climatizador Digital Automático",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Levantavidrios Delanteros y Traseros Eléctricos One Touch",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Espejos exteriores con regulación eléctrica",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tablero de instrumentos Analógico + Matriz color",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tapizado tela",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Asiento conductor con regulación en altura",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante Inyectado",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Tapizado de techo color natural",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Manijas internas de puerta Cromo satinado",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Decoración Volante Ribete cromado Negro brillante",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Salidas de aire Cromo satinado",
+                "incluido": true,
+                "categoria": "Confort"
+            }
+        ]
+    },
+    {
+        "modelo": "Peugeot 208",
+        "version": "Allure AT AM 26.5",
+        "nombreCompleto": "PEUGEOT 208 ALLURE AT AM 26.5",
+        "equipamiento": [
+            {
+                "nombre": "Embellecedor de grilla delantera negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros delanteros halógenos",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros colmillos DRL Tri-LED ",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Manijas de puerta color carrocería",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Espejos exteriores color negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Embellecedor entre faros traseros color negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Salida de escape color Metálica oscura ",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Llantas 16'' aleacion (Kenobi Bee)",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Color llantas Gris Anthra",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Frenos ABS con Repartidor Electrónico de Frenado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de Estabilidad (ESP) y de Tracción (ASR)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Ayuda al arranque en pendiente",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags frontales conductor y pasajero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags laterales delanteros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Cámara de visión trasera",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Fijaciones de Asientos ISOFIX y TOP TETHER",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alarma Antirrobo Perimetral",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Rueda de auxilio de 15'' (125/80 R15)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de crucero y limitador de velocidad",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Dirección Asistida Eléctrica Variable",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante multifunción",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Pantalla multimedia táctil 10''",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Mirror Screen (Apple CarPlay / Android Auto)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Parlantes 4P + 2TW",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tomas USB 2",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Antena corta",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Climatizador Digital Automático",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Levantavidrios Delanteros y Traseros Eléctricos One Touch",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Espejos exteriores con regulación eléctrica",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tablero de instrumentos Analógico + Matriz color",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tapizado tela",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Asiento conductor con regulación en altura",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante Inyectado",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Tapizado de techo color natural",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Manijas internas de puerta Cromo satinado",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Decoración Volante Ribete cromado Negro brillante",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Salidas de aire Cromo satinado",
+                "incluido": true,
+                "categoria": "Confort"
+            }
+        ]
+    },
+    {
+        "modelo": "Peugeot 208",
+        "version": "Allure PK T200 AM 26.5",
+        "nombreCompleto": "PEUGEOT 208 ALLURE PK T200 AM 26.5",
+        "equipamiento": [
+            {
+                "nombre": "Embellecedor de grilla delantera negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros delanteros halógenos",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros colmillos DRL Tri-LED ",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Manijas de puerta color carrocería",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Espejos exteriores color negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Embellecedor entre faros traseros color negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Salida de escape color Metálica oscura ",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Llantas 16'' aleacion (Kenobi Bee)",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Color llantas Black Ghana",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Frenos ABS con Repartidor Electrónico de Frenado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de Estabilidad (ESP) y de Tracción (ASR)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Ayuda al arranque en pendiente",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags frontales conductor y pasajero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags laterales delanteros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags de cortina",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Cámara de visión trasera Visio Park 180°",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Sensores de estacionamiento traseros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Fijaciones de Asientos ISOFIX y TOP TETHER",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alarma Antirrobo Perimetral",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Rueda de auxilio de 15'' (125/80 R15)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de crucero y limitador de velocidad",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Sistema de acceso y arranque manos libres (ADML)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Dirección Asistida Eléctrica Variable",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante multifunción",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Pantalla multimedia táctil 10''",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Mirror Screen (Apple CarPlay / Android Auto)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Parlantes 4P + 2TW",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tomas USB 2",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Antena corta (Tipo Shark)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Cargador inductivo de smartphones",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Servicios Conectados",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Climatizador Digital Automático",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Techo panorámico",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Levantavidrios Delanteros y Traseros Eléctricos One Touch",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Espejos exteriores con regulación eléctrica",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tablero de instrumentos Digital 2D",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tapizado tela y cuero",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Asiento conductor con regulación en altura",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante Cuero",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Tapizado de techo color natural",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Manijas internas de puerta Cromo satinado",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Decoración Volante Ribete cromado Negro brillante",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Salidas de aire Cromo satinado",
+                "incluido": true,
+                "categoria": "Confort"
+            }
+        ]
+    },
+    {
+        "modelo": "Peugeot 208",
+        "version": "GT T200 AM 26.5",
+        "nombreCompleto": "PEUGEOT 208 GT T200 AM 26.5",
+        "equipamiento": [
+            {
+                "nombre": "Embellecedor de grilla delantera color carroceria",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros delanteros FULL LED con corrección automática de altura",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros colmillos DRL Tri-LED ",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Manijas de puerta color carrocería",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Espejos exteriores color negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Embellecedor entre faros traseros color negro brillante",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Alerón en portón trasero",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Salida de escape color Metálica oscura ",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Llantas 16'' aleacion (Yanaka)",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Color llantas Black Ghana",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Frenos ABS con Repartidor Electrónico de Frenado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de Estabilidad (ESP) y de Tracción (ASR)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Ayuda al arranque en pendiente",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags frontales conductor y pasajero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags laterales delanteros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags de cortina",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Cámara de visión trasera Visio Park 180°",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Fijaciones de Asientos ISOFIX y TOP TETHER",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Indicador de descanso recomendado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alerta de riesgo de colisión",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Frenado automático de emergencia",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Asistencia al mantenimiento de carril",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Sensores de estacionamiento traseros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alarma Antirrobo Perimetral",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Rueda de auxilio de 15'' (125/80 R15)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de crucero y limitador de velocidad",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Sistema de acceso y arranque manos libres (ADML)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Dirección Asistida Eléctrica Variable",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante multifunción",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Pantalla multimedia táctil 10''",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Mirror Screen (Apple CarPlay / Android Auto)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Parlantes 4P + 2TW",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tomas USB 2",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Antena corta (Tipo Shark)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Cargador inductivo de smartphones",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Servicios Conectados",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Climatizador Digital Automático",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Techo panorámico",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Levantavidrios Delanteros y Traseros Eléctricos One Touch",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Espejos exteriores con regulación eléctrica",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tablero de instrumentos Digital 3D",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tapizado Cuero con costuras verdes y apoyabrazo conductor",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Asiento conductor con regulación en altura",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante Cuero con costuras verdes",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Tapizado de techo color negro",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Manijas internas de puerta Cromo satinado",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Decoración Volante Ribete cromado Negro brillante / Insignia GT",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Salidas de aire Cromo satinado",
+                "incluido": true,
+                "categoria": "Confort"
+            }
+        ]
+    },
+    {
+        "modelo": "Peugeot 2008",
+        "version": "ACTIVE T200 AM 26",
+        "nombreCompleto": "PEUGEOT 2008 ACTIVE T200 AM 26",
+        "equipamiento": [
+            {
+                "nombre": "Embellecedor de grilla delantera Negro piano",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros delanteros ECO LED",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros colmillos DRL LED",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros LED traseros",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Estilo Espejos exteriores Negro Piano",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Aplique en bajo de puertas Negro Mate",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Embellecedor entre faros traseros Negro Piano",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Barras de techo longitudinales",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Llantas 17'' diamantadas",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Frenos ABS con Repartidor Electrónico de Frenado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de Estabilidad (ESP) y de Tracción (ASR)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Ayuda al arranque en pendiente",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags frontales conductor y pasajero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags laterales delanteros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Cámara de visión trasera Vision Park 180°",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Fijaciones de Asientos ISOFIX y TOP TETHER",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Sensores de estacionamiento traseros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alerta de subinflado de neumatico iTPMS",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Faro antiniebla trasero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alarma perimetral",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Rueda de auxilo (125/85 R16)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Dirección Asistida Eléctrica Variable",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante multifunción",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Freno de mano eléctrico",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Pantalla multimedia táctil 10''",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Mirror Screen (Apple CarPlay / Android Auto)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Servicios conectados",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Climatizador automático",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tablero de instrumentos digital 2D",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Asiento conductor con regulación en altura",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Manijas internas de puerta Aluminio",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Salidas de aire Cromadas",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Tapizado Tela",
+                "incluido": true,
+                "categoria": "Confort"
+            }
+        ]
+    },
+    {
+        "modelo": "Peugeot 2008",
+        "version": "ALLURE T200 AM 26",
+        "nombreCompleto": "PEUGEOT 2008 ALLURE T200 AM 26",
+        "equipamiento": [
+            {
+                "nombre": "Embellecedor de grilla delantera Negro piano",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros delanteros ECO LED",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros colmillos DRL LED",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros LED traseros",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Estilo Espejos exteriores Negro Piano",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Aplique en bajo de puertas Gris Aluminio",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Embellecedor entre faros traseros Negro Piano",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Barras de techo longitudinales",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Llantas 17'' diamantadas",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Frenos ABS con Repartidor Electrónico de Frenado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de Estabilidad (ESP) y de Tracción (ASR)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Ayuda al arranque en pendiente",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags frontales conductor y pasajero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags laterales delanteros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags de cortina",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Cámara de visión trasera Vision Park 360°",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Fijaciones de Asientos ISOFIX y TOP TETHER",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Indicador de descanso recomendado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alerta de riesgo de colisión",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Frenado automático de emergencia",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Asistencia al mantenimiento de carril",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Sensores de estacionamiento traseros + Delanteros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Lectura e indicador de límite de velocidad",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alerta de subinflado de neumatico iTPMS",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alerta de punto ciego",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Luces altas automáticas",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Faro antiniebla trasero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alarma perimetral",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Rueda de auxilo (125/85 R16)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Dirección Asistida Eléctrica Variable",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante multifunción",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Freno de mano eléctrico",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Llave con acceso y arranque manos libres (ADML)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Pantalla multimedia táctil 10''",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Mirror Screen (Apple CarPlay / Android Auto)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Servicios conectados",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Cargador inductivo de smartphones",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Climatizador automático",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Espejos exteriores con plegado eléctrico",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tablero de instrumentos digital 2D",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Asiento conductor con regulación en altura",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Manijas internas de puerta Aluminio",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Salidas de aire Cromadas",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Tapizado tela y cuero",
+                "incluido": true,
+                "categoria": "Confort"
+            }
+        ]
+    },
+    {
+        "modelo": "Peugeot 2008",
+        "version": "GT T200 AM 26",
+        "nombreCompleto": "PEUGEOT 2008 GT T200 AM 26",
+        "equipamiento": [
+            {
+                "nombre": "Carrocería en color bi-tono",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Embellecedor de grilla delantera Color carrocería",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros delanteros FULL LED",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros colmillos DRL LED",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Faros LED traseros",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Estilo Espejos exteriores Negro Piano",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Aplique en bajo de puertas Negro Piano",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Embellecedor entre faros traseros Negro Piano",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Barras de techo longitudinales",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Llantas 17'' diamantadas",
+                "incluido": true,
+                "categoria": "Exterior"
+            },
+            {
+                "nombre": "Frenos ABS con Repartidor Electrónico de Frenado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Control de Estabilidad (ESP) y de Tracción (ASR)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Ayuda al arranque en pendiente",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags frontales conductor y pasajero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags laterales delanteros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Airbags de cortina",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Cámara de visión trasera Vision Park 360°",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Fijaciones de Asientos ISOFIX y TOP TETHER",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Indicador de descanso recomendado",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alerta de riesgo de colisión",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Frenado automático de emergencia",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Asistencia al mantenimiento de carril",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Sensores de estacionamiento traseros + Delanteros",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Lectura e indicador de límite de velocidad",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alerta de subinflado de neumatico iTPMS",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alerta de punto ciego",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Luces altas automáticas",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Faro antiniebla trasero",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Alarma perimetral",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Rueda de auxilo (125/85 R16)",
+                "incluido": true,
+                "categoria": "Seguridad"
+            },
+            {
+                "nombre": "Dirección Asistida Eléctrica Variable",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Volante multifunción",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Freno de mano eléctrico",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Llave con acceso y arranque manos libres (ADML)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Levas al volante",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Pantalla multimedia táctil 10''",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Mirror Screen (Apple CarPlay / Android Auto)",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Servicios conectados",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Cargador inductivo de smartphones",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Climatizador automático",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Techo panorámico con apertura",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Espejos exteriores con plegado eléctrico",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Tablero de instrumentos digital 3D",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Asiento conductor con regulación en altura",
+                "incluido": true,
+                "categoria": "Tecnología"
+            },
+            {
+                "nombre": "Manijas internas de puerta Aluminio",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Salidas de aire Cromadas",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Costuras de interior en Verde GT",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Tapizado tela y cuero",
+                "incluido": true,
+                "categoria": "Confort"
+            },
+            {
+                "nombre": "Kit de alfombras interiores GT",
+                "incluido": true,
+                "categoria": "Confort"
+            }
+        ]
+    },
+    {
         "modelo": "Jeep Renegade",
         "version": "Sport 1.3T",
         "nombreCompleto": "JEEP RENEGADE 1.3T",
