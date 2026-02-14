@@ -127,17 +127,17 @@ header {
         padding: 0.75rem;
         justify-content: space-between;
     }
-    
+
     .menu-toggle {
         display: block;
     }
-    
+
     .navbar {
         order: 4;
         flex: 0 0 100%;
         margin-top: 1rem;
     }
-    
+
     .navbar ul {
         display: none;
         width: 100%;
@@ -146,14 +146,14 @@ header {
         top: 100%;
         left: 0;
         background-color: black;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         z-index: 1000;
     }
-    
+
     .navbar ul.active {
         display: flex;
     }
-    
+
     .navbar li {
         display: block;
         text-align: center;
@@ -161,11 +161,12 @@ header {
         border-bottom: 1px solid #333;
         width: 100%;
     }
-    
-    .logoautocity, .logojeep {
+
+    .logoautocity,
+    .logojeep {
         order: 1;
     }
-    
+
     .logojeep {
         order: 3;
     }
@@ -175,13 +176,14 @@ header {
     header {
         padding: 0.5rem;
     }
-    
+
     .navbar a {
         padding: 0.8rem;
         font-size: 1rem;
     }
-    
-    .logoautocity, .logojeep {
+
+    .logoautocity,
+    .logojeep {
         width: clamp(100px, 25vw, 140px);
     }
 }
@@ -252,7 +254,8 @@ header {
     font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
-.model-filter, .version-filter {
+.model-filter,
+.version-filter {
     width: 100%;
     padding: 0.75rem 1rem;
     border: 2px solid var(--border-color);
@@ -270,7 +273,8 @@ header {
     min-height: 44px;
 }
 
-.model-filter:focus, .version-filter:focus {
+.model-filter:focus,
+.version-filter:focus {
     border-color: var(--secondary-color);
     outline: none;
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
@@ -475,7 +479,7 @@ footer {
     .comparison-filters-container {
         gap: 1.5rem;
     }
-    
+
     .advanced-filters {
         min-width: 100%;
         max-width: 100%;
@@ -486,21 +490,21 @@ footer {
     .comparator-container {
         padding: 0 1rem;
     }
-    
+
     .comparison-filters-container {
         flex-direction: column;
         gap: 1.5rem;
     }
-    
+
     .vs-circle-container {
         margin: 1rem 0;
     }
-    
+
     .comparator-container .filter-group {
         min-width: 100%;
         max-width: 100%;
     }
-    
+
     .filters {
         flex-direction: column;
         align-items: stretch;
@@ -508,18 +512,20 @@ footer {
         padding: 1rem;
         margin: 1.5rem 0;
     }
-    
+
     .category-filter {
         min-width: 100%;
     }
-    
-    .model-filter, .version-filter {
+
+    .model-filter,
+    .version-filter {
         padding: 0.8rem 1rem;
         font-size: 16px;
     }
 }
 
 @media (max-width: 640px) {
+
     .results-header,
     .comparison-item {
         grid-template-columns: 1fr;
@@ -527,12 +533,13 @@ footer {
         text-align: center;
         padding: 1rem;
     }
-    
-    .feature-col, .model-col {
+
+    .feature-col,
+    .model-col {
         text-align: center !important;
         padding-left: 0 !important;
     }
-    
+
     .comparison-feature {
         font-weight: 600;
         background-color: #f8f9fa;
@@ -540,11 +547,11 @@ footer {
         border-radius: 4px;
         margin-bottom: 0.5rem;
     }
-    
+
     .comparison-value {
         margin: 0.5rem 0;
     }
-    
+
     .category-header {
         text-align: center;
     }
@@ -554,8 +561,9 @@ footer {
     .comparator-container {
         padding: 0 0.5rem;
     }
-    
-    .model-filter, .version-filter {
+
+    .model-filter,
+    .version-filter {
         font-size: 16px;
     }
 }
@@ -600,7 +608,7 @@ footer {
     font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
-#filter-section .filter-group-inline .form-group select, 
+#filter-section .filter-group-inline .form-group select,
 #filter-section .filter-group-inline .form-group input {
     width: 100%;
     padding: 14px;
@@ -611,7 +619,7 @@ footer {
     min-height: 44px;
 }
 
-#filter-section .filter-group-inline .form-group select:focus, 
+#filter-section .filter-group-inline .form-group select:focus,
 #filter-section .filter-group-inline .form-group input:focus {
     border-color: var(--secondary-color);
     outline: none;
@@ -661,7 +669,8 @@ footer {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-#brand-filter, #model-filter {
+#brand-filter,
+#model-filter {
     padding: 0.8rem 1rem;
     border: 2px solid var(--border-color);
     border-radius: 8px;
@@ -671,7 +680,8 @@ footer {
     min-height: 44px;
 }
 
-#brand-filter:focus, #model-filter:focus {
+#brand-filter:focus,
+#model-filter:focus {
     border-color: var(--secondary-color);
     outline: none;
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
@@ -739,7 +749,8 @@ table {
     min-width: 600px;
 }
 
-th, td {
+th,
+td {
     padding: clamp(12px, 2vw, 16px) clamp(12px, 2vw, 20px);
     text-align: left;
     border-bottom: 1px solid #eaeaea;
@@ -798,36 +809,37 @@ tr:hover {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    
+
     #filter-section .filter-group-inline .form-group {
         min-width: 100%;
         max-width: 100%;
     }
-    
+
     #compare-section .filter-group {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     #compare-section .vehicle-select {
         min-width: 100%;
         max-width: 100%;
     }
-    
+
     .actions {
         flex-direction: column;
     }
-    
+
     button {
         width: 100%;
         margin-bottom: 10px;
     }
-    
-    th, td {
+
+    th,
+    td {
         padding: 12px 8px;
         font-size: 0.9rem;
     }
-    
+
     .section {
         padding: 1.5rem;
         margin-bottom: 1.5rem;
@@ -839,11 +851,11 @@ tr:hover {
         padding: 1rem;
         border-radius: 8px;
     }
-    
+
     #filter-section .filter-group-inline {
         grid-template-columns: 1fr;
     }
-    
+
     .table-container {
         margin: 0.5rem -1rem;
         width: calc(100% + 2rem);
@@ -907,7 +919,8 @@ tr:hover {
     color: var(--dark-color);
 }
 
-.fiat-filters input, .fiat-filters select {
+.fiat-filters input,
+.fiat-filters select {
     padding: 0.8rem;
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -918,7 +931,8 @@ tr:hover {
     width: 100%;
 }
 
-.fiat-filters input:focus, .fiat-filters select:focus {
+.fiat-filters input:focus,
+.fiat-filters select:focus {
     border-color: var(--secondary-color);
     outline: none;
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
@@ -1018,7 +1032,7 @@ tr:hover {
     .fiat-container {
         padding: 0.5rem;
     }
-    
+
     .fiat-filters {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
@@ -1028,35 +1042,36 @@ tr:hover {
     .fiat-table {
         min-width: 600px;
     }
-    
+
     .fiat-filters {
         grid-template-columns: 1fr;
         padding: 1rem;
     }
-    
-    .fiat-filters input, .fiat-filters select {
+
+    .fiat-filters input,
+    .fiat-filters select {
         min-width: 100%;
     }
-    
+
     .fiat-reset-btn {
         align-self: stretch;
         margin-top: 0.5rem;
     }
-    
+
     .fiat-page-title {
         font-size: 1.6rem;
     }
-    
+
     .fiat-table th {
         font-size: 1rem;
         padding: 1rem 0.5rem;
     }
-    
+
     .fiat-table td {
         padding: 0.7rem 0.4rem;
         font-size: 0.9rem;
     }
-    
+
     .fiat-filters label {
         font-size: 1rem;
     }
@@ -1066,11 +1081,11 @@ tr:hover {
     .fiat-filters {
         grid-template-columns: 1fr;
     }
-    
+
     .fiat-reset-btn {
         margin-top: 0.5rem;
     }
-    
+
     .fiat-container {
         padding: 0.25rem;
     }
@@ -1121,6 +1136,73 @@ tr:hover {
     gap: 0.3rem;
 }
 
+/* Contenedor */
+.switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    user-select: none;
+}
+
+/* Ocultar checkbox original */
+.switch input {
+    display: none;
+}
+
+/* Fondo del switch */
+.slider {
+    width: 50px;
+    height: 26px;
+    background-color: #d1d5db;
+    /* gris suave */
+    border-radius: 50px;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Círculo interno */
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease;
+}
+
+/* Cuando está activado */
+.switch input:checked+.slider {
+    background-color: #22c55e;
+    /* verde moderno */
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+/* Movimiento con efecto rebote */
+.switch input:checked+.slider::before {
+    transform: translateX(24px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al hacer click */
+.switch:active .slider::before {
+    width: 24px;
+}
+
+.result-item.final span:last-child {
+    transition: transform 0.3s ease;
+}
+
+.result-item.final span:last-child.animate {
+    transform: scale(1.08);
+}
+
+
 .calc-form-group label {
     font-weight: 600;
     color: var(--dark-color);
@@ -1128,7 +1210,8 @@ tr:hover {
     margin-bottom: 0.2rem;
 }
 
-.calc-select, .calc-input {
+.calc-select,
+.calc-input {
     width: 100%;
     padding: 0.6rem 0.8rem;
     border: 1.5px solid var(--border-color);
@@ -1146,7 +1229,8 @@ tr:hover {
     appearance: none;
 }
 
-.calc-select:focus, .calc-input:focus {
+.calc-select:focus,
+.calc-input:focus {
     border-color: var(--secondary-color);
     outline: none;
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
@@ -1234,28 +1318,28 @@ tr:hover {
         width: 95%;
         padding: 0.875rem;
     }
-    
+
     .calculator-container {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    
+
     .calculator-results {
         order: -1;
         padding: 1rem;
     }
-    
+
     .calculator-filters {
         flex-direction: column;
         align-items: stretch;
         gap: 0.75rem;
     }
-    
+
     .calc-form-group {
         min-width: 100%;
         max-width: 100%;
     }
-    
+
     .calc-btn {
         max-width: 100%;
         padding: 0.6rem 1.25rem;
@@ -1269,14 +1353,14 @@ tr:hover {
         padding: 0.75rem;
         margin: 0.5rem auto;
     }
-    
+
     .result-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.2rem;
         padding: 0.4rem 0;
     }
-    
+
     .result-item span:last-child {
         font-weight: 600;
         font-size: 0.85rem;
@@ -1289,12 +1373,17 @@ tr:hover {
 }
 
 @media (max-width: 768px) {
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
         font-size: 16px;
     }
 }
 
-button:focus, select:focus, input:focus {
+button:focus,
+select:focus,
+input:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 2px;
 }

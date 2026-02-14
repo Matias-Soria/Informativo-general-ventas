@@ -14,12 +14,12 @@
     <div class="app-container">
         <header>
             <img class="logoautocity" src="../img/logoautocity.jpg" alt="Auto City">
-            
+
             <!-- BOTON HAMBURGUESA AGREGADO -->
             <button class="menu-toggle" aria-label="Abrir menú">
                 ☰
             </button>
-            
+
             <div class="navbar">
                 <ul>
                     <li><a href="../index.html">Equipamientos</a></li>
@@ -88,7 +88,7 @@
 
             <div class="calculator-section">
                 <h2>CALCULADORA DE INTEGRACIONES</h2>
-                
+
                 <!-- NUEVO FILTRO DE MARCA PARA LA CALCULADORA -->
                 <div class="calculator-filters">
                     <div class="calc-form-group">
@@ -99,7 +99,7 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div class="calculator-container">
                     <div class="calculator-form">
                         <div class="calc-form-group">
@@ -119,7 +119,8 @@
 
                         <div class="calc-form-group">
                             <label for="precioVehiculo">Precio del Vehículo:</label>
-                            <input type="text" id="precioVehiculo" class="calc-input" placeholder="Ingrese el precio" readonly>
+                            <input type="text" id="precioVehiculo" class="calc-input" placeholder="Ingrese el precio"
+                                readonly>
                         </div>
 
                         <div class="calc-form-group">
@@ -144,6 +145,25 @@
                             </select>
                         </div>
 
+                        <!-- AHORA ESTÁN FUERA Y BIEN ESTRUCTURADOS -->
+
+                        <div class="calc-form-group">
+                            <label class="switch">
+                                <input type="checkbox" id="toggleSuscripcion" checked>
+                                <span class="slider"></span>
+                                Incluir Suscripción
+                            </label>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label class="switch">
+                                <input type="checkbox" id="toggleDerecho" checked>
+                                <span class="slider"></span>
+                                Incluir Derecho de Adjudicación (2.5%)
+                            </label>
+                        </div>
+
+
                         <button id="calcularBtn" class="calc-btn">CALCULAR INTEGRACIÓN</button>
                     </div>
 
@@ -165,6 +185,10 @@
                             <div class="result-item">
                                 <span>Suscripción:</span>
                                 <span id="resultSuscripcion">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Derecho de Adjudicación (2.5%):</span>
+                                <span id="resultDerecho">-</span>
                             </div>
                             <div class="result-item final">
                                 <span>INTEGRACIÓN FINAL:</span>

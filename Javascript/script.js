@@ -371,7 +371,7 @@ function initComparadorPrecios() {
         { id: 1017, brand: "Fiat", model: "Strada", version: "Freedom 1.3 8V CD", price: 37710000 },
         { id: 1018, brand: "Fiat", model: "Strada", version: "Volcano 1.3 8V CD CVT", price: 42110000 },
         { id: 1019, brand: "Fiat", model: "Toro", version: "Freedom T270 AT6 4X2", price: 47490000 },
-        { id: 1020, brand: "Fiat", model: "Toro", version: "Volcano T270 AT6 4X2", price: 53070000},
+        { id: 1020, brand: "Fiat", model: "Toro", version: "Volcano T270 AT6 4X2", price: 53070000 },
         { id: 1021, brand: "Fiat", model: "Titano", version: "Endurance MT 4X2", price: 50230000 },
         { id: 1022, brand: "Fiat", model: "Titano", version: "Endurance MT 4X4", price: 53160000 },
         { id: 1023, brand: "Fiat", model: "Titano", version: "Freedom MT 4X4", price: 58540000 },
@@ -834,7 +834,7 @@ function initFiatModelsPage() {
         },
         {
             marca: "FIAT",
-            modelo: "TITANO ENDURANCE",
+            modelo: "TITANO FREEDOM",
             precio: 58540000,
             financiaciones: [
                 {
@@ -1193,6 +1193,7 @@ function initFiatModelsPage() {
         const cuotaAdjudicar = document.getElementById('cuotaAdjudicar');
         const calcularBtn = document.getElementById('calcularBtn');
 
+
         if (!vehicleSelect || !calcularBtn) {
             console.warn('❌ Elementos de la calculadora no encontrados');
             return;
@@ -1371,6 +1372,17 @@ function initFiatModelsPage() {
         function calcularIntegracion() {
             const selectedVehicle = vehicleSelect.options[vehicleSelect.selectedIndex];
             const financiacionIndex = financiacionSelect.value;
+            const incluirSuscripcion = document.getElementById('toggleSuscripcion').checked;
+            const incluirDerecho = document.getElementById('toggleDerecho').checked;
+            // Actualizar automáticamente cuando cambian los switches
+            toggleSuscripcion.addEventListener("change", calcularIntegracion);
+            toggleDerecho.addEventListener("change", calcularIntegracion);
+            vehicleSelect.addEventListener("change", calcularIntegracion);
+            financiacionSelect.addEventListener("change", calcularIntegracion);
+            tipoAdjudicacion.addEventListener("change", calcularIntegracion);
+            cuotaAdjudicar.addEventListener("change", calcularIntegracion);
+
+
 
             if (!selectedVehicle || !selectedVehicle.value || financiacionIndex === '') {
                 alert('Por favor, seleccione un vehículo y tipo de financiación.');
@@ -1426,9 +1438,22 @@ function initFiatModelsPage() {
                 suscripcion = extractNumber(financiacion.suscrNeutra);
             }
 
-            // Calcular montos
+
+
+            // Calcular monto base de integración
             const totalIntegrar = Math.round(precio * (porcentajeIntegracion / 100));
-            const integracionFinal = Math.max(0, totalIntegrar + suscripcion);
+
+            // Derecho de adjudicación
+            const derechoAdjudicacion = Math.round(precio * 0.025);
+
+            // Aplicar condiciones
+            const suscripcionFinal = incluirSuscripcion ? suscripcion : 0;
+            const derechoFinal = incluirDerecho ? derechoAdjudicacion : 0;
+
+            // Integración final
+            const integracionFinal = Math.max(0, totalIntegrar + suscripcionFinal + derechoFinal);
+
+
 
             console.log('=== RESULTADOS DEL CÁLCULO ===');
             console.log({
@@ -1443,7 +1468,12 @@ function initFiatModelsPage() {
             document.getElementById('resultPrecio').textContent = `$${precio.toLocaleString()}`;
             document.getElementById('resultPorcentaje').textContent = `${porcentajeIntegracion}%`;
             document.getElementById('resultTotal').textContent = `$${totalIntegrar.toLocaleString()}`;
-            document.getElementById('resultSuscripcion').textContent = `$${suscripcion.toLocaleString()}`;
+            document.getElementById('resultSuscripcion').textContent =
+                incluirSuscripcion ? `$${suscripcion.toLocaleString()}` : '$0';
+
+            document.getElementById('resultDerecho').textContent =
+                incluirDerecho ? `$${derechoAdjudicacion.toLocaleString()}` : '$0';
+
             document.getElementById('resultFinal').textContent = `$${integracionFinal.toLocaleString()}`;
 
             console.log('=== FIN CÁLCULO ===');
